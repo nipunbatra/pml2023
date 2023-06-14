@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nipun Batra">
+<meta name="dcterms.date" content="2023-01-10">
+<meta name="description" content="Misc tips">
+
+<title>ES654 - Misc tips</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ES654</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../grading.html">
+ <span class="menu-text">Grading Policy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../faq.html">
+ <span class="menu-text">FAQs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../quizzes.html">
+ <span class="menu-text">Quizzes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html">
+ <span class="menu-text">Notebooks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://nipunbatra.github.io">
+ <span class="menu-text">Instructor Homepage</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Misc tips</h1>
+</div>
+
+<div>
+  <div class="description">
+    Misc tips
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nipun Batra </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 10, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="miscelleneous-tips" class="level3">
+<h3 class="anchored" data-anchor-id="miscelleneous-tips">Miscelleneous tips</h3>
+<ul>
+<li>Tab Complete</li>
+<li>a.b?</li>
+<li>Black format</li>
+<li>rich
+<ul>
+<li>table</li>
+<li>inspect</li>
+</ul></li>
+<li>dir()</li>
+<li>timing</li>
+<li>timing with sort?!</li>
+<li>timeit object</li>
+<li>plotting timing</li>
+<li>array .tolist()</li>
+<li>Dataclasses</li>
+<li>Annotation</li>
+<li>Plotting with pandas (sin, log, question …)</li>
+</ul>
+<div class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>config InlineBackend.figure_format<span class="op">=</span><span class="st">'retina'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.random.randn(n, k)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.random.randn(k, m)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>a.shape, b.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>((100, 20), (20, 50))</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a_list_of_list <span class="op">=</span> a.tolist()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>a_list_of_list[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>list</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">"list"</span> <span class="kw">in</span> <span class="bu">dir</span>(a)[:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>False</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rich</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rich.inspect(a.tolist, methods<span class="op">=</span><span class="va">True</span>, <span class="bu">all</span><span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭──────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method tolist of numpy.ndarray object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x164cbb8d0</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ────────────────────────╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">ndarray.tolist</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">a.tolist</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">()</span>                                                                                                      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__doc__</span> = <span style="color: #008000; text-decoration-color: #008000">"a.tolist()\n\n    Return the array as an ``a.ndim``-levels deep nested list of Python </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">scalars.\n\n    Return a copy of the array data as a (nested) Python list.\n    Data items</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">are converted to the nearest compatible builtin Python type, via\n    the </span>                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">`~numpy.ndarray.item` function.\n\n    If ``a.ndim`` is 0, then since the depth of the </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">nested list is 0, it will\n    not be a list at all, but a simple Python scalar.\n\n    </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Parameters\n    ----------\n    none\n\n    Returns\n    -------\n    y : object, or list </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">of object, or list of list of object, or ...\n        The possibly nested list of array </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">elements.\n\n    Notes\n    -----\n    The array may be recreated via ``a = </span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">np.array(a.tolist())``, although this\n    may sometimes lose precision.\n\n    Examples\n</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">--------\n    For a 1D array, ``a.tolist()`` is almost the same as ``list(a)``,\n    </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">except that ``tolist`` changes numpy scalars to Python scalars:\n\n    &gt;&gt;&gt; a = </span>            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">np.uint32([1, 2])\n    &gt;&gt;&gt; a_list = list(a)\n    &gt;&gt;&gt; a_list\n    [1, 2]\n    &gt;&gt;&gt; </span>          <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">type(a_list[0])\n    &lt;class 'numpy.uint32'&gt;\n    &gt;&gt;&gt; a_tolist = a.tolist()\n    &gt;&gt;&gt; </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">a_tolist\n    [1, 2]\n    &gt;&gt;&gt; type(a_tolist[0])\n    &lt;class 'int'&gt;\n\n    Additionally, </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">for a 2D array, ``tolist`` applies recursively:\n\n    &gt;&gt;&gt; a = np.array([[1, 2], [3, </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">4]])\n    &gt;&gt;&gt; list(a)\n    [array([1, 2]), array([3, 4])]\n    &gt;&gt;&gt; a.tolist()\n    [[1, </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">2], [3, 4]]\n\n    The base case for this recursion is a 0D array:\n\n    &gt;&gt;&gt; a = </span>         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">np.array(1)\n    &gt;&gt;&gt; list(a)\n    Traceback (most recent call last):\n      ...\n    </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">TypeError: iteration over a 0-d array\n    &gt;&gt;&gt; a.tolist()\n    1"</span>                          <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__module__</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>                                                                                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__name__</span> = <span style="color: #008000; text-decoration-color: #008000">'tolist'</span>                                                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__qualname__</span> = <span style="color: #008000; text-decoration-color: #008000">'ndarray.tolist'</span>                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__self__</span> = <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">array</span><span style="font-weight: bold">([[</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.76405235e+00</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4.00157208e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9.78737984e-01</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                              <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-2.05158264e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3.13067702e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-8.54095739e-01</span><span style="font-weight: bold">]</span>,                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-2.55298982e+00</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">6.53618595e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8.64436199e-01</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                               <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.20237985e+00</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-3.87326817e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-3.02302751e-01</span><span style="font-weight: bold">]</span>,                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.04855297e+00</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.42001794e+00</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.70627019e+00</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                               <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">3.02471898e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-6.34322094e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-3.62741166e-01</span><span style="font-weight: bold">]</span>,                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="color: #808000; text-decoration-color: #808000">...</span>,                                                                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="font-weight: bold">[</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">8.73311836e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.19973618e+00</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4.56153036e-01</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                              <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.24021634e+00</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">9.00054243e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.80224223e+00</span><span style="font-weight: bold">]</span>,                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-2.08285103e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.57437124e+00</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.98989494e-01</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                               <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">4.32837621e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-8.08717532e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.10412399e+00</span><span style="font-weight: bold">]</span>,                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                             <span style="font-weight: bold">[</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-7.89102180e-01</span>,  <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.24845579e-03</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.59939788e-01</span>, <span style="color: #808000; text-decoration-color: #808000">...</span>,                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                               <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.58433847e-01</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.14190142e+00</span>, <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">-1.31097037e+00</span><span style="font-weight: bold">]])</span>                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__text_signature__</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>                                                                                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__call__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__call__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Call self as a function.</span>                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>          <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__class__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">class </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__class__</span><span style="font-weight: bold">()</span>:                                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__delattr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__delattr__</span><span style="font-weight: bold">(</span>name, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Implement </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">delattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__dir__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__dir__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Default </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">dir</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> implementation.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__eq__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__eq__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bfbf7f; text-decoration-color: #bfbf7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">==value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__format__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__format__</span><span style="font-weight: bold">(</span>format_spec, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Default object formatter.</span>                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__ge__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__ge__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&gt;=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__getattribute__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__getattribute__</span><span style="font-weight: bold">(</span>name, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">getattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__gt__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__gt__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&gt;value.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__hash__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__hash__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">hash</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__init__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__init__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Initialize self.  See </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">help</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">type</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">))</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> for accurate </span>        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">signature.</span>                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__init_subclass__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__init_subclass__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">This method is called when a class is subclassed.</span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__le__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__le__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&lt;=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__lt__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__lt__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&lt;value.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__ne__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__ne__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self!=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__new__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__new__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Create and return a new object.  See </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">help</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">type</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> for accurate</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">signature.</span>                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__reduce__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__reduce__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Helper for pickle.</span>                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__reduce_ex__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__reduce_ex__</span><span style="font-weight: bold">(</span>protocol, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Helper for pickle.</span>                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__repr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__repr__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">repr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__setattr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__setattr__</span><span style="font-weight: bold">(</span>name, value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Implement </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">setattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name, value</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__sizeof__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__sizeof__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Size of object in memory, in bytes.</span>                                      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__str__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__str__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">str</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__subclasshook__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__subclasshook__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Abstract classes can override this to customize </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">issubclass</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">lambda</span> x: np.power(x, <span class="dv">3</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.power(x, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"$\sin(x)$"</span>: np.sin,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"$\log(x)$"</span>: np.log,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"$\frac{sin(x)}</span><span class="sc">{x}</span><span class="vs">$"</span>: <span class="kw">lambda</span> x: np.sin(x) <span class="op">/</span> x,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"$x^3$"</span>: <span class="kw">lambda</span> x: np.power(x, <span class="dv">3</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<pre><code>{'$\\sin(x)$': &lt;ufunc 'sin'&gt;,
+ '$\\log(x)$': &lt;ufunc 'log'&gt;,
+ '$\\frac{sin(x)}{x}$': &lt;function __main__.&lt;lambda&gt;(x)&gt;,
+ '$x^3$': &lt;function __main__.&lt;lambda&gt;(x)&gt;}</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="fl">0.005</span>, <span class="fl">10.0</span>, <span class="fl">0.005</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> {k: v(x) <span class="cf">for</span> k, v <span class="kw">in</span> d.items()}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="57">
+<pre><code>{'$\\sin(x)$': array([ 0.00499998,  0.00999983,  0.01499944, ..., -0.53137431,
+        -0.53560333, -0.53981897]),
+ '$\\log(x)$': array([-5.29831737, -4.60517019, -4.19970508, ...,  2.30108397,
+         2.30158459,  2.30208497]),
+ '$\\frac{sin(x)}{x}$': array([ 0.99999583,  0.99998333,  0.9999625 , ..., -0.05321726,
+        -0.05361395, -0.0540089 ]),
+ '$x^3$': array([1.25000000e-07, 1.00000000e-06, 3.37500000e-06, ...,
+        9.95506747e+02, 9.97002999e+02, 9.98500750e+02])}</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(e, index<span class="op">=</span>x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="59">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>$\sin(x)$</th>
+      <th>$\log(x)$</th>
+      <th>$\frac{sin(x)}{x}$</th>
+      <th>$x^3$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.005</th>
+      <td>0.005000</td>
+      <td>-5.298317</td>
+      <td>0.999996</td>
+      <td>1.250000e-07</td>
+    </tr>
+    <tr>
+      <th>0.010</th>
+      <td>0.010000</td>
+      <td>-4.605170</td>
+      <td>0.999983</td>
+      <td>1.000000e-06</td>
+    </tr>
+    <tr>
+      <th>0.015</th>
+      <td>0.014999</td>
+      <td>-4.199705</td>
+      <td>0.999963</td>
+      <td>3.375000e-06</td>
+    </tr>
+    <tr>
+      <th>0.020</th>
+      <td>0.019999</td>
+      <td>-3.912023</td>
+      <td>0.999933</td>
+      <td>8.000000e-06</td>
+    </tr>
+    <tr>
+      <th>0.025</th>
+      <td>0.024997</td>
+      <td>-3.688879</td>
+      <td>0.999896</td>
+      <td>1.562500e-05</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9.975</th>
+      <td>-0.522877</td>
+      <td>2.300082</td>
+      <td>-0.052419</td>
+      <td>9.925187e+02</td>
+    </tr>
+    <tr>
+      <th>9.980</th>
+      <td>-0.527132</td>
+      <td>2.300583</td>
+      <td>-0.052819</td>
+      <td>9.940120e+02</td>
+    </tr>
+    <tr>
+      <th>9.985</th>
+      <td>-0.531374</td>
+      <td>2.301084</td>
+      <td>-0.053217</td>
+      <td>9.955067e+02</td>
+    </tr>
+    <tr>
+      <th>9.990</th>
+      <td>-0.535603</td>
+      <td>2.301585</td>
+      <td>-0.053614</td>
+      <td>9.970030e+02</td>
+    </tr>
+    <tr>
+      <th>9.995</th>
+      <td>-0.539819</td>
+      <td>2.302085</td>
+      <td>-0.054009</td>
+      <td>9.985007e+02</td>
+    </tr>
+  </tbody>
+</table>
+<p>1999 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="64">
+<pre><code>&lt;AxesSubplot:&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="tips_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df.plot(subplots<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>array([&lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;, &lt;AxesSubplot:&gt;],
+      dtype=object)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="tips_files/figure-html/cell-16-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>$\sin$</th>
+      <th>log</th>
+      <th>$\frac{sin(x)}{x}$</th>
+      <th>x^3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.005</th>
+      <td>0.005000</td>
+      <td>-5.298317</td>
+      <td>0.999996</td>
+      <td>1.250000e-07</td>
+    </tr>
+    <tr>
+      <th>0.010</th>
+      <td>0.010000</td>
+      <td>-4.605170</td>
+      <td>0.999983</td>
+      <td>1.000000e-06</td>
+    </tr>
+    <tr>
+      <th>0.015</th>
+      <td>0.014999</td>
+      <td>-4.199705</td>
+      <td>0.999963</td>
+      <td>3.375000e-06</td>
+    </tr>
+    <tr>
+      <th>0.020</th>
+      <td>0.019999</td>
+      <td>-3.912023</td>
+      <td>0.999933</td>
+      <td>8.000000e-06</td>
+    </tr>
+    <tr>
+      <th>0.025</th>
+      <td>0.024997</td>
+      <td>-3.688879</td>
+      <td>0.999896</td>
+      <td>1.562500e-05</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>9.975</th>
+      <td>-0.522877</td>
+      <td>2.300082</td>
+      <td>-0.052419</td>
+      <td>9.925187e+02</td>
+    </tr>
+    <tr>
+      <th>9.980</th>
+      <td>-0.527132</td>
+      <td>2.300583</td>
+      <td>-0.052819</td>
+      <td>9.940120e+02</td>
+    </tr>
+    <tr>
+      <th>9.985</th>
+      <td>-0.531374</td>
+      <td>2.301084</td>
+      <td>-0.053217</td>
+      <td>9.955067e+02</td>
+    </tr>
+    <tr>
+      <th>9.990</th>
+      <td>-0.535603</td>
+      <td>2.301585</td>
+      <td>-0.053614</td>
+      <td>9.970030e+02</td>
+    </tr>
+    <tr>
+      <th>9.995</th>
+      <td>-0.539819</td>
+      <td>2.302085</td>
+      <td>-0.054009</td>
+      <td>9.985007e+02</td>
+    </tr>
+  </tbody>
+</table>
+<p>1999 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>((df <span class="op">-</span> df.<span class="bu">min</span>(axis<span class="op">=</span><span class="dv">0</span>)) <span class="op">/</span> (df.<span class="bu">max</span>(axis<span class="op">=</span><span class="dv">0</span>) <span class="op">-</span> df.<span class="bu">min</span>(axis<span class="op">=</span><span class="dv">0</span>))).plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="65">
+<pre><code>&lt;AxesSubplot:&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="tips_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(np.random.randn(<span class="dv">1000</span>, <span class="dv">5</span>),</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>                  columns<span class="op">=</span><span class="st">"a,b,c,d,e"</span>.split(<span class="st">","</span>))</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+      <th>e</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.593274</td>
+      <td>0.568722</td>
+      <td>-0.114487</td>
+      <td>0.251630</td>
+      <td>-1.210856</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.393734</td>
+      <td>0.085253</td>
+      <td>0.099422</td>
+      <td>-1.530616</td>
+      <td>0.327623</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.279196</td>
+      <td>-0.377051</td>
+      <td>0.004175</td>
+      <td>-1.483492</td>
+      <td>-1.479796</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.134687</td>
+      <td>-0.667723</td>
+      <td>-0.011556</td>
+      <td>0.839491</td>
+      <td>-0.173930</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-2.810668</td>
+      <td>-0.150654</td>
+      <td>-0.481044</td>
+      <td>-0.234694</td>
+      <td>0.899731</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>-0.837658</td>
+      <td>1.315288</td>
+      <td>-0.364523</td>
+      <td>1.993571</td>
+      <td>1.584878</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>-2.104663</td>
+      <td>-2.553118</td>
+      <td>-1.242666</td>
+      <td>0.201987</td>
+      <td>-0.305332</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>-1.195587</td>
+      <td>-1.577903</td>
+      <td>0.849912</td>
+      <td>0.327590</td>
+      <td>-0.001670</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>-0.035563</td>
+      <td>-0.489252</td>
+      <td>1.930498</td>
+      <td>-0.262645</td>
+      <td>0.825932</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>-0.643267</td>
+      <td>-0.828981</td>
+      <td>-0.202735</td>
+      <td>-0.257866</td>
+      <td>0.070815</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 5 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.assign(f<span class="op">=</span>df.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="68">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+      <th>e</th>
+      <th>f</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.593274</td>
+      <td>0.568722</td>
+      <td>-0.114487</td>
+      <td>0.251630</td>
+      <td>-1.210856</td>
+      <td>1.088284</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.393734</td>
+      <td>0.085253</td>
+      <td>0.099422</td>
+      <td>-1.530616</td>
+      <td>0.327623</td>
+      <td>-1.412052</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.279196</td>
+      <td>-0.377051</td>
+      <td>0.004175</td>
+      <td>-1.483492</td>
+      <td>-1.479796</td>
+      <td>-3.056967</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.134687</td>
+      <td>-0.667723</td>
+      <td>-0.011556</td>
+      <td>0.839491</td>
+      <td>-0.173930</td>
+      <td>0.120969</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-2.810668</td>
+      <td>-0.150654</td>
+      <td>-0.481044</td>
+      <td>-0.234694</td>
+      <td>0.899731</td>
+      <td>-2.777329</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>-0.837658</td>
+      <td>1.315288</td>
+      <td>-0.364523</td>
+      <td>1.993571</td>
+      <td>1.584878</td>
+      <td>3.691555</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>-2.104663</td>
+      <td>-2.553118</td>
+      <td>-1.242666</td>
+      <td>0.201987</td>
+      <td>-0.305332</td>
+      <td>-6.003792</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>-1.195587</td>
+      <td>-1.577903</td>
+      <td>0.849912</td>
+      <td>0.327590</td>
+      <td>-0.001670</td>
+      <td>-1.597657</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>-0.035563</td>
+      <td>-0.489252</td>
+      <td>1.930498</td>
+      <td>-0.262645</td>
+      <td>0.825932</td>
+      <td>1.968971</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>-0.643267</td>
+      <td>-0.828981</td>
+      <td>-0.202735</td>
+      <td>-0.257866</td>
+      <td>0.070815</td>
+      <td>-1.862035</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 6 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df.query(<span class="st">"f &gt; 5"</span>)[<span class="st">"f"</span>].std()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<pre><code>0.6609257763922614</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df.query(<span class="st">"f &lt;= 5"</span>)[<span class="st">"f"</span>].std()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="67">
+<pre><code>2.1891090850524444</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"tolist"</span> <span class="kw">in</span> <span class="bu">dir</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="71">
+<pre><code>False</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> search(obj, query):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> re</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: re.search(query, x), <span class="bu">dir</span>(obj)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>search(a, <span class="st">"lis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<pre><code>['tolist']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="98">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> search(obj, query):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> re</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> rich <span class="im">import</span> inspect</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> rich.pretty <span class="im">import</span> Pretty</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> rich.panel <span class="im">import</span> Panel</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: re.search(query, x), <span class="bu">dir</span>(obj)))</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> Panel(Pretty(<span class="st">"a"</span>), title<span class="op">=</span><span class="ss">f"Searching for `</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">`"</span>)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># return p</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    ps <span class="op">=</span> []</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> q <span class="kw">in</span> z:</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>        ps.append(Panel(Pretty(inspect(<span class="bu">getattr</span>(obj, q), methods<span class="op">=</span><span class="va">True</span>, docs<span class="op">=</span><span class="va">True</span>))))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="99">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>search(np.random, <span class="st">"normal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─ </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method lognormal of numpy.random.mtrand.RandomState object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10c627840</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ─╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">RandomState.lognormal</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">lognormal</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">mean</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">sigma</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">size</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">29</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─ </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method multivariate_normal of numpy.random.mtrand.RandomState object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10c627840</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ─╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">RandomState.multivariate_normal</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">multivariate_normal</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">mean, cov, </span><span style="color: #808000; text-decoration-color: #808000">size</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">check_valid</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008000; text-decoration-color: #008000">'warn'</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">tol</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1e-8</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                          <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">29</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰──────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─ </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method normal of numpy.random.mtrand.RandomState object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10c627840</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ─╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">RandomState.normal</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">normal</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">loc</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">scale</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">size</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">29</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰─────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─ </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method standard_normal of numpy.random.mtrand.RandomState object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10c627840</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ─╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">RandomState.standard_normal</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">standard_normal</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">size</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">29</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰──────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">getattr</span>(pd.DataFrame().values, <span class="st">"tolist"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<pre><code>&lt;function ndarray.tolist&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame.to</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>search(df.values, <span class="st">"list"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭───────────────────────────────────────────── Searching for {query} ─────────────────────────────────────────────╮
+│ <span style="font-weight: bold">[</span><span style="color: #008000; text-decoration-color: #008000">'tolist'</span><span style="font-weight: bold">]</span>                                                                                                      │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>search(pd.DataFrame, <span class="st">"to"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ <span style="font-weight: bold">[</span>                                                                                                               │
+│     <span style="color: #008000; text-decoration-color: #008000">'_constructor'</span>,                                                                                             │
+│     <span style="color: #008000; text-decoration-color: #008000">'_constructor_sliced'</span>,                                                                                      │
+│     <span style="color: #008000; text-decoration-color: #008000">'_to_dict_of_blocks'</span>,                                                                                       │
+│     <span style="color: #008000; text-decoration-color: #008000">'kurtosis'</span>,                                                                                                 │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_clipboard'</span>,                                                                                             │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_csv'</span>,                                                                                                   │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_dict'</span>,                                                                                                  │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_excel'</span>,                                                                                                 │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_feather'</span>,                                                                                               │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_gbq'</span>,                                                                                                   │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_hdf'</span>,                                                                                                   │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_html'</span>,                                                                                                  │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_json'</span>,                                                                                                  │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_latex'</span>,                                                                                                 │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_markdown'</span>,                                                                                              │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_numpy'</span>,                                                                                                 │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_orc'</span>,                                                                                                   │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_parquet'</span>,                                                                                               │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_period'</span>,                                                                                                │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_pickle'</span>,                                                                                                │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_records'</span>,                                                                                               │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_sql'</span>,                                                                                                   │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_stata'</span>,                                                                                                 │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_string'</span>,                                                                                                │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_timestamp'</span>,                                                                                             │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_xarray'</span>,                                                                                                │
+│     <span style="color: #008000; text-decoration-color: #008000">'to_xml'</span>                                                                                                    │
+│ <span style="font-weight: bold">]</span>                                                                                                               │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+</div>
+</div>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="st">"normal"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>np.random.normal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="55">
+<pre><code>&lt;function RandomState.normal&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rich <span class="im">import</span> inspect</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>inspect(<span class="bu">eval</span>(<span class="ss">f"np.random.</span><span class="sc">{</span>q<span class="sc">}</span><span class="ss">"</span>), methods<span class="op">=</span><span class="va">True</span>, <span class="bu">all</span><span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">built-in</span><span style="color: #000000; text-decoration-color: #000000"> method normal of numpy.random.mtrand.RandomState object at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10c627840</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ───────────────╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">RandomState.normal</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span>                                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">normal</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">loc</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">scale</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">1.0</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">size</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span>                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__doc__</span> = <span style="color: #008000; text-decoration-color: #008000">'\n        normal(loc=0.0, scale=1.0, size=None)\n\n        Draw random samples from a </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">normal (Gaussian) distribution.\n\n        The probability density function of the normal </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">distribution, first\n        derived by De Moivre and 200 years later by both Gauss and </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Laplace\n        independently [2]_, is often called the bell curve because of\n        </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">its characteristic shape (see the example below).\n\n        The normal distributions </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">occurs often in nature.  For example, it\n        describes the commonly occurring </span>        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">distribution of samples influenced\n        by a large number of tiny, random </span>             <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">disturbances, each with its own\n        unique distribution [2]_.\n\n        .. note::\n </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">New code should use the ``normal`` method of a ``default_rng()``\n            instance </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">instead; please see the :ref:`random-quick-start`.\n\n        Parameters\n        </span>         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">----------\n        loc : float or array_like of floats\n            Mean ("centre") of </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">the distribution.\n        scale : float or array_like of floats\n            Standard </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">deviation (spread or "width") of the distribution. Must be\n            non-negative.\n   </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">size : int or tuple of ints, optional\n            Output shape.  If the given shape is, </span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">e.g., ``(m, n, k)``, then\n            ``m * n * k`` samples are drawn.  If size is </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">``None`` (default),\n            a single value is returned if ``loc`` and ``scale`` are </span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">both scalars.\n            Otherwise, ``np.broadcast(loc, scale).size`` samples are </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">drawn.\n\n        Returns\n        -------\n        out : ndarray or scalar\n            </span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Drawn samples from the parameterized normal distribution.\n\n        See Also\n        </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">--------\n        scipy.stats.norm : probability density function, distribution or\n      </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">cumulative density function, etc.\n        random.Generator.normal: which should be used </span>  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">for new code.\n\n        Notes\n        -----\n        The probability density for the </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Gaussian distribution is\n\n        .. math:: p(x) = \\frac{1}{\\sqrt{ 2 \\pi \\sigma^2 </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">}}\n                         e^{ - \\frac{ (x - \\mu)^2 } {2 \\sigma^2} },\n\n        </span>     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">where :math:`\\mu` is the mean and :math:`\\sigma` the standard\n        deviation. The </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">square of the standard deviation, :math:`\\sigma^2`,\n        is called the variance.\n\n </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">The function has its peak at the mean, and its "spread" increases with\n        the </span>       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">standard deviation (the function reaches 0.607 times its maximum at\n        :math:`x + </span>   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">\\sigma` and :math:`x - \\sigma` [2]_).  This implies that\n        normal is more likely </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">to return samples lying close to the mean, rather\n        than those far away.\n\n       </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">References\n        ----------\n        .. [1] Wikipedia, "Normal distribution",\n        </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">https://en.wikipedia.org/wiki/Normal_distribution\n        .. [2] P. R. Peebles Jr., </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">"Central Limit Theorem" in "Probability,\n               Random Variables and Random </span>      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Signal Principles", 4th ed., 2001,\n               pp. 51, 51, 125.\n\n        Examples\n </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">--------\n        Draw samples from the distribution:\n\n        &gt;&gt;&gt; mu, sigma = 0, 0.1 # </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">mean and standard deviation\n        &gt;&gt;&gt; s = np.random.normal(mu, sigma, 1000)\n\n        </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Verify the mean and the variance:\n\n        &gt;&gt;&gt; abs(mu - np.mean(s))\n        0.0  # may </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">vary\n\n        &gt;&gt;&gt; abs(sigma - np.std(s, ddof=1))\n        0.1  # may vary\n\n        </span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">Display the histogram of the samples, along with\n        the probability density </span>         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">function:\n\n        &gt;&gt;&gt; import matplotlib.pyplot as plt\n        &gt;&gt;&gt; count, bins, ignored</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">= plt.hist(s, 30, density=True)\n        &gt;&gt;&gt; plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi))</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">*\n        ...                np.exp( - (bins - mu)**2 / (2 * sigma**2) ),\n        ...   </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">linewidth=2, color=\'r\')\n        &gt;&gt;&gt; plt.show()\n\n        Two-by-four array of samples </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">from N(3, 6.25):\n\n        &gt;&gt;&gt; np.random.normal(3, 2.5, size=(2, 4))\n        </span>            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">array([[-4.49401501,  4.00950034, -1.81814867,  7.29718677],   # random\n               [ </span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #008000; text-decoration-color: #008000">0.39924804,  4.68456316,  4.99394529,  4.84057254]])  # random\n\n        '</span>                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__module__</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>                                                                                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__name__</span> = <span style="color: #008000; text-decoration-color: #008000">'normal'</span>                                                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>       <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__qualname__</span> = <span style="color: #008000; text-decoration-color: #008000">'RandomState.normal'</span>                                                                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__self__</span> = <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">RandomState</span><span style="font-weight: bold">(</span>MT19937<span style="font-weight: bold">)</span> at <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10C627840</span>                                                        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__text_signature__</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>                                                                                       <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__call__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__call__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Call self as a function.</span>                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>          <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__class__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">class </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__class__</span><span style="font-weight: bold">()</span>:                                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__delattr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__delattr__</span><span style="font-weight: bold">(</span>name, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Implement </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">delattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__dir__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__dir__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Default </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">dir</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> implementation.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__eq__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__eq__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bfbf7f; text-decoration-color: #bfbf7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">==value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__format__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__format__</span><span style="font-weight: bold">(</span>format_spec, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Default object formatter.</span>                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__ge__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__ge__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&gt;=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__getattribute__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__getattribute__</span><span style="font-weight: bold">(</span>name, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">getattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__gt__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__gt__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&gt;value.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__hash__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__hash__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">hash</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__init__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__init__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Initialize self.  See </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">help</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">type</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">))</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> for accurate </span>        <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">signature.</span>                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>  <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__init_subclass__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__init_subclass__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">This method is called when a class is subclassed.</span>               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__le__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__le__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&lt;=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__lt__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__lt__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self&lt;value.</span>                                                   <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>             <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__ne__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__ne__</span><span style="font-weight: bold">(</span>value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return self!=value.</span>                                                  <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__new__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__new__</span><span style="font-weight: bold">(</span>*args, **kwargs<span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Create and return a new object.  See </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">help</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">type</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f"> for accurate</span> <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                      <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">signature.</span>                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__reduce__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__reduce__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Helper for pickle.</span>                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>      <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__reduce_ex__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__reduce_ex__</span><span style="font-weight: bold">(</span>protocol, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Helper for pickle.</span>                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>           <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__repr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__repr__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">repr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>        <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__setattr__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__setattr__</span><span style="font-weight: bold">(</span>name, value, <span style="color: #800080; text-decoration-color: #800080">/</span><span style="font-weight: bold">)</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Implement </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">setattr</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self, name, value</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>         <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__sizeof__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__sizeof__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Size of object in memory, in bytes.</span>                                      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>            <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__str__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__str__</span><span style="font-weight: bold">()</span>: <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Return </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">str</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">(</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">self</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">)</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>   <span style="color: #bfbf7f; text-decoration-color: #bfbf7f; font-style: italic">__subclasshook__</span> = <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">__subclasshook__</span><span style="font-weight: bold">(</span><span style="color: #808000; text-decoration-color: #808000">...</span><span style="font-weight: bold">)</span> <span style="color: #7f7f7f; text-decoration-color: #7f7f7f">Abstract classes can override this to customize </span><span style="color: #bf7fbf; text-decoration-color: #bf7fbf; font-weight: bold">issubclass</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold">()</span><span style="color: #7f7f7f; text-decoration-color: #7f7f7f">.</span>    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>inspect(inspect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─────────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">function</span><span style="color: #000000; text-decoration-color: #000000"> inspect at </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0x10f3fc550</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ───────────────────────────────────────╮</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #00ffff; text-decoration-color: #00ffff; font-style: italic">def </span><span style="color: #800000; text-decoration-color: #800000; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>obj: Any, *, console: Optional<span style="font-weight: bold">[</span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">ForwardRef</span><span style="font-weight: bold">(</span><span style="color: #008000; text-decoration-color: #008000">'Console'</span><span style="font-weight: bold">)]</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, title: Optional<span style="font-weight: bold">[</span>str<span style="font-weight: bold">]</span> = <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>, help:    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> bool = <span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span>, methods: bool = <span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span>, docs: bool = <span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span>, private: bool = <span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span>, dunder: bool = <span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span>, sort: bool <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> = <span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span>, all: bool = <span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span>, value: bool = <span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="font-weight: bold">)</span> -&gt; <span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span>:                                                         <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Inspect any Python object.</span>                                                                                      <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;)</span><span style="color: #008080; text-decoration-color: #008080"> to see summarized info.</span>                                                                     <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">methods</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> to see methods.</span>                                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">help</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> to see full </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">non-abbreviated</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> help.</span>                                              <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">private</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> to see private attributes </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">single underscore</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">dunder</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> to see attributes beginning with double underscore.</span>                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">* </span><span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">OBJECT</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">&gt;</span><span style="color: #008080; text-decoration-color: #008080">, </span><span style="color: #808000; text-decoration-color: #808000">all</span><span style="color: #008080; text-decoration-color: #008080">=</span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080"> to see all attributes.</span>                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">Args:</span>                                                                                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    obj </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">Any</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: An object to inspect.</span>                                                                            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    title </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">str, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Title to display over inspect result, or </span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080"> use type. Defaults to </span><span style="color: #800080; text-decoration-color: #800080; font-style: italic">None</span><span style="color: #008080; text-decoration-color: #008080">.</span>            <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    help </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Show full help text rather than just first paragraph. Defaults to </span><span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="color: #008080; text-decoration-color: #008080">.</span>             <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    methods </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Enable inspection of callables. Defaults to </span><span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    docs </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Also render doc strings. Defaults to </span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    private </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Show private attributes </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">beginning with underscore</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">. Defaults to </span><span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="color: #008080; text-decoration-color: #008080">.</span>           <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    dunder </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Show attributes starting with double underscore. Defaults to </span><span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="color: #008080; text-decoration-color: #008080">.</span>                <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    sort </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Sort attributes alphabetically. Defaults to </span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    all </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Show all attributes. Defaults to </span><span style="color: #ff0000; text-decoration-color: #ff0000; font-style: italic">False</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080">    value </span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">(</span><span style="color: #008080; text-decoration-color: #008080">bool, optional</span><span style="color: #008080; text-decoration-color: #008080; font-weight: bold">)</span><span style="color: #008080; text-decoration-color: #008080">: Pretty print value. Defaults to </span><span style="color: #00ff00; text-decoration-color: #00ff00; font-style: italic">True</span><span style="color: #008080; text-decoration-color: #008080">.</span>                                               <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span>                                                                                                                 <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">│</span> <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">35</span><span style="font-style: italic"> attribute(s) not shown.</span> Run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">inspect</span><span style="font-weight: bold">(</span>inspect<span style="font-weight: bold">)</span> for options.                                                    <span style="color: #000080; text-decoration-color: #000080">│</span>
+<span style="color: #000080; text-decoration-color: #000080">╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+</pre>
+</div>
+</div>
+<div class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="at">@dataclass</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> InventoryItem:</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class for keeping track of an item in inventory."""</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>    name: <span class="bu">str</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>    unit_price: <span class="bu">float</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>    quantity_on_hand: <span class="bu">int</span> <span class="op">=</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> InventoryItem(<span class="st">"A"</span>, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="76">
+<pre><code>InventoryItem(name='A', unit_price=20, quantity_on_hand=0)</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> InventoryItemOld:</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, unit_price: <span class="bu">float</span>, </span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>                 quantity_on_hand: <span class="bu">int</span> <span class="op">=</span> <span class="dv">0</span>):</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.unit_price <span class="op">=</span> unit_price</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.quantity_on_hand <span class="op">=</span> quantity_on_hand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> InventoryItemOld(<span class="st">"A"</span>, <span class="dv">2</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<pre><code>&lt;__main__.InventoryItemOld at 0x166340430&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greeting(name: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'Hello '</span> <span class="op">+</span> name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>greeting(<span class="st">"Abc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="71">
+<pre><code>'Hello Abc'</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>greeting(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

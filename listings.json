@@ -1,0 +1,55 @@
+[
+  {
+    "listing": "/notebooks/index.html",
+    "items": [
+      "/notebooks/posts/mle.html",
+      "/notebooks/posts/log-sum-exp.html",
+      "/notebooks/posts/svm-rbf.html",
+      "/notebooks/posts/svm-soft-margin.html",
+      "/notebooks/posts/svm-rbf-gamma.html",
+      "/notebooks/posts/svm.html",
+      "/notebooks/posts/svm-kernel.html",
+      "/notebooks/posts/kmeans-init.html",
+      "/notebooks/posts/kmeans-num-clusters.html",
+      "/notebooks/posts/hierarchial-clustering.html",
+      "/notebooks/posts/curse-dimensionality.html",
+      "/notebooks/posts/kmeans-segmentation.html",
+      "/notebooks/posts/image-completion.html",
+      "/notebooks/posts/movie-recommendation-knn-mf.html",
+      "/notebooks/posts/parametric-non-parametric.html",
+      "/notebooks/posts/autodiff-helper.html",
+      "/notebooks/posts/1d-cnn.html",
+      "/notebooks/posts/knn-lsh.html",
+      "/notebooks/posts/cnn.html",
+      "/notebooks/posts/names.html",
+      "/notebooks/posts/autodiff-jax-torch.html",
+      "/notebooks/posts/logistic.html",
+      "/notebooks/posts/nn.html",
+      "/notebooks/posts/gd.html",
+      "/notebooks/posts/taylor.html",
+      "/notebooks/posts/condition-inverse.html",
+      "/notebooks/posts/projection.html",
+      "/notebooks/posts/maths-jax.html",
+      "/notebooks/posts/cnn-edge.html",
+      "/notebooks/posts/lowrank-matrix.html",
+      "/notebooks/posts/python-utils.html",
+      "/notebooks/posts/split.html",
+      "/notebooks/posts/hyperparameter-1.html",
+      "/notebooks/posts/dt-reg.html",
+      "/notebooks/posts/pivot-cross.html",
+      "/notebooks/posts/tips.html"
+    ]
+  },
+  {
+    "listing": "/quizzes.html",
+    "items": [
+      "/exams/prereq.html",
+      "/exams/q1.html",
+      "/exams/q2.html",
+      "/exams/q3.html",
+      "/exams/q4.html",
+      "/exams/assignment-5.html",
+      "/exams/q5.html"
+    ]
+  }
+]
