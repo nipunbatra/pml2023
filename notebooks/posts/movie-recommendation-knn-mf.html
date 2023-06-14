@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,9 +20,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -49,43 +50,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -123,7 +94,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
@@ -144,44 +116,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">ES654</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../grading.html">
+    <a class="nav-link" href="../../grading.html" rel="" target="">
  <span class="menu-text">Grading Policy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../faq.html">
+    <a class="nav-link" href="../../faq.html" rel="" target="">
  <span class="menu-text">FAQs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../schedule.html">
+    <a class="nav-link" href="../../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../quizzes.html">
+    <a class="nav-link" href="../../quizzes.html" rel="" target="">
  <span class="menu-text">Quizzes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/index.html">
+    <a class="nav-link" href="../../notebooks/index.html" rel="" target="">
  <span class="menu-text">Notebooks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://nipunbatra.github.io">
+    <a class="nav-link" href="https://nipunbatra.github.io" rel="" target="">
  <span class="menu-text">Instructor Homepage</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -267,87 +239,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>user_id</th>
-      <th>movie_id</th>
-      <th>rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>66</td>
-      <td>7</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>54</td>
-      <td>7</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>38</td>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>56</td>
-      <td>6</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>987</th>
-      <td>77</td>
-      <td>8</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>992</th>
-      <td>99</td>
-      <td>3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>994</th>
-      <td>8</td>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>998</th>
-      <td>22</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>999</th>
-      <td>88</td>
-      <td>9</td>
-      <td>1</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">user_id</th>
+<th data-quarto-table-cell-role="th">movie_id</th>
+<th data-quarto-table-cell-role="th">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>66</td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>54</td>
+<td>7</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>38</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">987</td>
+<td>77</td>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">992</td>
+<td>99</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">994</td>
+<td>8</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">998</td>
+<td>22</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">999</td>
+<td>88</td>
+<td>9</td>
+<td>1</td>
+</tr>
+</tbody>
 </table>
+
 <p>642 rows × 3 columns</p>
 </div>
 </div>
@@ -358,184 +331,185 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'user_id'</span>, columns<span class="op">=</span><span class="st">'movie_id'</span>, values<span class="op">=</span><span class="st">'rating'</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th>movie_id</th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-    <tr>
-      <th>user_id</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">movie_id</th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">user_id</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">96</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">98</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">99</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>NaN</td>
+</tr>
+</tbody>
 </table>
+
 <p>100 rows × 10 columns</p>
 </div>
 </div>
@@ -546,184 +520,185 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th>movie_id</th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-    <tr>
-      <th>user_id</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">movie_id</th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">user_id</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">96</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">98</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">99</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>0.0</td>
+</tr>
+</tbody>
 </table>
+
 <p>100 rows × 10 columns</p>
 </div>
 </div>
@@ -759,303 +734,304 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(sim_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>...</th>
-      <th>90</th>
-      <th>91</th>
-      <th>92</th>
-      <th>93</th>
-      <th>94</th>
-      <th>95</th>
-      <th>96</th>
-      <th>97</th>
-      <th>98</th>
-      <th>99</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.000000</td>
-      <td>0.717428</td>
-      <td>0.663734</td>
-      <td>0.565794</td>
-      <td>0.547289</td>
-      <td>0.742468</td>
-      <td>0.539472</td>
-      <td>0.599021</td>
-      <td>0.748964</td>
-      <td>0.523832</td>
-      <td>...</td>
-      <td>0.876593</td>
-      <td>0.593722</td>
-      <td>0.615664</td>
-      <td>0.722496</td>
-      <td>0.783190</td>
-      <td>0.657754</td>
-      <td>0.665375</td>
-      <td>0.446627</td>
-      <td>0.774667</td>
-      <td>0.703313</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.717428</td>
-      <td>1.000000</td>
-      <td>0.650769</td>
-      <td>0.591169</td>
-      <td>0.559964</td>
-      <td>0.585314</td>
-      <td>0.300491</td>
-      <td>0.255039</td>
-      <td>0.693395</td>
-      <td>0.500193</td>
-      <td>...</td>
-      <td>0.609392</td>
-      <td>0.313893</td>
-      <td>0.510454</td>
-      <td>0.550459</td>
-      <td>0.624622</td>
-      <td>0.493197</td>
-      <td>0.644346</td>
-      <td>0.476288</td>
-      <td>0.802740</td>
-      <td>0.781611</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.663734</td>
-      <td>0.650769</td>
-      <td>1.000000</td>
-      <td>0.758954</td>
-      <td>0.406780</td>
-      <td>0.372046</td>
-      <td>0.416654</td>
-      <td>0.270593</td>
-      <td>0.746685</td>
-      <td>0.560180</td>
-      <td>...</td>
-      <td>0.519274</td>
-      <td>0.322243</td>
-      <td>0.772529</td>
-      <td>0.253842</td>
-      <td>0.712485</td>
-      <td>0.257761</td>
-      <td>0.322830</td>
-      <td>0.283373</td>
-      <td>0.441886</td>
-      <td>0.459929</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.565794</td>
-      <td>0.591169</td>
-      <td>0.758954</td>
-      <td>1.000000</td>
-      <td>0.549030</td>
-      <td>0.540128</td>
-      <td>0.671775</td>
-      <td>0.572892</td>
-      <td>0.611794</td>
-      <td>0.489225</td>
-      <td>...</td>
-      <td>0.424052</td>
-      <td>0.586110</td>
-      <td>0.456327</td>
-      <td>0.506719</td>
-      <td>0.715831</td>
-      <td>0.210494</td>
-      <td>0.506585</td>
-      <td>0.492312</td>
-      <td>0.551652</td>
-      <td>0.424052</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.547289</td>
-      <td>0.559964</td>
-      <td>0.406780</td>
-      <td>0.549030</td>
-      <td>1.000000</td>
-      <td>0.354329</td>
-      <td>0.304478</td>
-      <td>0.541185</td>
-      <td>0.821353</td>
-      <td>0.202287</td>
-      <td>...</td>
-      <td>0.667638</td>
-      <td>0.527306</td>
-      <td>0.339913</td>
-      <td>0.435159</td>
-      <td>0.582943</td>
-      <td>0.478699</td>
-      <td>0.417780</td>
-      <td>0.450063</td>
-      <td>0.502836</td>
-      <td>0.741820</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>0.657754</td>
-      <td>0.493197</td>
-      <td>0.257761</td>
-      <td>0.210494</td>
-      <td>0.478699</td>
-      <td>0.519615</td>
-      <td>0.452602</td>
-      <td>0.571548</td>
-      <td>0.551553</td>
-      <td>0.405674</td>
-      <td>...</td>
-      <td>0.564076</td>
-      <td>0.556890</td>
-      <td>0.604211</td>
-      <td>0.682793</td>
-      <td>0.661382</td>
-      <td>1.000000</td>
-      <td>0.412568</td>
-      <td>0.796715</td>
-      <td>0.678637</td>
-      <td>0.693008</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>0.665375</td>
-      <td>0.644346</td>
-      <td>0.322830</td>
-      <td>0.506585</td>
-      <td>0.417780</td>
-      <td>0.853538</td>
-      <td>0.359095</td>
-      <td>0.538977</td>
-      <td>0.351369</td>
-      <td>0.191776</td>
-      <td>...</td>
-      <td>0.498686</td>
-      <td>0.640033</td>
-      <td>0.190421</td>
-      <td>0.690704</td>
-      <td>0.682163</td>
-      <td>0.412568</td>
-      <td>1.000000</td>
-      <td>0.280141</td>
-      <td>0.734105</td>
-      <td>0.581800</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>0.446627</td>
-      <td>0.476288</td>
-      <td>0.283373</td>
-      <td>0.492312</td>
-      <td>0.450063</td>
-      <td>0.400743</td>
-      <td>0.709211</td>
-      <td>0.532239</td>
-      <td>0.469979</td>
-      <td>0.566223</td>
-      <td>...</td>
-      <td>0.262641</td>
-      <td>0.446564</td>
-      <td>0.501441</td>
-      <td>0.689500</td>
-      <td>0.637007</td>
-      <td>0.796715</td>
-      <td>0.280141</td>
-      <td>1.000000</td>
-      <td>0.659366</td>
-      <td>0.481508</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>0.774667</td>
-      <td>0.802740</td>
-      <td>0.441886</td>
-      <td>0.551652</td>
-      <td>0.502836</td>
-      <td>0.844146</td>
-      <td>0.446610</td>
-      <td>0.473016</td>
-      <td>0.617575</td>
-      <td>0.335738</td>
-      <td>...</td>
-      <td>0.546861</td>
-      <td>0.500390</td>
-      <td>0.305585</td>
-      <td>0.673754</td>
-      <td>0.687116</td>
-      <td>0.678637</td>
-      <td>0.734105</td>
-      <td>0.659366</td>
-      <td>1.000000</td>
-      <td>0.600213</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>0.703313</td>
-      <td>0.781611</td>
-      <td>0.459929</td>
-      <td>0.424052</td>
-      <td>0.741820</td>
-      <td>0.527274</td>
-      <td>0.294579</td>
-      <td>0.578997</td>
-      <td>0.732042</td>
-      <td>0.435869</td>
-      <td>...</td>
-      <td>0.818182</td>
-      <td>0.615435</td>
-      <td>0.581559</td>
-      <td>0.645439</td>
-      <td>0.623673</td>
-      <td>0.693008</td>
-      <td>0.581800</td>
-      <td>0.481508</td>
-      <td>0.600213</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">90</th>
+<th data-quarto-table-cell-role="th">91</th>
+<th data-quarto-table-cell-role="th">92</th>
+<th data-quarto-table-cell-role="th">93</th>
+<th data-quarto-table-cell-role="th">94</th>
+<th data-quarto-table-cell-role="th">95</th>
+<th data-quarto-table-cell-role="th">96</th>
+<th data-quarto-table-cell-role="th">97</th>
+<th data-quarto-table-cell-role="th">98</th>
+<th data-quarto-table-cell-role="th">99</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.000000</td>
+<td>0.717428</td>
+<td>0.663734</td>
+<td>0.565794</td>
+<td>0.547289</td>
+<td>0.742468</td>
+<td>0.539472</td>
+<td>0.599021</td>
+<td>0.748964</td>
+<td>0.523832</td>
+<td>...</td>
+<td>0.876593</td>
+<td>0.593722</td>
+<td>0.615664</td>
+<td>0.722496</td>
+<td>0.783190</td>
+<td>0.657754</td>
+<td>0.665375</td>
+<td>0.446627</td>
+<td>0.774667</td>
+<td>0.703313</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0.717428</td>
+<td>1.000000</td>
+<td>0.650769</td>
+<td>0.591169</td>
+<td>0.559964</td>
+<td>0.585314</td>
+<td>0.300491</td>
+<td>0.255039</td>
+<td>0.693395</td>
+<td>0.500193</td>
+<td>...</td>
+<td>0.609392</td>
+<td>0.313893</td>
+<td>0.510454</td>
+<td>0.550459</td>
+<td>0.624622</td>
+<td>0.493197</td>
+<td>0.644346</td>
+<td>0.476288</td>
+<td>0.802740</td>
+<td>0.781611</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.663734</td>
+<td>0.650769</td>
+<td>1.000000</td>
+<td>0.758954</td>
+<td>0.406780</td>
+<td>0.372046</td>
+<td>0.416654</td>
+<td>0.270593</td>
+<td>0.746685</td>
+<td>0.560180</td>
+<td>...</td>
+<td>0.519274</td>
+<td>0.322243</td>
+<td>0.772529</td>
+<td>0.253842</td>
+<td>0.712485</td>
+<td>0.257761</td>
+<td>0.322830</td>
+<td>0.283373</td>
+<td>0.441886</td>
+<td>0.459929</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.565794</td>
+<td>0.591169</td>
+<td>0.758954</td>
+<td>1.000000</td>
+<td>0.549030</td>
+<td>0.540128</td>
+<td>0.671775</td>
+<td>0.572892</td>
+<td>0.611794</td>
+<td>0.489225</td>
+<td>...</td>
+<td>0.424052</td>
+<td>0.586110</td>
+<td>0.456327</td>
+<td>0.506719</td>
+<td>0.715831</td>
+<td>0.210494</td>
+<td>0.506585</td>
+<td>0.492312</td>
+<td>0.551652</td>
+<td>0.424052</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0.547289</td>
+<td>0.559964</td>
+<td>0.406780</td>
+<td>0.549030</td>
+<td>1.000000</td>
+<td>0.354329</td>
+<td>0.304478</td>
+<td>0.541185</td>
+<td>0.821353</td>
+<td>0.202287</td>
+<td>...</td>
+<td>0.667638</td>
+<td>0.527306</td>
+<td>0.339913</td>
+<td>0.435159</td>
+<td>0.582943</td>
+<td>0.478699</td>
+<td>0.417780</td>
+<td>0.450063</td>
+<td>0.502836</td>
+<td>0.741820</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>0.657754</td>
+<td>0.493197</td>
+<td>0.257761</td>
+<td>0.210494</td>
+<td>0.478699</td>
+<td>0.519615</td>
+<td>0.452602</td>
+<td>0.571548</td>
+<td>0.551553</td>
+<td>0.405674</td>
+<td>...</td>
+<td>0.564076</td>
+<td>0.556890</td>
+<td>0.604211</td>
+<td>0.682793</td>
+<td>0.661382</td>
+<td>1.000000</td>
+<td>0.412568</td>
+<td>0.796715</td>
+<td>0.678637</td>
+<td>0.693008</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">96</td>
+<td>0.665375</td>
+<td>0.644346</td>
+<td>0.322830</td>
+<td>0.506585</td>
+<td>0.417780</td>
+<td>0.853538</td>
+<td>0.359095</td>
+<td>0.538977</td>
+<td>0.351369</td>
+<td>0.191776</td>
+<td>...</td>
+<td>0.498686</td>
+<td>0.640033</td>
+<td>0.190421</td>
+<td>0.690704</td>
+<td>0.682163</td>
+<td>0.412568</td>
+<td>1.000000</td>
+<td>0.280141</td>
+<td>0.734105</td>
+<td>0.581800</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>0.446627</td>
+<td>0.476288</td>
+<td>0.283373</td>
+<td>0.492312</td>
+<td>0.450063</td>
+<td>0.400743</td>
+<td>0.709211</td>
+<td>0.532239</td>
+<td>0.469979</td>
+<td>0.566223</td>
+<td>...</td>
+<td>0.262641</td>
+<td>0.446564</td>
+<td>0.501441</td>
+<td>0.689500</td>
+<td>0.637007</td>
+<td>0.796715</td>
+<td>0.280141</td>
+<td>1.000000</td>
+<td>0.659366</td>
+<td>0.481508</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">98</td>
+<td>0.774667</td>
+<td>0.802740</td>
+<td>0.441886</td>
+<td>0.551652</td>
+<td>0.502836</td>
+<td>0.844146</td>
+<td>0.446610</td>
+<td>0.473016</td>
+<td>0.617575</td>
+<td>0.335738</td>
+<td>...</td>
+<td>0.546861</td>
+<td>0.500390</td>
+<td>0.305585</td>
+<td>0.673754</td>
+<td>0.687116</td>
+<td>0.678637</td>
+<td>0.734105</td>
+<td>0.659366</td>
+<td>1.000000</td>
+<td>0.600213</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">99</td>
+<td>0.703313</td>
+<td>0.781611</td>
+<td>0.459929</td>
+<td>0.424052</td>
+<td>0.741820</td>
+<td>0.527274</td>
+<td>0.294579</td>
+<td>0.578997</td>
+<td>0.732042</td>
+<td>0.435869</td>
+<td>...</td>
+<td>0.818182</td>
+<td>0.615435</td>
+<td>0.581559</td>
+<td>0.645439</td>
+<td>0.623673</td>
+<td>0.693008</td>
+<td>0.581800</td>
+<td>0.481508</td>
+<td>0.600213</td>
+<td>1.000000</td>
+</tr>
+</tbody>
 </table>
+
 <p>100 rows × 100 columns</p>
 </div>
 </div>
@@ -1111,119 +1087,120 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>show_neighbors(A, <span class="dv">0</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th>movie_id</th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-    <tr>
-      <th>user_id</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">movie_id</th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">user_id</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">28</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">46</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">90</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">87</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1261,105 +1238,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(<span class="st">"mov-rec.xlsx"</span>)</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Timestamp</th>
-      <th>Your name</th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2023-04-11 10:58:44.990</td>
-      <td>Nipun</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2023-04-11 10:59:49.617</td>
-      <td>Gautam Vashishtha</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2023-04-11 11:12:44.033</td>
-      <td>Eshan Gujarathi</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2023-04-11 11:13:48.674</td>
-      <td>Sai Krishna Avula</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2023-04-11 11:13:55.658</td>
-      <td>Ankit Yadav</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Timestamp</th>
+<th data-quarto-table-cell-role="th">Your name</th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2023-04-11 10:58:44.990</td>
+<td>Nipun</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2023-04-11 10:59:49.617</td>
+<td>Gautam Vashishtha</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2023-04-11 11:12:44.033</td>
+<td>Eshan Gujarathi</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2023-04-11 11:13:48.674</td>
+<td>Sai Krishna Avula</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2023-04-11 11:13:55.658</td>
+<td>Ankit Yadav</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1373,626 +1351,627 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.set_index(<span class="st">'Your name'</span>)</span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-    <tr>
-      <th>Your name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nipun</th>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Gautam Vashishtha</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Eshan Gujarathi</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Sai Krishna Avula</th>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Ankit Yadav</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Dhruv</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Saatvik Rao</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Zeel B Patel</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Neel</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Sachin Jalan</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Ayush Shrivastava</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>....</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Hari Hara Sudhan</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Etikikota Hrushikesh</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Chirag</th>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Aaryan Darad</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Hetvi Patel</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Kalash Kankaria</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Rachit Verma</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>shriraj</th>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Bhavini Korthi</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Hitarth Gandhi</th>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Radhika Joglekar</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Medhansh Singh</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Arun Mani</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Satyam</th>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Karan Kumar</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>R Yeeshu Dhurandhar</th>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>Satyam Gupta</th>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>rushali</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>shridhar</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Tanvi Jain</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Manish Prabhubhai Salvi</th>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Varun Barala</th>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Kevin Shah</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Inderjeet</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Gangaram Siddam</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Aditi</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Madhuri Awachar</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Anupam</th>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Jinay</th>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Shrutimoy</th>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Aadesh Desai</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Dhairya</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Rahul C</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Your name</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Nipun</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Gautam Vashishtha</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Eshan Gujarathi</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sai Krishna Avula</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Ankit Yadav</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Dhruv</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Saatvik Rao</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Zeel B Patel</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>2.0</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Neel</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sachin Jalan</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Ayush Shrivastava</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">....</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Hari Hara Sudhan</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Etikikota Hrushikesh</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Chirag</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Aaryan Darad</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Hetvi Patel</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Kalash Kankaria</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Rachit Verma</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">shriraj</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Bhavini Korthi</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Hitarth Gandhi</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Radhika Joglekar</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Medhansh Singh</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Arun Mani</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Satyam</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Karan Kumar</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">R Yeeshu Dhurandhar</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Satyam Gupta</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">rushali</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">shridhar</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Tanvi Jain</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Manish Prabhubhai Salvi</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Varun Barala</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Kevin Shah</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Inderjeet</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Gangaram Siddam</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Aditi</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Madhuri Awachar</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Anupam</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Jinay</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Shrutimoy</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>2.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Aadesh Desai</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Dhairya</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Rahul C</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2044,251 +2023,253 @@ Name: Rahul C, dtype: float64</code></pre>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>df_copy.fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>show_neighbors(df_copy, user, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-    <tr>
-      <th>Your name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Rahul C</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>Shrutimoy</th>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>Hitarth Gandhi</th>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>R Yeeshu Dhurandhar</th>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>shridhar</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Sachin Jalan</th>
-      <td>4.0</td>
-      <td>0.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>3.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Your name</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Rahul C</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Shrutimoy</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>2.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Hitarth Gandhi</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">R Yeeshu Dhurandhar</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">shridhar</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sachin Jalan</td>
+<td>4.0</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>0.0</td>
+<td>3.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>39.000000</td>
-      <td>32.000000</td>
-      <td>38.000000</td>
-      <td>43.000000</td>
-      <td>45.000000</td>
-      <td>44.000000</td>
-      <td>35.000000</td>
-      <td>40.000000</td>
-      <td>21.000000</td>
-      <td>39.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>4.102564</td>
-      <td>3.718750</td>
-      <td>4.131579</td>
-      <td>4.581395</td>
-      <td>3.644444</td>
-      <td>3.977273</td>
-      <td>4.400000</td>
-      <td>4.250000</td>
-      <td>3.476190</td>
-      <td>4.230769</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.753758</td>
-      <td>0.958304</td>
-      <td>0.991070</td>
-      <td>0.793802</td>
-      <td>1.003529</td>
-      <td>1.067242</td>
-      <td>0.976187</td>
-      <td>1.080123</td>
-      <td>0.813575</td>
-      <td>0.902089</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>3.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>2.000000</td>
-      <td>2.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>4.000000</td>
-      <td>3.000000</td>
-      <td>4.000000</td>
-      <td>4.000000</td>
-      <td>3.000000</td>
-      <td>3.000000</td>
-      <td>4.000000</td>
-      <td>4.000000</td>
-      <td>3.000000</td>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>4.000000</td>
-      <td>4.000000</td>
-      <td>4.000000</td>
-      <td>5.000000</td>
-      <td>4.000000</td>
-      <td>4.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>3.000000</td>
-      <td>4.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>5.000000</td>
-      <td>4.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>4.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>4.000000</td>
-      <td>5.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-      <td>5.000000</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>39.000000</td>
+<td>32.000000</td>
+<td>38.000000</td>
+<td>43.000000</td>
+<td>45.000000</td>
+<td>44.000000</td>
+<td>35.000000</td>
+<td>40.000000</td>
+<td>21.000000</td>
+<td>39.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>4.102564</td>
+<td>3.718750</td>
+<td>4.131579</td>
+<td>4.581395</td>
+<td>3.644444</td>
+<td>3.977273</td>
+<td>4.400000</td>
+<td>4.250000</td>
+<td>3.476190</td>
+<td>4.230769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>0.753758</td>
+<td>0.958304</td>
+<td>0.991070</td>
+<td>0.793802</td>
+<td>1.003529</td>
+<td>1.067242</td>
+<td>0.976187</td>
+<td>1.080123</td>
+<td>0.813575</td>
+<td>0.902089</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>3.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>2.000000</td>
+<td>2.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>4.000000</td>
+<td>3.000000</td>
+<td>4.000000</td>
+<td>4.000000</td>
+<td>3.000000</td>
+<td>3.000000</td>
+<td>4.000000</td>
+<td>4.000000</td>
+<td>3.000000</td>
+<td>4.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>4.000000</td>
+<td>4.000000</td>
+<td>4.000000</td>
+<td>5.000000</td>
+<td>4.000000</td>
+<td>4.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>3.000000</td>
+<td>4.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>5.000000</td>
+<td>4.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>4.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>4.000000</td>
+<td>5.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+<td>5.000000</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2445,171 +2426,172 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(torch.mm(W, H).detach().numpy())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-1.733831</td>
-      <td>2.962563</td>
-      <td>-0.009936</td>
-      <td>-0.591927</td>
-      <td>2.442282</td>
-      <td>-0.533001</td>
-      <td>-0.500535</td>
-      <td>-0.777075</td>
-      <td>-0.427938</td>
-      <td>-0.050505</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>-1.605388</td>
-      <td>2.875087</td>
-      <td>0.171515</td>
-      <td>-0.770741</td>
-      <td>2.594427</td>
-      <td>-0.652586</td>
-      <td>-0.512620</td>
-      <td>-0.953935</td>
-      <td>-0.329276</td>
-      <td>-0.023146</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.159360</td>
-      <td>-0.289060</td>
-      <td>-0.022038</td>
-      <td>0.082685</td>
-      <td>-0.266777</td>
-      <td>0.069192</td>
-      <td>0.052250</td>
-      <td>0.101196</td>
-      <td>0.030828</td>
-      <td>0.001642</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>-3.637741</td>
-      <td>4.346515</td>
-      <td>-2.580031</td>
-      <td>1.911339</td>
-      <td>0.407374</td>
-      <td>1.134387</td>
-      <td>-0.353923</td>
-      <td>1.689442</td>
-      <td>-1.846117</td>
-      <td>-0.440421</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1.706123</td>
-      <td>-2.207651</td>
-      <td>0.978520</td>
-      <td>-0.611154</td>
-      <td>-0.617788</td>
-      <td>-0.328235</td>
-      <td>0.228982</td>
-      <td>-0.492014</td>
-      <td>0.780051</td>
-      <td>0.176302</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>1.362280</td>
-      <td>-2.751892</td>
-      <td>-0.572962</td>
-      <td>1.180665</td>
-      <td>-2.989312</td>
-      <td>0.929992</td>
-      <td>0.551276</td>
-      <td>1.363935</td>
-      <td>0.121039</td>
-      <td>-0.036218</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>1.432943</td>
-      <td>-1.514237</td>
-      <td>1.287248</td>
-      <td>-1.086741</td>
-      <td>0.338909</td>
-      <td>-0.685343</td>
-      <td>0.065700</td>
-      <td>-1.016967</td>
-      <td>0.827599</td>
-      <td>0.208897</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>0.381086</td>
-      <td>0.345669</td>
-      <td>1.366953</td>
-      <td>-1.551476</td>
-      <td>1.978570</td>
-      <td>-1.084161</td>
-      <td>-0.261282</td>
-      <td>-1.599606</td>
-      <td>0.599750</td>
-      <td>0.189461</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>-3.364117</td>
-      <td>6.450801</td>
-      <td>0.942667</td>
-      <td>-2.333749</td>
-      <td>6.511645</td>
-      <td>-1.880903</td>
-      <td>-1.232884</td>
-      <td>-2.755594</td>
-      <td>-0.473888</td>
-      <td>0.027722</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>0.877697</td>
-      <td>-1.631227</td>
-      <td>-0.175042</td>
-      <td>0.521516</td>
-      <td>-1.568212</td>
-      <td>0.428319</td>
-      <td>0.302370</td>
-      <td>0.626961</td>
-      <td>0.149908</td>
-      <td>0.002033</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>-1.733831</td>
+<td>2.962563</td>
+<td>-0.009936</td>
+<td>-0.591927</td>
+<td>2.442282</td>
+<td>-0.533001</td>
+<td>-0.500535</td>
+<td>-0.777075</td>
+<td>-0.427938</td>
+<td>-0.050505</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>-1.605388</td>
+<td>2.875087</td>
+<td>0.171515</td>
+<td>-0.770741</td>
+<td>2.594427</td>
+<td>-0.652586</td>
+<td>-0.512620</td>
+<td>-0.953935</td>
+<td>-0.329276</td>
+<td>-0.023146</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.159360</td>
+<td>-0.289060</td>
+<td>-0.022038</td>
+<td>0.082685</td>
+<td>-0.266777</td>
+<td>0.069192</td>
+<td>0.052250</td>
+<td>0.101196</td>
+<td>0.030828</td>
+<td>0.001642</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>-3.637741</td>
+<td>4.346515</td>
+<td>-2.580031</td>
+<td>1.911339</td>
+<td>0.407374</td>
+<td>1.134387</td>
+<td>-0.353923</td>
+<td>1.689442</td>
+<td>-1.846117</td>
+<td>-0.440421</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>1.706123</td>
+<td>-2.207651</td>
+<td>0.978520</td>
+<td>-0.611154</td>
+<td>-0.617788</td>
+<td>-0.328235</td>
+<td>0.228982</td>
+<td>-0.492014</td>
+<td>0.780051</td>
+<td>0.176302</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>1.362280</td>
+<td>-2.751892</td>
+<td>-0.572962</td>
+<td>1.180665</td>
+<td>-2.989312</td>
+<td>0.929992</td>
+<td>0.551276</td>
+<td>1.363935</td>
+<td>0.121039</td>
+<td>-0.036218</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">96</td>
+<td>1.432943</td>
+<td>-1.514237</td>
+<td>1.287248</td>
+<td>-1.086741</td>
+<td>0.338909</td>
+<td>-0.685343</td>
+<td>0.065700</td>
+<td>-1.016967</td>
+<td>0.827599</td>
+<td>0.208897</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>0.381086</td>
+<td>0.345669</td>
+<td>1.366953</td>
+<td>-1.551476</td>
+<td>1.978570</td>
+<td>-1.084161</td>
+<td>-0.261282</td>
+<td>-1.599606</td>
+<td>0.599750</td>
+<td>0.189461</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">98</td>
+<td>-3.364117</td>
+<td>6.450801</td>
+<td>0.942667</td>
+<td>-2.333749</td>
+<td>6.511645</td>
+<td>-1.880903</td>
+<td>-1.232884</td>
+<td>-2.755594</td>
+<td>-0.473888</td>
+<td>0.027722</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">99</td>
+<td>0.877697</td>
+<td>-1.631227</td>
+<td>-0.175042</td>
+<td>0.521516</td>
+<td>-1.568212</td>
+<td>0.428319</td>
+<td>0.302370</td>
+<td>0.626961</td>
+<td>0.149908</td>
+<td>0.002033</td>
+</tr>
+</tbody>
 </table>
+
 <p>100 rows × 10 columns</p>
 </div>
 </div>
@@ -2617,171 +2599,172 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>1.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">96</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">97</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">98</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>2.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>1.0</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">99</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 <p>100 rows × 10 columns</p>
 </div>
 </div>
@@ -2915,108 +2898,110 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(torch.mm(W, H).detach().numpy()).head(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3.622862</td>
-      <td>3.536414</td>
-      <td>3.945925</td>
-      <td>2.985436</td>
-      <td>2.999869</td>
-      <td>2.749094</td>
-      <td>2.605484</td>
-      <td>2.758482</td>
-      <td>2.209353</td>
-      <td>3.361388</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.622746</td>
-      <td>3.547434</td>
-      <td>3.798462</td>
-      <td>3.133817</td>
-      <td>3.271342</td>
-      <td>3.176287</td>
-      <td>3.221505</td>
-      <td>3.073355</td>
-      <td>2.856927</td>
-      <td>3.383140</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>3.622862</td>
+<td>3.536414</td>
+<td>3.945925</td>
+<td>2.985436</td>
+<td>2.999869</td>
+<td>2.749094</td>
+<td>2.605484</td>
+<td>2.758482</td>
+<td>2.209353</td>
+<td>3.361388</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.622746</td>
+<td>3.547434</td>
+<td>3.798462</td>
+<td>3.133817</td>
+<td>3.271342</td>
+<td>3.176287</td>
+<td>3.221505</td>
+<td>3.073355</td>
+<td>2.856927</td>
+<td>3.383140</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <div class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(A).head(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -3072,108 +3057,110 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(torch.mm(W,H).detach().numpy()).head(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.014621</td>
-      <td>5.012642</td>
-      <td>4.012176</td>
-      <td>3.013239</td>
-      <td>4.012656</td>
-      <td>3.010292</td>
-      <td>1.012815</td>
-      <td>3.011410</td>
-      <td>3.015494</td>
-      <td>4.012996</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2.987797</td>
-      <td>2.986945</td>
-      <td>3.989305</td>
-      <td>3.987498</td>
-      <td>3.988829</td>
-      <td>1.989375</td>
-      <td>4.989910</td>
-      <td>1.987138</td>
-      <td>1.986990</td>
-      <td>3.987026</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.014621</td>
+<td>5.012642</td>
+<td>4.012176</td>
+<td>3.013239</td>
+<td>4.012656</td>
+<td>3.010292</td>
+<td>1.012815</td>
+<td>3.011410</td>
+<td>3.015494</td>
+<td>4.012996</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2.987797</td>
+<td>2.986945</td>
+<td>3.989305</td>
+<td>3.987498</td>
+<td>3.988829</td>
+<td>1.989375</td>
+<td>4.989910</td>
+<td>1.987138</td>
+<td>1.986990</td>
+<td>3.987026</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <div class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(A).head(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="35">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">0</th>
+<th data-quarto-table-cell-role="th">1</th>
+<th data-quarto-table-cell-role="th">2</th>
+<th data-quarto-table-cell-role="th">3</th>
+<th data-quarto-table-cell-role="th">4</th>
+<th data-quarto-table-cell-role="th">5</th>
+<th data-quarto-table-cell-role="th">6</th>
+<th data-quarto-table-cell-role="th">7</th>
+<th data-quarto-table-cell-role="th">8</th>
+<th data-quarto-table-cell-role="th">9</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -3730,87 +3717,88 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'user'</span>: users, <span class="st">'movie'</span>: movies, <span class="st">'rating'</span>: ratings})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>user</th>
-      <th>movie</th>
-      <th>rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>1</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>2</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>4</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>5</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>6</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>512</th>
-      <td>98</td>
-      <td>8</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>513</th>
-      <td>98</td>
-      <td>9</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>514</th>
-      <td>99</td>
-      <td>0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>515</th>
-      <td>99</td>
-      <td>4</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>516</th>
-      <td>99</td>
-      <td>6</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">user</th>
+<th data-quarto-table-cell-role="th">movie</th>
+<th data-quarto-table-cell-role="th">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0</td>
+<td>1</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0</td>
+<td>2</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0</td>
+<td>4</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0</td>
+<td>5</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0</td>
+<td>6</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">512</td>
+<td>98</td>
+<td>8</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">513</td>
+<td>98</td>
+<td>9</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">514</td>
+<td>99</td>
+<td>0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">515</td>
+<td>99</td>
+<td>4</td>
+<td>2.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">516</td>
+<td>99</td>
+<td>6</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 <p>517 rows × 3 columns</p>
 </div>
 </div>
@@ -3939,87 +3927,88 @@ Name: Rahul C, dtype: float64</code></pre>
 <div class="cell" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'user'</span>: users, <span class="st">'movie'</span>: movies, <span class="st">'rating'</span>: ratings})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="56">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>user</th>
-      <th>movie</th>
-      <th>rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>1</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>2</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>3</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>4</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>371</th>
-      <td>44</td>
-      <td>3</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>372</th>
-      <td>44</td>
-      <td>4</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>373</th>
-      <td>44</td>
-      <td>5</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>374</th>
-      <td>44</td>
-      <td>6</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>375</th>
-      <td>44</td>
-      <td>7</td>
-      <td>5.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">user</th>
+<th data-quarto-table-cell-role="th">movie</th>
+<th data-quarto-table-cell-role="th">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0</td>
+<td>0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0</td>
+<td>1</td>
+<td>5.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0</td>
+<td>2</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0</td>
+<td>3</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0</td>
+<td>4</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">371</td>
+<td>44</td>
+<td>3</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">372</td>
+<td>44</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">373</td>
+<td>44</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">374</td>
+<td>44</td>
+<td>6</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">375</td>
+<td>44</td>
+<td>7</td>
+<td>5.0</td>
+</tr>
+</tbody>
 </table>
+
 <p>376 rows × 3 columns</p>
 </div>
 </div>
@@ -4121,212 +4110,214 @@ Name: Dhruv, dtype: float64</code></pre>
 <div class="cell" data-execution_count="62">
 <div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>completed_matrix.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="62">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-    <tr>
-      <th>Your name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nipun</th>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Gautam Vashishtha</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Eshan Gujarathi</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Sai Krishna Avula</th>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>6.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Ankit Yadav</th>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Your name</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Nipun</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Gautam Vashishtha</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Eshan Gujarathi</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sai Krishna Avula</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>6.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Ankit Yadav</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
 <div class="cell" data-execution_count="63">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="63">
-
 <div>
 
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Sholay</th>
-      <th>Swades (We The People)</th>
-      <th>The Matrix (I)</th>
-      <th>Interstellar</th>
-      <th>Dangal</th>
-      <th>Taare Zameen Par</th>
-      <th>Shawshank Redemption</th>
-      <th>The Dark Knight</th>
-      <th>Notting Hill</th>
-      <th>Uri: The Surgical Strike</th>
-    </tr>
-    <tr>
-      <th>Your name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nipun</th>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>Gautam Vashishtha</th>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Eshan Gujarathi</th>
-      <td>4.0</td>
-      <td>NaN</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Sai Krishna Avula</th>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-      <td>4.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>Ankit Yadav</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>5.0</td>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>4.0</td>
-    </tr>
-  </tbody>
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Sholay</th>
+<th data-quarto-table-cell-role="th">Swades (We The People)</th>
+<th data-quarto-table-cell-role="th">The Matrix (I)</th>
+<th data-quarto-table-cell-role="th">Interstellar</th>
+<th data-quarto-table-cell-role="th">Dangal</th>
+<th data-quarto-table-cell-role="th">Taare Zameen Par</th>
+<th data-quarto-table-cell-role="th">Shawshank Redemption</th>
+<th data-quarto-table-cell-role="th">The Dark Knight</th>
+<th data-quarto-table-cell-role="th">Notting Hill</th>
+<th data-quarto-table-cell-role="th">Uri: The Surgical Strike</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Your name</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Nipun</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Gautam Vashishtha</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Eshan Gujarathi</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>NaN</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sai Krishna Avula</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Ankit Yadav</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>2.0</td>
+<td>5.0</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -4476,9 +4467,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -4543,6 +4548,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
