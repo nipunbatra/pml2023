@@ -1,0 +1,69 @@
+---
+title: Quiz 4 (25 March)
+date: 2023-03-25
+format:
+    # include-in-header: 
+    #     text: |
+    #         \pagenumbering{gobble}
+    #         \usepackage{amsmath}
+    #         \usepackage{amsfonts}
+    #         \usepackage{bm}
+
+    # geometry:
+    #     - top=7mm
+    #     - left=7mm
+    #     - right=7mm
+    #     - bottom=7mm
+    #     - heightrounded
+    # fontfamily: libertine
+    # colorlinks: true
+  html:
+    default
+    # include-in-header: 
+    #     text: |
+    #         \pagenumbering{gobble}
+    #         \usepackage{amsmath}
+    #         \usepackage{amsfonts}
+    #         \usepackage{bm}
+
+    # geometry:
+    #     - top=7mm
+    #     - left=7mm
+    #     - right=7mm
+    #     - bottom=7mm
+    #     - heightrounded
+    # fontfamily: libertine
+    # colorlinks: true
+---
+- Total Time: 1 hour 15 mins AND Total Marks: 10
+
+\includegraphics[width=0.66\textwidth]{db.png}
+
+1. Consider the figure above, where we fit the model $p(y=1 \mid \mathbf{x}, \bm{{\theta}})=\sigma\left(\theta_0+\theta_1 x_1+\theta_2 x_2\right)$ by maximum likelihood, i.e., we minimize $J_a({\theta})=-\ell\left(\bm{{\theta}}, \mathcal{D}_{\text {train }}\right)$
+where $\ell\left(\bm{{\theta}}, \mathcal{D}_{\text {train }}\right)$ is the log likelihood on the training set. In the questions below, **when multiple decision boundaries are possible, you should choose the one which minimizes the number of classification errors on the training dataset.**
+    - (a) Sketch a decision boundary for the model. How many classification errors does your method make? (1 mark)
+    - (b) Now, we regularize **only** the $\theta_0$ parameter, i.e., we minimize: $J_b({\theta})=-\ell\left(\bm{{\theta}}, \mathcal{D}_{\text {train }}\right)+\lambda \theta_0^2$. Suppose $\lambda$ is a very large number, so we regularize $\theta_0$ all the way to 0, but all other parameters are unregularized. Sketch a possible decision boundary. How many classification errors does your method make? (1 mark)
+    - (c) Repeat part (b), but we now instead regularize the $\theta_1$ parameter. (1 mark)
+    - (d) Repeat part (b), but we now instead regularize the $\theta_2$ parameter. (1 mark)
+
+2. Prove that softmax is equivalent to sigmoid when there are only two classes. (1 mark)
+
+3. $y = \sigma(z)$, where $\sigma$ is the sigmoid function. We also know that $z = f(a)$. Find $\dfrac{\partial y}{\partial a}$.  (1 mark)
+
+4. Let us consider a $K$-class logistic regression problem. For some example, $x$, we get our outputs before the application of softmax as: $z_1=x^T\theta_1$, $\cdots , z_k=x^T\theta_k$, $\cdots ,z_K=x^T\theta_K$. We denote the vector of outputs as 
+$\vec{z} = \left[\begin{array}{@{}c@{}}
+    z_{1} \\
+    z_{2} \\
+    \vdots \\
+    z_{K} 
+    \end{array} \right]$
+
+We will try to now use the cross entropy loss function to train our model. One of the terms in the cross entropy loss function is: $\log\left(\frac{e^{z_k}}{\sum_{j=1}^K e^{z_j}}\right)$ which we refer to as $\mathrm{LOGSOFTMAX}(z_k, \vec{z})$.
+However, we find that $\mathrm{LOGSOFTMAX}(z_k, \vec{z})$ cannot be computed directly for several cases. When $z_k$ is a large number (e.g. 5000), a computer is unable to compute $e^{z_k}$ as an overflow occurs ($e^{z_k}$ = inf). When $z_k$ is a large negative number (e.g. -5000), $e^{z_k}$ = 0.0.
+
+- (a) What problem occurs in computing $\mathrm{LOGSOFTMAX}(z_k, \vec{z})$ when all elements of $\vec{z}$ are large (in magnitude) negative numbers (e.g. all $z_i < -6000$)? (1 mark)
+
+- (b) Modify the $\mathrm{LOGSOFTMAX}(z_k, \vec{z})$ expression using some **trick** so that we are able to compute it for any $z_k$ and $\vec{z}$. You need to show the steps/simplifications you make. Show that this trick solves both the above problems (overflow and the problem you find in part (a) of this question) (2 marks)
+
+
+5. We use a new type of coin for coin toss experiments. For this coin, the probability of heads goes down exponentially with the draw. Assuming the probaility of heads for the first draw ($i=1$) is $\theta$ and for the $i$th draw is $\theta_i = \dfrac{\theta}{2^{i-1}}$. What is the maximum likelihood estimate for $\theta$ for obtaining the draws as: T, H, H. Assume that each draw is independent of the others. Ofcourse, the identical assumption can not be made. (1 mark)

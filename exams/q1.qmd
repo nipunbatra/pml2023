@@ -1,0 +1,46 @@
+---
+title: Quiz 1 (18 Jan)
+date: 2023-01-18
+---
+
+### Instructions
+- Total Time: 30 mins
+---
+1. Remember the entropy discussion we had in the lecture. We saw that for the Tennis example, the maximum entropy is 1.0. What is the maximum entropy an Imagenet classification problem, where we have 1024 classes? **[1 mark]**
+2. Given the following dataset, what attribute/feature would the decision tree algorithm choose to split the data on for the first iteration? Why? **[1 mark]**
+
+| Sample # | Tomato radius | Tomato weight | Tomato color | Tomato quality |
+|----------|---------------|---------------|--------------|----------------|
+| 1        | 1             | 1             | 1            |  Good        |
+| 2        | 1             | 1             | 2            |  Good        |
+| 3        | 1             | 2             | 1            |  Bad         |
+| 4        | 1             | 2             | 2            |  Bad         |
+| 5        | 2             | 1             | 1            |  Good        |
+| 6        | 2             | 2             | 2            |  Good        |
+
+
+
+3. In the lectures we saw that `np.std(x)` and `pd.Series(x).std()` are different. Why? **[1 mark]**
+
+4. Quoting Wikipedia: 
+
+>Pruning is a data compression technique in machine learning and search algorithms that reduces the size of decision trees by removing sections of the tree that are non-critical and redundant to classify instances. Pruning reduces the complexity of the final classifier, and hence improves predictive accuracy by the reduction of overfitting.
+
+>Pre-pruning procedures prevent a complete induction of the training set by replacing a stop () criterion in the induction algorithm (e.g. max. Tree depth or information gain (Attr)> minGain). Pre-pruning methods are do not induce an entire set, but rather trees remain small from the start. 
+
+Create a decision tree for the following classification problem. Explain why the pre-pruning using information gain approach can be limiting? **[2 marks]**
+
+| $x_1$ | $x_2$ | $y$ |
+|----|----|---|
+| 0  | 0  | 0 |
+| 0  | 1  | 1 |
+| 1  | 0  | 1 |
+| 1  | 1  | 0 |
+
+5. Visualize the decision tree for the following regression problem, where the ground truth is the function $y = x + 2$. Use $x = \{1, 2, \cdots 4\}$ as the training dataset. Also visualize the learnt function **[2 marks]**
+
+6. Create an example ground truth and prediction where the mean absolute error is 100 and mean error is 0. **[0.5 marks]**
+
+7. Create one confusion matrix for 100 total examples where the precision is 0.8, recall is 0.5. **[1 mark]**
+
+8. Show visualisation of `1d` regression problem for continuous inputs showing a good fit, a high bias and a high variance fit. **[1.5 mark]**

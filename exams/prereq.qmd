@@ -1,0 +1,63 @@
+---
+title: "Prerequsite test"
+date: 2023-01-05
+---
+
+# Instructions
+
+
+1. This test is open book, open internet, open notes. You can use any resources you want to solve the problems.
+2. You should be typing your answers in a Jupyter notebook. 
+3. The submission would be a link to a public GitHub repository containing the notebook. Fill [this](https://forms.gle/xtZtBcD1ReVjT7M19) form to submit your solution. 
+4. A random subset of students may have a viva post the exam. The viva would be based on the notebook and the solutions you have provided.
+5. The test is open till 6th January 2022 9 PM. You can submit your solutions anytime before that.
+6. This problem has to be solved individually. You cannot collaborate with anyone else.
+7. The code should be written using Python. 
+8. Some questions may require you to answer in text. You can use markdown cells to write your answers. Some questions may require you to write code. You can use code cells to write your code. Some questions may require you to write mathematical expressions. You can use LaTeX to write your expressions. You can write such LaTeX expressions in markdown cells.
+9. For any other questions, please ask on the General channel on Slack.
+
+
+
+--- 
+
+# Questions
+1. How many multiplications and additions do you need to perform a matrix multiplication between a (n, k) and (k, m) matrix? Explain.
+2. Write Python code to multiply the above two matrices. Solve using list of lists and then use numpy. Compare the timing of both solutions. Which one is faster? Why?
+3. Finding the highest element in a list requires one pass of the array. Finding the second highest element requires 2 passes of the the array. Using this method, what is the time complexity of finding the median of the array? Can you suggest a better method? Can you implement both these methods in Python and compare against `numpy.median` routine in terms of time?
+4. What is the gradient of the following function with respect to x and y?
+$$
+x^2y+y^3\sin(x)
+$$
+
+5. Use `JAX` to confirm the gradient evaluated by your method matches the analytical solution corresponding to a few random values of x and y
+6. Use `sympy` to confirm that you obtain the same gradient analytically.
+7. Create a Python nested dictionary to represent hierarchical information. We want to store record of students and their marks. Something like:
+   1. 2022
+      1. Branch 1
+         1. Roll Number: 1, Name: N, Marks:
+            1. Maths: 100, English: 70 ...
+      2. Branch 2
+   2. 2023
+      1. Branch 1
+      2. Branch 2
+   3. 2024
+      1. Branch 1
+      2. Branch 2
+   4. 2025
+      1. Branch 1
+      2. Branch 2
+8. Store the same information using Python classes. We have an overall database which is a list of year objects. Each year contains a list of branches. Each branch contains a list of students. Each student has some properties like name, roll number and has marks in some subjects.
+9. Using matplotlib plot the following functions on the domain: x = 0.5 to 100.0 in steps of 0.5.
+   1. $y = x$
+   2. $y = x^2$
+   3. $y = \frac{x^3}{100}$
+   4. $y = \sin(x)$
+   5. $y = \frac{\sin(x)}{x}$
+   6. $y = \log(x)$
+   7. $y = e^x$
+10. Using numpy generate a matrix of size `20X5` containing random numbers drawn uniformly from the range of 1 to 2. Using Pandas create a dataframe out of this matrix. Name the columns of the dataframe as "a", "b", "c", "d", "e". Find the column with the highest standard deviation. Find the row with the lowest mean.
+11. Add a new column to the dataframe called "f" which is the sum of the columns "a", "b", "c", "d", "e". Create another column called "g". The value in the column "g" should be "LT8" if the value in the column "f" is less than 8 and "GT8" otherwise. Find the number of rows in the dataframe where the value in the column "g" is "LT8". Find the standard deviation of the column "f" for the rows where the value in the column "g" is "LT8" and "GT8" respectively.
+12. Write a small piece of code to explain broadcasting in numpy.
+13. Write a function to compute the `argmin` of a numpy array. The function should take a numpy array as input and return the index of the minimum element. You can use the `np.argmin` function to verify your solution.
+
+

@@ -1,0 +1,20 @@
+---
+title: "Grading Policy"
+---
+
+
+- Quizzes: 60%
+    - 10% each
+    - Best 6 out of 8
+---
+
+- Assignments: 40%
+    - Variable weight (e.g. some assignments would be 5%, some 10%, etc.)
+    - Some assignments would involve:
+        - Making pull requests to public repositories
+        - Writing Hugging Face Spaces like demos
+---
+
+- Bonus: up to 6%
+    - Making a non-trivial pull request to a well-starred public repo (4%)
+    - Getting the PR accepted (2%)

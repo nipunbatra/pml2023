@@ -1,0 +1,77 @@
+---
+title: "FAQ"
+---
+
+
+#### Prerequisites
+
+- What are the course prerequisites?
+    - The course has no "formal" prerequisites like all courses at IITGn. However, it is assumed that you have a basic understanding of: 
+        - programming (Python), and data structures (ES242 equivalent)
+        - probability and statistics 
+        - linear algebra 
+        - calculus 
+- How can I prepare for the prerequisite exam?
+    - Your UG course material should be sufficient to prepare for the exam.
+    - You may additionally refer to the "prerequisite" reading section on the [course homepage](./index.html).
+- What happens if I do not clear the prerequisite exam?
+    - You will not be allowed to take the course.
+- What do you mean by "clear" the exam?
+    - Like all courses at IITGn, the instructor will decide the cut-off for the exam. You will have to score above the cut-off to clear the exam. No cut-off will be revealed to the students apriori.
+
+---
+
+#### Quizzes
+
+- What happens if I miss a quiz due to any reason?
+    - The quiz will be marked as 0.
+    - The provision of best 6 out of 8 quizzes is designed keeping in mind such scenarios.
+- Will the quizzes and end-semester exam be open book? Will I be allowed to carry notes?
+    - No, the exams and quizzes will be closed book. You are not permitted to carry notes.
+- How soon can I expect to receive my answer sheets back?
+    - You should expect to receive answer sheets back in 4-5 working days.
+- Is there an end-semester exam or mid-semester exam?
+    - No, there is no end-semester exam or mid-semester exam. However, some of the quizzes may be held in the exam slot. In total we will have 8 equal weightage quizzes. The best 6 out of them will be considered for the final grade.
+- Will the quizzes be MCQs or subjective?
+    - The quizzes may contain both the MCQs and subjective questions.
+---
+
+#### Assignments
+- What happens if I miss an assignment due to any reason?
+    - There will no extensions for assignments.
+- I have a doubt in the assignment. Whom should I write to?
+    - Ask on the slack General channel. If you don't get a response within 2 days, write to the course instructor.
+- I do not know Python. Can I code assignments in some other language?
+    - Unfortunately, no. You have to stick to Python.
+- How will you evaluate the assignment?
+    - The assignments would be followed by a viva. The TAs would first check the code and compare against the submission. Any change from the submitted code is not allowed and any instance of the same would culminate in a warning. The TAs would run the code and ask a few questions. About 75% of these questions would be based on the assignment in question and about 25% would be based on the theory behind the concepts covered in the assignment. 
+    - The grade breakup would be: i) code runs correctly and solves the problem [50% marks]; ii) questions based on the assignment and student understanding of code [25% marks]; iii) code quality [12.5% marks]; iv) questions based on the theory behind the concepts covered in the assignments [12.5% marks]
+- Is the assignment individual or group?
+    - The assignment is TBA. In case of group, all team members get the same grade for the assignment.
+
+---
+
+#### Attendance
+
+- Attendance policy
+    - Attendance is not mandatory, but highly encouraged. Marks often correlated with attendance. 
+
+---
+
+
+#### Projects
+
+- Is there a project component in the course?
+    - No. There is no project component in the course. 
+
+---
+
+#### Bonus
+
+- Can I choose a PR of my choice.
+    - Yes, you can choose a PR of your choice from a list of PRs decided by the teaching staff. The teaching staff hold the right to decide whether a PR is suitable or not.
+
+
+
+
+

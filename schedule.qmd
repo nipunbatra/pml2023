@@ -1,0 +1,40 @@
+---
+title: "Schedule"
+---
+
+|Lecture #|Date|Topic|
+|:---:|:---:|:---|
+|1|3 Jan|Introduction and Logistics [[Slides](lectures/1-introduction.pdf)]|
+|None| 4 Jan|[Pre-requisites quiz released](https://nipunbatra.github.io/ml2023/exams/prereq.html)|
+|2|5 Jan|Convention, Metrics, Classification, Regression [[Slides](lectures/accuracy.pdf)]|
+|3|10 Jan|Decision Trees - 1[[Slides](lectures/decision-tree-1.pdf)][[Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/tips.html)]|
+|4|12 Jan|Decision Trees - 2[[Slides](lectures/decision-tree-2-bias-variance-1.pdf)][[Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/pivot-cross.html)]|
+|5|17 Jan|Bias and Variance[[Slides](lectures/bias-variance-1.pdf)][[Notebook on Python utils](https://nipunbatra.github.io/ml2023/notebooks/posts/python-utils.html)][[Notebook on Grid Search](https://nipunbatra.github.io/ml2023/notebooks/posts/hyperparameter-1.html)]|
+|None| 18 Jan| Quiz 1|
+|6|19 Jan| Bias, Variance 2, Cross Validation[[Slides](lectures/cross-validation.pdf)]|
+|7|24 Jan| Ensemble Methods[[Slides](lectures/ensemble.pdf)]| 
+|8|31 Jan| Ensemble Methods[[Slides](lectures/ensemble.pdf)], Weighted samples in decision trees[[Slides](lectures/dt-weighted.pdf)], Maths for ML-1 [[Slides](lectures/ml-maths.pdf)] [[Notebook-1](https://nipunbatra.github.io/ml2023/notebooks/posts/maths-jax.html)] [[Notebook 2](https://nipunbatra.github.io/ml2023/notebooks/posts/lowrank-matrix.html)], [[Streamlit app](notebooks/posts/streamlit-app.py)] Linear Regression [[Slides](lectures/linear-regression.pdf)]|
+|9| 2 Feb| Linear Regression [[Slides](lectures/linear-regression.pdf)], Contour Plots [[Slides](lectures/ml-maths-2-contour.pdf)], Geometric View of Linear Regression [[Slides](lectures/geometric-regression.pdf)]|
+|10| 9 Feb| Linear Regression II [[Slides](lectures/linear-regression-2.pdf)]|
+|11| 14 Feb| Gradient Descent [[Slides](lectures/Gradient-descent.pdf)], [Taylor's Series](https://www.youtube.com/watch?v=3d6DsjIBzJ4&t), [Notebook on Taylor's series](https://nipunbatra.github.io/ml2023/notebooks/posts/taylor.html), [Reference on relationship between Taylor's series and GD](https://www.cs.princeton.edu/courses/archive/fall18/cos597G/lecnotes/lecture3.pdf), [Reference 2](https://ekamperi.github.io/machine%20learning/2019/07/28/gradient-descent.html)|
+|12| 16 Feb| Gradient Descent [[Slides](lectures/Gradient-descent.pdf)] [Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/gd.html)|
+|13| 21 Feb|Gradient Descent continued, [[Ridge Regression](lectures/ridge-regression.pdf)], [[Streamlit demo](https://nipunbatra-ml-ridge.streamlit.app)], [[Additional reading on SGD being an unbiased estimator](https://florian.github.io/estimators/)]|
+|14| 23 Feb|Ridge regression, [LASSO](lectures/lasso-regression.pdf), [[Interactive article on Optimization algorithms](https://fa.bianp.net/teaching/2018/COMP-652/stochastic_gradient.html)]|
+|15| 28 Feb|Logistic regression [[Slides](lectures/logistic-1.pdf)], [[Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/logistic.html)] (best run locally to render interactive visualisations)|
+|16| 2 Mar|Logistic regression [[Slides](lectures/logistic-1.pdf)]|
+|17| 14 Mar| Logistic regression [[Slides](lectures/logistic-1.pdf)]|
+|18| 16 Mar| MLP [[Slides](lectures/mlp.pdf)]|
+|19| 21 Mar| MLP [[Slides](lectures/mlp.pdf)], [Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/nn.html)|
+|20| 28 Mar| MLP [[Slides](lectures/mlp.pdf)]|
+|21| 30 Mar| Next work prediction [[Slides](lectures/next-token.pdf)], [Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/names.html)|
+|22| 4 Apr | Convolutional Neural Networks [[Slides](lectures/CNN.pdf)], [1d CNN slides](lectures/1d-cnn.pdf), [Notebook 1](https://nipunbatra.github.io/ml2023/notebooks/posts/cnn.html), [Notebook 2](https://nipunbatra.github.io/ml2023/notebooks/posts/cnn-edge.html), [Notebook 3](https://nipunbatra.github.io/ml2023/notebooks/posts/1d-cnn.html), [Equivariance v/s Invariance](https://www.doc.ic.ac.uk/~bkainz/teaching/DL/notes/equivariance.pdf), [Reference1](https://poloclub.github.io/cnn-explainer/), [Reference2](https://e2eml.school/how_convolutional_neural_networks_work.html), [Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/cnn.html)|
+|23| 6 Apr| Autograd  [[Slides](lectures/autograd.pdf)], [Notebook on Autodiff](https://nipunbatra.github.io/ml2023/notebooks/posts/autodiff-helper.html), [Reference on chain rule](https://tutorial.math.lamar.edu/classes/calciii/chainrule.aspx) Naive Bayes [[Slides](lectures/naive-bayes.pdf)]|
+|24| 11 Apr| Naive Bayes [[Slides](lectures/naive-bayes.pdf)], KNN [[Slides](lectures/knn.pdf)]|
+|25| 13 Apr| KNN, [Parametric v/s Non-Parametric](https://nipunbatra.github.io/ml2023/notebooks/posts/parametric-non-parametric.html), [Movie Recommendation](https://nipunbatra.github.io/ml2023/notebooks/posts/movie-recommendation-knn-mf.html)|
+|26| 18 Apr| [Curse of Dimensionality](https://nipunbatra.github.io/ml2023/notebooks/posts/curse-dimensionality.html), [Segment Anything demo](https://segment-anything.com), Unsupervised learning, [Image segmentation](https://nipunbatra.github.io/ml2023/notebooks/posts/kmeans-segmentation.html), [Image completion](https://nipunbatra.github.io/ml2023/notebooks/posts/image-completion.html), KMeans [Viz 1](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/), [Viz 2](http://alekseynp.com/viz/k-means.html), [PCA reference](https://www.youtube.com/watch?v=g-Hb26agBFg)|
+|27| 20 Apr| [Constrained Optimization (self study)](https://www.youtube.com/watch?v=rjq0g-ugwwg), [Support Vector Machines -1](lectures/svm-intro.pdf)|
+|28| 23 Apr| [Support Vector Machines](lectures/svm-intro.pdf)|
+|29| 25 Apr| [Support Vector Machines (Soft Margin)](lectures/svm-soft-margin.pdf)|
+
+
+

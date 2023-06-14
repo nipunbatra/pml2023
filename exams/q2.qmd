@@ -1,0 +1,53 @@
+---
+title: Quiz 2 (8 Feb)
+date: 2023-02-08
+format:
+  # pdf:
+  #   include-in-header: 
+  #       text: '\pagenumbering{gobble}'
+  #   geometry:
+  #       - top=10mm
+  #       - left=10mm
+  #       - right=10mm
+  #       - heightrounded
+  #   fontfamily: libertine
+  #   colorlinks: true
+  html:
+    default
+---
+- Total Time: 1 hour 15 mins AND Total Marks: 10
+
+1. In bootstrap sampling, we sample with replacement from the original dataset. Let us assume that the original dataset of size $N$ has all distinct elements. As an example if $N=8$, we may have the dataset as $\{1, 2,3, 4, 5, 6, 7, 8\}$. A bootstrap sample (or round) is also of size $N$ and can contain some elements more than once. For example, a bootstrap sample may be $\{8, 8, 3, 4, 5, 1, 8, 5\}$. The unique elements in this sample are: $\{1, 3, 4, 5, 8\}$. This sample has 5 unique elements. Show that on average the number of unique elements in a bootstrap sample is $63.2\%$ of $N$. **[1.5 marks]**
+
+
+2. We studied the ADABoost classification algorithm for binary classification. We wrote the final prediction as:
+$\mathrm{SIGN}(\sum{\alpha_i}h_i(x))$ where $\alpha_i$ is the weight of the classifier $h_i$ and $h_i(x)$ is the prediction of the classifier $h_i$ on the input $x$. We also noted that each prediction $h_i(x)$ is either $+1$ or $-1$. 
+
+    Extend ADABoost to multi-class classification where we have $K$ classes and each classifier predicts one of the $K$ classes (a number from $\{1 \cdots K\}$). As an example, if we have $m=4$ members in the ensemble, we may have something like $h_1(x) = 1$, $h_2(x) = 2$, $h_3(x) = 3$ and $h_4(x) = 2$. Now, write the formula for prediction for multi-class classification using the ensemble of classifiers, i.e. for any input $x$, which class amongst $\{1 \cdots K\}$) will be predicted as a function of $\alpha_i$s and $h_i(x)$? Note: do not use the concept of one-vs-one or one-vs-all here.   **[2 marks]**
+
+
+3. Which hyperparameter can you vary to control the bias-variance tradeoff (or complexity) for decision trees? Draw the bias variance tradeoff curve for decision trees using this hyperparameter. Explain your answer. **[1.5 mark]**
+
+
+4. The normal equation for linear regression is given as: $\hat{\theta} = (X^TX)^{-1}X^Ty$. Instead of computing the normal equation directly, let us use the SVD decomposition of X. We decompose X as $X = U\Sigma V^T$.
+
+
+>Rewrite the normal equation using the **reduced** SVD decomposition of X, that is write $\hat{\theta}$ in terms of $U$, $\Sigma$ and $V$ and $y$.
+
+>For this question, let us assume that $X$ is of size $n \times m$ and $y$ is of size $n \times 1$. Let us also assume that the number of features $m$ is significantly less than the number of samples $n$.
+
+>Once you have written $\hat{\theta}$ in terms of $U$, $\Sigma$ and $V$ and $y$, find the time complexity of computing $\hat{\theta}$ using the **reduced** form of SVD decomposition of $X$. **[4 marks]**
+
+
+>We provide some background on the SVD decomposition of a matrix $X$ below:
+The **reduced** form of SVD decomposition of $X$ is given as $X = U\Sigma V^T$ where $U$ is of size $n \times m$, $\Sigma$ is of size $m \times m$ and $V$ is of size $m \times m$. The columns of $U$ are called the left singular vectors of $X$ and the columns of $V$ are called the right singular vectors of $X$. The singular matrix $\Sigma$ is a diagonal matrix: it has zeros everywhere except on the diagonal. The diagonal elements of $\Sigma$ are the singular values of $X$. The singular values of $X$ are always non-negative and are arranged in decreasing order. The singular values of $X$ are also called the eigenvalues of $X^TX$.
+
+>Further, for reduced SVD, $U^TU = I$ and $V^TV = I$ and $VV^T = I$ where $I$ is the identity matrix.
+
+>We also provide some background on the time complexity of matrix multiplication below:
+Let $A$ be of size $n \times m$, $B$ be of size $m \times p$ and $C$ be of size $n \times p$. The time complexity of computing $C = AB$ is $O(nmp)$. Further, the time complexity of inverse of a $n \times n$ matrix $A$ is $O(n^3)$. The time complexity of computing SVD of the above $n \times m$ matrix $X$ is $O(nm^2)$. You **should** factor this time complexity in your answer for computing $\hat{\theta}$.
+
+> **BONUS:** Solve the above problem (computing $\hat{\theta}$ and its time complexity) with the **full** version of SVD, what changes will you need to make? The full version of SVD is given as $X = U\Sigma V^T$ where $U$ is of size $n \times n$, $\Sigma$ is of size $n \times m$ and $V$ is of size $m \times m$. $U$ and $V$ are orthogonal matrices. **[2 marks]**
+
+
+5. Let us assume $K$ members in an ensemble. For simplicity let us assume that each member in the ensemble has the same probability of error $p<0.5$. We saw in the class that the probability of error (given by the binomial expansion) reduces as we increase the number of members in the ensemble. But, empirically adding more members in an ensemble may not always reduce the error. Why? **[1 mark]**

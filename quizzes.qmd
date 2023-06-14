@@ -1,0 +1,8 @@
+---
+title: "Quizzes"
+listing:
+  contents: exams
+  type: table
+  sort: "date"  
+---
+

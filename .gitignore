@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+/.quarto/
+docs
+ds_store
+ds_store/
+.DS_Store
+.DS_Store
+runs/
+mnist-cnn/

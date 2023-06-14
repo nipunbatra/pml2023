@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ES654"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: grading.qmd
+        text: Grading Policy
+      - href: faq.qmd
+        text: FAQs
+      - href: schedule.qmd
+        text: Schedule
+      - href: quizzes.qmd
+        text: Quizzes
+      - text: "Notebooks"
+        href: notebooks/index.qmd
+      - href: https://nipunbatra.github.io
+        text: Instructor Homepage
+
+
+format:
+  html:
+    theme:
+      light: [litera, styles.scss]
+      dark: [darkly, styles-dark.scss]
+    highlight-style: a11y-dark
+    mainfont: "Roboto"
+    code-copy: true
+    code-overflow: wrap
+
+
+execute:
+  freeze: auto
+
