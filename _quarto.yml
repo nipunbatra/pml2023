@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "ES654"
+  title: "ES661 PML"
   navbar:
     right:
       - href: index.qmd
