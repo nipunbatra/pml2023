@@ -15,16 +15,15 @@ TO BE FINALISED
         - 25%: Code quality
         - 25%: Presentation/Conceptual understanding
     - You get one week to complete each assignment.
-    - The assignments would be released on Monday and would be due on the next Tuesday evening.
     - Tentative schedule:
-        - Assignment 1: 14 August
-        - Assignment 2: 11 September
-        - Assignment 3: Week 7
-        - Assignment 4: Week 9
+        - Assignment 1: 10 August (due 18 August)
+        - Assignment 2: 21 August (due 28 August)
+        - Assignment 3: 14 September (due 21 September)
+        - Assignment 4: 30 October (due 6 November)
 
 - Project (27%): The number of project groups would be <=10. Depending on the class size, the groups would be of 3-5 students. 
     - Tentative schedule:
-        - Project proposal: Week 5
-        - Project presentation: 22 November
+        - Presentation I: 6 October
+        - Final Project presentation: 22 November
 
-- Interactive article (5%): Create a Streamlit or similar interactive article for concept explanation. 
+- Interactive article (5%): Create a Streamlit or similar interactive article for concept explanation (due 15 November)
