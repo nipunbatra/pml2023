@@ -23,7 +23,8 @@ TO BE FINALISED
 
 - Project (27%): The number of project groups would be <=10. Depending on the class size, the groups would be of 3-5 students. 
     - Tentative schedule:
-        - Presentation I: 6 October
-        - Final Project presentation: 22 November
+        - Presentation I: 6 October (10%)
+        - Final Project presentation: 22 November (12%)
+        - Final report: 24 November (5%)
 
 - Interactive article (5%): Create a Streamlit or similar interactive article for concept explanation (due 15 November)
