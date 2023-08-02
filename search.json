@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "ES 661 Probabilistic Machine Learning",
     "section": "",
-    "text": "Summary\n\nInstructor: Nipun Batra (nipun.batra@iitgn.ac.in)\nTeaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor\nCourse Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST\nSlack Invite\n\n\n\nMain topics\n\nBayesian Inference\nEstimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian\nSampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)\nApproximate Inference: Variational Inference, Markov Chain Monte Carlo, Laplace Approximation\nModels: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA\nApplications: Bayesian Optimization, Active learning"
+    "text": "Summary\n\nInstructor: Nipun Batra (nipun.batra@iitgn.ac.in)\nTeaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor\nCourse Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST\nSlack Invite corrected!\n\n\n\nMain topics\n\nBayesian Inference\nEstimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian\nSampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)\nApproximate Inference: Variational Inference, Markov Chain Monte Carlo, Laplace Approximation\nModels: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA\nApplications: Bayesian Optimization, Active learning"
   },
   {
     "objectID": "grading.html",
