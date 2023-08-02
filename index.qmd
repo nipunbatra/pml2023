@@ -5,9 +5,16 @@ title: "ES 661 Probabilistic Machine Learning"
 ### Summary
 
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
-* Teaching Assistants: 
-* Course Timings: Monday 330-450 PM IST and ... 
+* Teaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor
+* Course Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST
 * [Slack Invite](https://join.slack.com/t/sustainability-lab-hq/shared_invite/zt-204csy3ox-MJjEy_7jZzhEo0zdJprc~Q)
 
 
 
+### Main topics
+1. Bayesian Inference
+2. Estimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian
+3. Sampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)
+4. Approximate Inference: Variational Inference,  Markov Chain Monte Carlo, Laplace Approximation
+5. Models: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes
+6. Applications: Bayesian Optimization, Active learning
