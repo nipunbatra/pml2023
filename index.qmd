@@ -7,7 +7,7 @@ title: "ES 661 Probabilistic Machine Learning"
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
 * Teaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor
 * Course Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST
-* [Slack Invite](https://join.slack.com/t/sustainability-lab-hq/shared_invite/zt-204csy3ox-MJjEy_7jZzhEo0zdJprc~Q)
+* [Slack Invite corrected!](https://join.slack.com/t/pml23/shared_invite/zt-20o47q69t-SRBCc6sbNybppafChg8rPA)
 
 
 
