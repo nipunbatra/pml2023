@@ -14,6 +14,8 @@ website:
         text: FAQs
       - href: schedule.qmd
         text: Schedule
+      - href: assignments/index.qmd
+        text: "Assignments"
       - href: quizzes.qmd
         text: Quizzes
       - text: "Notebooks"
