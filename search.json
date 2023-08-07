@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "FAQ",
+    "objectID": "assignments/index.html",
+    "href": "assignments/index.html",
+    "title": "Assignments",
     "section": "",
-    "text": "Prerequisites"
+    "text": "No matching items"
   },
   {
     "objectID": "quizzes.html",
@@ -14,18 +14,32 @@
     "text": "No matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ES 661 Probabilistic Machine Learning",
-    "section": "",
-    "text": "Summary\n\nInstructor: Nipun Batra (nipun.batra@iitgn.ac.in)\nTeaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor\nCourse Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST\nSlack Invite corrected!\n\n\n\nMain topics\n\nBayesian Inference\nEstimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian\nSampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)\nApproximate Inference: Variational Inference, Markov Chain Monte Carlo, Laplace Approximation\nModels: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA\nApplications: Bayesian Optimization, Active learning"
-  },
-  {
     "objectID": "grading.html",
     "href": "grading.html",
     "title": "Grading Policy",
     "section": "",
     "text": "TO BE FINALISED\n\nQuizzes (36%): Three quizzes of 12% each. These are held in the exam 1, 2, 3 slots.\nAssignments (32%):\n\nFour assignments of ~8% each.\nFollowed by a viva.\nTotal number of groups in the course would be &lt;=20. Depending on class size, the groups would be of 2 or 3 students.\nThe assignments would be graded on the basis of the following rubric:\n\n50%: Correctness of the code\n25%: Code quality\n25%: Presentation/Conceptual understanding\n\nYou get one week to complete each assignment.\nTentative schedule:\n\nAssignment 1: 10 August (due 18 August)\nAssignment 2: 21 August (due 28 August)\nAssignment 3: 14 September (due 21 September)\nAssignment 4: 30 October (due 6 November)\n\n\nProject (27%): The number of project groups would be &lt;=10. Depending on the class size, the groups would be of 3-5 students.\n\nTentative schedule:\n\nPresentation I: 6 October (10%)\nFinal Project presentation: 22 November (12%)\nFinal report: 24 November (5%)\n\n\nInteractive article (5%): Create a Streamlit or similar interactive article for concept explanation (due 15 November)"
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Prerequisites"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Lecture #\nDate\nTopic"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ES 661 Probabilistic Machine Learning",
+    "section": "",
+    "text": "Summary\n\nInstructor: Nipun Batra (nipun.batra@iitgn.ac.in)\nTeaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor\nCourse Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST\nSlack Invite corrected!\n\n\n\nMain topics\n\nBayesian Inference\nEstimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian\nSampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)\nApproximate Inference: Variational Inference, Markov Chain Monte Carlo, Laplace Approximation\nModels: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA\nApplications: Bayesian Optimization, Active learning"
   },
   {
     "objectID": "notebooks/index.html",
@@ -35,10 +49,17 @@
     "text": "No matching items"
   },
   {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "assignments/1.html",
+    "href": "assignments/1.html",
+    "title": "Assignment 1 (released 10 Aug, due 18 Aug)",
     "section": "",
-    "text": "Lecture #\nDate\nTopic"
+    "text": "Total marks: 6\nUse torch for the assignment\nFor distributions use torch.distributions and do not use torch.random directly\nThe assignment has to be done in groups of two.\nThe assignment should be a single Jupyter notebook.\nThe results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%)."
+  },
+  {
+    "objectID": "assignments/1.html#instructions",
+    "href": "assignments/1.html#instructions",
+    "title": "Assignment 1 (released 10 Aug, due 18 Aug)",
+    "section": "",
+    "text": "Total marks: 6\nUse torch for the assignment\nFor distributions use torch.distributions and do not use torch.random directly\nThe assignment has to be done in groups of two.\nThe assignment should be a single Jupyter notebook.\nThe results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%)."
   }
 ]

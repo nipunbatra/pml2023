@@ -6,10 +6,10 @@
       version="2.0">
 <channel>
 <title>ES661 PML</title>
-<link>https://github.com/nipunbatra/pml2023/notebooks/index.html</link>
-<atom:link href="https://github.com/nipunbatra/pml2023/notebooks/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://github.com/nipunbatra/pml2023/assignments/index.html</link>
+<atom:link href="https://github.com/nipunbatra/pml2023/assignments/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 07 Aug 2023 04:46:26 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Aug 2023 04:46:27 GMT</lastBuildDate>
 </channel>
 </rss>
