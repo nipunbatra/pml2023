@@ -1,0 +1,15 @@
+---
+title: Assignment 1 (released 10 Aug, due 18 Aug)
+date: 2023-08-10
+---
+
+## Instructions
+
+- Total marks: 6
+- Use torch for the assignment
+- For distributions use torch.distributions and do not use torch.random directly
+- The assignment has to be done in groups of two.
+- The assignment should be a single Jupyter notebook.
+- The results from every question of your assignment should be in visual formats such as plots, tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
+
+
