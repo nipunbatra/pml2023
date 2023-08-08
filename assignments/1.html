@@ -164,6 +164,21 @@ ul.task-list li input[type="checkbox"] {
 <li>The assignment should be a single Jupyter notebook.</li>
 <li>The results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
 </ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li><p>Optimise the following function using torch autograd and gradient descent, f(θ) = (θ₀ - 2)² + (θ₁ - 3)². In addition to finding the optima, you need to show the convergence plots. [0.5 marks]</p></li>
+<li><p>Generate some data (100 data points) using a univariate Normal distribution with <code>loc=2.0</code> and <code>scale=4.0</code>.</p>
+<ol type="a">
+<li><p>Plot a 2d contour plot showing the Likelihood or the Log-Likelihood as a function of <code>loc</code> and <code>scale</code>. Please label all the axes including the colorbar. [1 mark]</p></li>
+<li><p>Find the MLE parameters for the <code>loc</code> and <code>scale</code> using gradient descent. Plot convergence plot as well. [1 mark]</p></li>
+<li><p>Redo the above question but learn <code>log(scale)</code> instead of <code>scale</code> and then finally transform to learn <code>scale</code>. What can you conclude? Why is this transformation useful? [0.5 mark]</p></li>
+</ol></li>
+<li><p>Generate some data (1000 data points) using a univariate Normal distribution with <code>loc=2.0</code> and <code>scale=4.0</code> and using Student-T distributions with varying degrees (from 1-8) of freedom (1000 data points corresponding to each degree of freedom). Plot the pdf (and logpdf) at uniformly spaced data from (-50, 50) in steps of 0.1. What can you conclude? [1 mark]</p></li>
+<li><p>Analytically derive the MLE for exponential distribution. Generate some data (1000 data points) using some fixed parameter values and see if you can recover the analytical parameters using gradient descent based solution for obtaining MLE. [1 mark]</p></li>
+<li></li>
+</ol>
 
 
 </section>
