@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/nipunbatra/pml2023/assignments/1.html</loc>
-    <lastmod>2023-08-08T11:55:34.638Z</lastmod>
+    <lastmod>2023-08-08T11:59:45.076Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/quizzes.html</loc>
-    <lastmod>2023-08-08T11:55:33.618Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/grading.html</loc>
-    <lastmod>2023-08-08T11:55:32.810Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/faq.html</loc>
-    <lastmod>2023-08-08T11:55:31.938Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/schedule.html</loc>
-    <lastmod>2023-08-08T11:55:29.746Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/index.html</loc>
-    <lastmod>2023-08-08T11:55:32.366Z</lastmod>
+    <lastmod>2023-08-08T11:59:44.164Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/notebooks/index.html</loc>
-    <lastmod>2023-08-08T11:55:33.226Z</lastmod>
+    <lastmod>2023-08-08T11:59:43.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/index.html</loc>
+    <lastmod>2023-08-08T11:59:42.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/schedule.html</loc>
+    <lastmod>2023-08-08T11:59:39.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/faq.html</loc>
+    <lastmod>2023-08-08T11:59:42.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/grading.html</loc>
+    <lastmod>2023-08-08T11:59:42.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/notebooks/bayes-librarian.html</loc>
+    <lastmod>2023-08-08T11:59:43.772Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/assignments.html</loc>
-    <lastmod>2023-08-08T11:55:34.118Z</lastmod>
+    <lastmod>2023-08-08T11:59:44.616Z</lastmod>
   </url>
 </urlset>
