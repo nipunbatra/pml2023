@@ -2,7 +2,7 @@
 title: Assignments
 listing:
   sort: "date desc"
-  contents: "posts"
+  contents: "assignments"
   sort-ui: false
   filter-ui: false
   categories: true
