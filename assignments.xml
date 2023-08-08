@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>ES661 PML</title>
+<link>https://github.com/nipunbatra/pml2023/assignments.html</link>
+<atom:link href="https://github.com/nipunbatra/pml2023/assignments.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Thu, 10 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Assignment 1 (released 10 Aug, due 18 Aug)</title>
+  <link>https://github.com/nipunbatra/pml2023/assignments/1.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total marks: 6</li>
+<li>Use torch for the assignment</li>
+<li>For distributions use torch.distributions and do not use torch.random directly</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single Jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+</ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li><p>Optimise the following function using torch autograd and gradient descent, f(θ) = (θ₀ - 2)² + (θ₁ - 3)². In addition to finding the optima, you need to show the convergence plots. [0.5 marks]</p></li>
+<li><p>Generate some data (100 data points) using a univariate Normal distribution with <code>loc=2.0</code> and <code>scale=4.0</code>.</p>
+<ol type="a">
+<li><p>Plot a 2d contour plot showing the Likelihood or the Log-Likelihood as a function of <code>loc</code> and <code>scale</code>. Please label all the axes including the colorbar. [1 mark]</p></li>
+<li><p>Find the MLE parameters for the <code>loc</code> and <code>scale</code> using gradient descent. Plot convergence plot as well. [1 mark]</p></li>
+<li><p>Redo the above question but learn <code>log(scale)</code> instead of <code>scale</code> and then finally transform to learn <code>scale</code>. What can you conclude? Why is this transformation useful? [0.5 mark]</p></li>
+</ol></li>
+<li><p>Generate some data (1000 data points) using a univariate Normal distribution with <code>loc=2.0</code> and <code>scale=4.0</code> and using Student-T distributions with varying degrees (from 1-8) of freedom (1000 data points corresponding to each degree of freedom). Plot the pdf (and logpdf) at uniformly spaced data from (-50, 50) in steps of 0.1. What can you conclude? [1 mark]</p></li>
+<li><p>Analytically derive the MLE for exponential distribution. Generate some data (1000 data points) using some fixed parameter values and see if you can recover the analytical parameters using gradient descent based solution for obtaining MLE. [1 mark]</p></li>
+<li></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://github.com/nipunbatra/pml2023/assignments/1.html</guid>
+  <pubDate>Thu, 10 Aug 2023 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
