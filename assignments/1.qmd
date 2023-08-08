@@ -11,6 +11,7 @@ date: 2023-08-10
 - The assignment has to be done in groups of two.
 - The assignment should be a single Jupyter notebook.
 - The results from every question of your assignment should be in visual formats such as plots, tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
+- To know more about a distribution, just look at the Wikipedia page. 
 
 
 ## Questions
@@ -29,5 +30,5 @@ date: 2023-08-10
 
 4. Analytically derive the MLE for exponential distribution. Generate some data (1000 data points) using some fixed parameter values and see if you can recover the analytical parameters using gradient descent based solution for obtaining MLE. [1 mark]
 
-5. 
+5. Generate some data (100 data points) using a univariate Normal distribution with `loc=2.0` and `scale=4.0`. Now, create datasets of size 10, 20, 50, 100, 500, 1000, 5000, 10000. We will use a different random seed to create ten different datasets for each of these sizes. For each of these datasets, find the MLE parameters for the `loc` and `scale` using gradient descent.  Plot the estimates of `loc` and `scale` as a function of the dataset size. What can you conclude? [1 mark]
 
