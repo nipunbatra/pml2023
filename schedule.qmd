@@ -2,5 +2,9 @@
 title: "Schedule"
 ---
 
-|Lecture #|Date|Topic|
-|:---:|:---:|:---|
+The YouTube playlist is linked [here](https://www.youtube.com/watch?v=UCYaVS9_jGU&list=PLftoLyLEwECBEJyfRBJoSBd0UaTjEcs3I).
+
+|Lecture #|Date|Topic| Reading|
+|:---:|:---:|:---|:---|
+|1| Aug 3| Introduction and Logistics [[Slides](lectures/introduction.pdf)], [[YouTube](https://www.youtube.com/watch?v=UCYaVS9_jGU)]|
+|2| Aug 7| Bayes Rule for ML [[Slides](lectures/Bayes-ML.pdf)], [[YouTube](https://www.youtube.com/watch?v=d1v7SeXAWl8)]|
