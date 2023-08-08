@@ -3,8 +3,9 @@ title: "Schedule"
 ---
 
 The YouTube playlist is linked [here](https://www.youtube.com/watch?v=UCYaVS9_jGU&list=PLftoLyLEwECBEJyfRBJoSBd0UaTjEcs3I).
+The page containing the notebooks is linked [here](notebooks/index.qmd).
 
 |Lecture #|Date|Topic| Reading|
 |:---:|:---:|:---|:---|
 |1| Aug 3| Introduction and Logistics [[Slides](lectures/introduction.pdf)], [[YouTube](https://www.youtube.com/watch?v=UCYaVS9_jGU)]|
-|2| Aug 7| Bayes Rule for ML [[Slides](lectures/Bayes-ML.pdf)], [[YouTube](https://www.youtube.com/watch?v=d1v7SeXAWl8)]|
+|2| Aug 7| Bayes Rule for ML [[Slides](lectures/Bayes-ML.pdf)], [[YouTube](https://www.youtube.com/watch?v=d1v7SeXAWl8)], [[Notebook](notebooks/bayes-librarian.ipynb)]|
