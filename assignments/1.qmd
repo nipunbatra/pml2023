@@ -13,3 +13,21 @@ date: 2023-08-10
 - The results from every question of your assignment should be in visual formats such as plots, tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
 
 
+## Questions
+
+1. Optimise the following function using torch autograd and gradient descent, f(θ) = (θ₀ - 2)² + (θ₁ - 3)². In addition to finding the optima, you need to show the convergence plots. [0.5 marks]
+
+2. Generate some data (100 data points) using a univariate Normal distribution with `loc=2.0` and `scale=4.0`. 
+
+    a. Plot a 2d contour plot showing the Likelihood or the Log-Likelihood as a function of `loc` and `scale`. Please label all the axes including the colorbar. [1 mark]
+    
+    b. Find the MLE parameters for the `loc` and `scale` using gradient descent. Plot convergence plot as well. [1 mark]
+
+    c. Redo the above question but learn `log(scale)` instead of `scale` and then finally transform to learn `scale`. What can you conclude? Why is this transformation useful? [0.5 mark]
+
+3. Generate some data (1000 data points) using a univariate Normal distribution with `loc=2.0` and `scale=4.0` and using Student-T distributions with varying degrees (from 1-8) of freedom (1000 data points corresponding to each degree of freedom). Plot the pdf (and logpdf) at uniformly spaced data from (-50, 50) in steps of 0.1. What can you conclude? [1 mark]
+
+4. Analytically derive the MLE for exponential distribution. Generate some data (1000 data points) using some fixed parameter values and see if you can recover the analytical parameters using gradient descent based solution for obtaining MLE. [1 mark]
+
+5. 
+
