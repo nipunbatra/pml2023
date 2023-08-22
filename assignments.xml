@@ -10,7 +10,208 @@
 <atom:link href="https://github.com/nipunbatra/pml2023/assignments.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 10 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 22 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Assignment 2 (released 22 Aug, due 30 Aug)</title>
+  <link>https://github.com/nipunbatra/pml2023/assignments/2.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total marks: 6</li>
+<li>Use torch for the assignment</li>
+<li>For distributions use torch.distributions and do not use torch.random directly</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single Jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+<li>To know more about a distribution, just look at the Wikipedia page.</li>
+</ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li>[Total marks: 1.5] Consider the dataset below (1.1). Find MLE estimate for parameters of a neural network for regression with Gaussian Homoskedastic noise, where noise variance has a fixed value = 0.0025. Your model summary should match with (1.2). Animate the MLE fit on the data along with the 95% noise variance intervals [1 mark]. What is the effect of varying the noise variance (only in model, not for regenerating the data) on the MLE fit, show it for 3 different noise variance values? [0.5 mark] Refer to <a href="https://machinelearningmastery.com/develop-your-first-neural-network-with-pytorch-step-by-step/">this tutorial</a> for building and training <code>torch.nn</code> models. Use <a href="https://matplotlib.org/stable/tutorials/introductory/animation_tutorial.html">FuncAnimation</a> from matplotlib or <a href="https://github.com/jwkvam/celluloid">Celluloid</a> for animation.</li>
+</ol>
+<p>1.1 Data Generation</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">np.random.seed(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-4">X <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb1-5">noise <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.random.normal(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb1-6">y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.sin(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> np.pi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> X) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise</span></code></pre></div>
+<p>1.2 Model Summary</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ... <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Your model</span></span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> torchsummary <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> summary</span>
+<span id="cb2-4">summary(model, (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,))</span></code></pre></div>
+<pre><code>----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                   [-1, 10]              20
+              GELU-2                   [-1, 10]               0
+            Linear-3                   [-1, 10]             110
+              SELU-4                   [-1, 10]               0
+            Linear-5                    [-1, 1]              11
+================================================================
+Total params: 141
+Trainable params: 141
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.00
+Params size (MB): 0.00
+Estimated Total Size (MB): 0.00
+----------------------------------------------------------------</code></pre>
+<ol start="2" type="1">
+<li>[Total marks: 1.5] You toss a coin 10 times and the result turns out to be: <code>[1, 0, 0, 1, 1, 0, 1, 0, 0, 0]</code>. Find the MAP estimate for <code>probability of heads</code> if:
+<ol type="i">
+<li>Prior is Beta distribution with parameters (alpha=2, beta=3):
+<ol type="a">
+<li>Calculate the answer analytically using the closed form MAP estimate [0.5 mark]</li>
+<li>Find the answer with gradient descent using <code>torch.optim</code> [0.5 mark]</li>
+</ol></li>
+<li>Prior is a Gaussian distribution with mean=0.5 and variance=0.1. Find the answer with gradient descent using <code>torch.optim</code> [0.5 mark]</li>
+</ol></li>
+<li>[Total marks: 2] Generate a linear trend dataset with the following code (3.1). Find MAP estimate for slope and intercept:
+<ol type="i">
+<li>Prior is Normal distribution with mean=0 and variance=1 [0.5 mark]</li>
+<li>Show the effect of varying the size of the dataset on the MAP estimate [0.5 mark]</li>
+<li>Show the effect of varying the prior variance on the MAP estimate [0.5 mark]</li>
+<li>Change the prior to Laplace with mean = 0 and scale = 1. Compare the MAP estimate with the one obtained in (i). What do you observe? [0.5 mark]</li>
+</ol></li>
+</ol>
+<p>3.1 Generate a linear trend dataset</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb4-2">slope <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb4-3">intercept <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb4-4">N <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span id="cb4-5">X <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, N)</span>
+<span id="cb4-6">noise <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.random.normal(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>, N)</span>
+<span id="cb4-7">y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> slope <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> X <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> intercept <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise</span></code></pre></div>
+<ol start="4" type="1">
+<li>[Total marks: 1] Generate a classification dataset with the following code (4.1). Find the MAP estimate for the parameters of logistic regression. Assume Normal prior with mean=0 and variance=0.1 for all parameters. Visualize the MLE and MAP classification boundaries. What do you observe? [1 mark]</li>
+</ol>
+<p>4.1 Generate a classification dataset</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sklearn.datasets <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> make_blobs</span>
+<span id="cb5-2"></span>
+<span id="cb5-3">X, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> make_blobs(</span>
+<span id="cb5-4">    n_samples<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, centers<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, n_features<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, random_state<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, cluster_std<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span></span>
+<span id="cb5-5">)</span></code></pre></div>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://github.com/nipunbatra/pml2023/assignments/2.html</guid>
+  <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Assignment 1 (released 10 Aug, due 18 Aug)</title>
   <link>https://github.com/nipunbatra/pml2023/assignments/1.html</link>
