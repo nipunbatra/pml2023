@@ -1,0 +1,92 @@
+---
+title: Assignment 2 (released 22 Aug, due 30 Aug)
+date: 2023-08-22
+---
+
+## Instructions
+
+- Total marks: 6
+- Use torch for the assignment
+- For distributions use torch.distributions and do not use torch.random directly
+- The assignment has to be done in groups of two.
+- The assignment should be a single Jupyter notebook.
+- The results from every question of your assignment should be in visual formats such as plots, tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
+- To know more about a distribution, just look at the Wikipedia page. 
+
+
+## Questions
+
+1. [Total marks: 1.5] Consider the dataset below (1.1). Find MLE estimate for parameters of a neural network for regression with Gaussian Homoskedastic noise, where noise variance has a fixed value = 0.0025. Your model summary should match with (1.2). Animate the MLE fit on the data along with the 95% noise variance intervals [1 mark]. What is the effect of varying the noise variance (only in model, not for regenerating the data) on the MLE fit, show it for 3 different noise variance values? [0.5 mark] Refer to [this tutorial](https://machinelearningmastery.com/develop-your-first-neural-network-with-pytorch-step-by-step/) for building and training `torch.nn` models. Use [FuncAnimation](https://matplotlib.org/stable/tutorials/introductory/animation_tutorial.html) from matplotlib or [Celluloid](https://github.com/jwkvam/celluloid) for animation.
+
+1.1 Data Generation
+```py
+import numpy as np
+
+np.random.seed(0)
+X = np.linspace(0, 1, 100)
+noise = np.random.normal(0, 0.05, 100)
+y = np.sin(2 * np.pi * X) + noise
+```
+
+1.2 Model Summary
+```py
+model = ... # Your model
+
+from torchsummary import summary
+summary(model, (1,))
+```
+
+```
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                   [-1, 10]              20
+              GELU-2                   [-1, 10]               0
+            Linear-3                   [-1, 10]             110
+              SELU-4                   [-1, 10]               0
+            Linear-5                    [-1, 1]              11
+================================================================
+Total params: 141
+Trainable params: 141
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.00
+Params size (MB): 0.00
+Estimated Total Size (MB): 0.00
+----------------------------------------------------------------
+```
+
+2. [Total marks: 1.5] You toss a coin 10 times and the result turns out to be: `[1, 0, 0, 1, 1, 0, 1, 0, 0, 0]`. Find the MAP estimate for `probability of heads` if:
+    i. Prior is Beta distribution with parameters (alpha=2, beta=3):
+        a. Calculate the answer analytically using the closed form MAP estimate [0.5 mark]
+        b. Find the answer with gradient descent using `torch.optim` [0.5 mark]
+    ii. Prior is a Gaussian distribution with mean=0.5 and variance=0.1. Find the answer with gradient descent using `torch.optim` [0.5 mark]
+
+3. [Total marks: 2] Generate a linear trend dataset with the following code (3.1). Find MAP estimate for slope and intercept:
+    i. Prior is Normal distribution with mean=0 and variance=1 [0.5 mark]
+    ii. Show the effect of varying the size of the dataset on the MAP estimate [0.5 mark]
+    iii. Show the effect of varying the prior variance on the MAP estimate [0.5 mark]
+    iv. Change the prior to Laplace with mean = 0 and scale = 1. Compare the MAP estimate with the one obtained in (i). What do you observe? [0.5 mark]
+
+3.1 Generate a linear trend dataset
+```py
+import numpy as np
+slope = 3
+intercept = 2
+N = 100
+X = np.linspace(0, 1, N)
+noise = np.random.normal(0, 0.05, N)
+y = slope * X + intercept + noise
+```
+
+4. [Total marks: 1] Generate a classification dataset with the following code (4.1). Find the MAP estimate for the parameters of logistic regression. Assume Normal prior with mean=0 and variance=0.1 for all parameters. Visualize the MLE and MAP classification boundaries. What do you observe? [1 mark]
+
+4.1 Generate a classification dataset
+```py
+from sklearn.datasets import make_blobs
+
+X, y = make_blobs(
+    n_samples=100, centers=2, n_features=2, random_state=0, cluster_std=0.8
+)
+```
