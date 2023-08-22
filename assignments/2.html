@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
 <ul>
-<li>Total marks: 6</li>
+<li>Total marks: 8</li>
 <li>Use torch for the assignment</li>
 <li>For distributions use torch.distributions and do not use torch.random directly</li>
 <li>The assignment has to be done in groups of two.</li>
@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <ol type="1">
-<li>[Total marks: 1.5] Consider the dataset below (1.1). Find MLE estimate for parameters of a neural network for regression with Gaussian Homoskedastic noise, where noise variance has a fixed value = 0.0025. Your model summary should match with (1.2). Animate the MLE fit on the data along with the 95% noise variance intervals [1 mark]. What is the effect of varying the noise variance (only in model, not for regenerating the data) on the MLE fit, show it for 3 different noise variance values? [0.5 mark] Refer to <a href="https://machinelearningmastery.com/develop-your-first-neural-network-with-pytorch-step-by-step/">this tutorial</a> for building and training <code>torch.nn</code> models. Use <a href="https://matplotlib.org/stable/tutorials/introductory/animation_tutorial.html">FuncAnimation</a> from matplotlib or <a href="https://github.com/jwkvam/celluloid">Celluloid</a> for animation.</li>
+<li>[Total marks: 2.5] Consider the dataset below (1.1). Find MLE estimate for parameters of a neural network for regression with Gaussian Homoskedastic noise, where noise variance has a fixed value = 0.0025. Your model summary should match with (1.2). Animate the MLE fit on the data along with the 95% noise variance intervals [2 marks]. What is the effect of varying the noise variance (only in model, not for regenerating the data) on the MLE fit, show it for 3 different noise variance values? [0.5 mark] Refer to <a href="https://machinelearningmastery.com/develop-your-first-neural-network-with-pytorch-step-by-step/">this tutorial</a> for building and training <code>torch.nn</code> models. Use <a href="https://matplotlib.org/stable/tutorials/introductory/animation_tutorial.html">FuncAnimation</a> from matplotlib or <a href="https://github.com/jwkvam/celluloid">Celluloid</a> for animation.</li>
 </ol>
 <p>1.1 Data Generation</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -245,9 +245,9 @@ Estimated Total Size (MB): 0.00
 </ol></li>
 <li>Prior is a Gaussian distribution with mean=0.5 and variance=0.1. Find the answer with gradient descent using <code>torch.optim</code> [0.5 mark]</li>
 </ol></li>
-<li>[Total marks: 2] Generate a linear trend dataset with the following code (3.1). Find MAP estimate for slope and intercept:
+<li>[Total marks: 2.5] Generate a linear trend dataset with the following code (3.1). Find MAP estimate for slope and intercept:
 <ol type="i">
-<li>Prior is Normal distribution with mean=0 and variance=1 [0.5 mark]</li>
+<li>Prior is Normal distribution with mean=0 and variance=1 [1 marks]</li>
 <li>Show the effect of varying the size of the dataset on the MAP estimate [0.5 mark]</li>
 <li>Show the effect of varying the prior variance on the MAP estimate [0.5 mark]</li>
 <li>Change the prior to Laplace with mean = 0 and scale = 1. Compare the MAP estimate with the one obtained in (i). What do you observe? [0.5 mark]</li>
@@ -262,7 +262,7 @@ Estimated Total Size (MB): 0.00
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="fl">0.05</span>, N)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> slope <span class="op">*</span> X <span class="op">+</span> intercept <span class="op">+</span> noise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="4" type="1">
-<li>[Total marks: 1] Generate a classification dataset with the following code (4.1). Find the MAP estimate for the parameters of logistic regression. Assume Normal prior with mean=0 and variance=0.1 for all parameters. Visualize the MLE and MAP classification boundaries. What do you observe? [1 mark]</li>
+<li>[Total marks: 1.5] Generate a classification dataset with the following code (4.1). Find the MAP estimate for the parameters of logistic regression. Assume Normal prior with mean=0 and variance=0.1 for all parameters. Visualize the MLE and MAP classification boundaries. What do you observe? [1.5 marks]</li>
 </ol>
 <p>4.1 Generate a classification dataset</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> make_blobs</span>
