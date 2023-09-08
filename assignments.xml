@@ -13,6 +13,53 @@
 <lastBuildDate>Tue, 22 Aug 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Assignment 2 (released 22 Aug, due 30 Aug)</title>
+  <link>https://github.com/nipunbatra/pml2023/assignments/3.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total marks: 8</li>
+<li>Use torch for the assignment</li>
+<li>For distributions use torch.distributions and do not use torch.random directly</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single Jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+<li>To know more about a distribution, just look at the Wikipedia page.</li>
+</ul>
+</section>
+<section id="under-construction-dont-solve-till-this-note-is-removed" class="level2">
+<h2 class="anchored" data-anchor-id="under-construction-dont-solve-till-this-note-is-removed">UNDER CONSTRUCTION (DON”T SOLVE TILL THIS NOTE IS REMOVED)</h2>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li><p>Approximate the normalization constant for standard normal distribution using Monte Carlo integration. We only know the numerator term: e^ and want to find <img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20e%5E%5Cfrac%7B-x%5E2%7D%7B2%7D%20dx"></p>
+<ol type="i">
+<li>What do you choose as f(x) and p(x)? [0.5 mark]</li>
+<li>Estimate <code>I</code> using Monte Carlo integration for varying number of samples. For each number of samples, repeat the experiment 10 times and report the mean and standard deviation of the estimate. [1 mark]</li>
+<li>scipy.integrate.quad</li>
+</ol></li>
+</ol>
+<p>Use 1000 samples. [1 mark]</p>
+<ol start="2" type="1">
+<li><p>Inverse CDF</p></li>
+<li><p>Rejection sampling</p></li>
+<li><p>Laplace approximation (w/ change of variable?; BNN)</p></li>
+<li><p>BMH data https://nbviewer.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb</p></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://github.com/nipunbatra/pml2023/assignments/3.html</guid>
+  <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Assignment 2 (released 22 Aug, due 30 Aug)</title>
   <link>https://github.com/nipunbatra/pml2023/assignments/2.html</link>
   <description><![CDATA[ 
 
