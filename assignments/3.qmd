@@ -1,0 +1,39 @@
+---
+title: Assignment 2 (released 22 Aug, due 30 Aug)
+date: 2023-08-22
+---
+
+## Instructions
+
+- Total marks: 8
+- Use torch for the assignment
+- For distributions use torch.distributions and do not use torch.random directly
+- The assignment has to be done in groups of two.
+- The assignment should be a single Jupyter notebook.
+- The results from every question of your assignment should be in visual formats such as plots, tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
+- To know more about a distribution, just look at the Wikipedia page. 
+
+
+## UNDER CONSTRUCTION (DON"T SOLVE TILL THIS NOTE IS REMOVED)
+
+## Questions
+
+1. Approximate the normalization constant for standard normal distribution using Monte Carlo integration. We only know the numerator term: e^\frac{-x^2}{2} and want to find $I = \int_{-\infty}^{\infty} e^\frac{-x^2}{2} dx$
+
+    i. What do you choose as f(x) and p(x)? [0.5 mark]
+    ii. Estimate `I` using Monte Carlo integration for varying number of samples. For each number of samples, repeat the experiment 10 times and report the mean and standard deviation of the estimate. [1 mark]
+    iii. scipy.integrate.quad
+
+Use 1000 samples. [1 mark]
+
+2. Inverse CDF
+
+3. Rejection sampling
+
+4. Laplace approximation (w/ change of variable?; BNN)
+
+
+
+6. BMH data
+https://nbviewer.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb
+
