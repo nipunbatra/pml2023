@@ -10,7 +10,169 @@
 <atom:link href="https://github.com/nipunbatra/pml2023/assignments.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 22 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 18 Sep 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Assignment 3 (released 18 Sep, due 27 September 7 PM)</title>
+  <link>https://github.com/nipunbatra/pml2023/assignments/3.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total marks: 9</li>
+<li>Use torch for the assignment</li>
+<li>For sampling, use torch.distributions and do not use torch.random directly</li>
+<li>For computing log_prob, use torch.distributions and do not use custom formulas</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single Jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots and tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+<li>To know more about a distribution, just look at the Wikipedia page (table on the right will have everything you need).</li>
+</ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li>[2.5 marks] Approximate the normalization constant for standard normal distribution using Monte Carlo integration. Assume that we only know the numerator term: <img src="https://latex.codecogs.com/png.latex?e%5E%5Cfrac%7B-x%5E2%7D%7B2%7D"> and want to find <img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20e%5E%5Cfrac%7B-x%5E2%7D%7B2%7D%20dx">: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Cint%20f(x)%20p(x)%20dx%20%5Capprox%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi=1%7D%5E%7BN%7D%20f(x_i)%20%5Ctext%7B%20where%20%7D%20x_i%20%5Csim%20p(x).%0A%5Cend%7Bequation%7D">
+<ol type="i">
+<li>Take <code>p(x) = Uniform(-a, a)</code>. Choose the following values of <code>a</code> {0.01, 0.02, 0.05, 0.1, 0.5, 1, 2, 3, 5}. Draw 1000 samples for each <code>a</code> and plot the normalizing constant on y-axis for each value of <code>a</code> on x-axis. Draw a horizontal line showing the analytical normalizing constant as ground truth. [1 marks]</li>
+<li>Estimate <code>I</code> using Monte Carlo integration for varying number of MC samples {10, 100, 10^3 , 10^4, 10^5} for <code>a=4</code>. For each value of number of MC samples, repeat the experiment 10 times and plot the mean estimate with <code>plt.plot</code> and the standard deviation of the estimate using <code>plt.fill_between</code>. [1 mark]</li>
+<li>Repeat (i.) using <code>scipy.integrate.quad</code> and compare it with the estimates obtained in (i.) using a similar plot used in (i.). [0.5 mark]</li>
+</ol></li>
+<li>[1.5 marks] Inverse CDF sampling for <a href="https://en.wikipedia.org/wiki/Cauchy_distribution">Cauchy distribution</a>:
+<ol type="i">
+<li>Analytically derive the Inverse CDF from the CDF of the Cauchy distribution. [0.5 mark]</li>
+<li>Draw samples from the Cauchy distribution (loc=0, scale=1) with inverse CDF sampling. Use the inverse CDF derived in (i.). While generating samples from the uniform distribution, restrict the samples to be between 0.05 and 0.95 to avoid numerical instability. Verify that drawn samples are correct by plotting the kernel density estimation (empirical pdf) with <code>sns.kdeplot</code> (<code>sns</code> stands for the <a href="https://seaborn.pydata.org/">seaborn</a> library) along with pdf obtained with <code>dist.log_prob</code>, where <code>dist</code> is <code>torch.distributions.Cauchy(loc=0, scale=1)</code> [0.5 mark]</li>
+<li>Repeat (ii.) using inverse CDF from <code>torch.distributions.Cauchy</code>. You can access the inverse CDF at <code>dist.icdf</code> where <code>dist</code> is an instance of <code>torch.distributions.Cauchy</code>. [0.5 mark]</li>
+</ol></li>
+<li>[1.5 marks] Rejection sampling:
+<ol type="i">
+<li>Sample the unnormalized distribution shown in the code below using rejection sampling. Use Normal(loc=5, scale=5), Uniform(-15, 15), and Laplace distribution(loc=5, scale=5) as the proposal distributions. Report the accepance ratios for each proposal distribution (You may choose suitable Multiplier value (M) while considering the support -15 &lt; x &lt; 15). [1 mark]</li>
+<li>Create and compare plots showing the target distribution (<code>taget_pdf</code> function), proposal distribution (pdf via <code>log_prob</code> method), scaled proposal distribution (scaled by M), and pdf of final normalized target distribution (empirical pdf) using <code>sns.kdeplot</code>. [0.5 mark]</li>
+</ol></li>
+</ol>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch.distributions <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> D</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> target_pdf(x):</span>
+<span id="cb1-5">    gaussian_pdf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> D.Normal(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>).log_prob(x).exp()</span>
+<span id="cb1-6">    cauchy_pdf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> D.Cauchy(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>).log_prob(x).exp()</span>
+<span id="cb1-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> gaussian_pdf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> cauchy_pdf</span></code></pre></div>
+<ol start="4" type="1">
+<li>[3.5 marks] Generate the following classification dataset:</li>
+</ol>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sklearn.datasets <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> make_circles</span>
+<span id="cb2-2">X, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> make_circles(n_samples<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, noise<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.02</span>, random_state<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42</span>)</span></code></pre></div>
+<p>We want to perform classification with the following Neural Network which returns logits for the cross-entropy loss:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch.nn <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> nn</span>
+<span id="cb3-2">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> nn.Sequential(</span>
+<span id="cb3-3">    nn.Linear(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>),</span>
+<span id="cb3-4">    nn.ReLU(),</span>
+<span id="cb3-5">    nn.Linear(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb3-6">)</span></code></pre></div>
+<ol type="i">
+<li>What are the total number of parameters in this model? Apply <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BN%7D(0,%201)"> prior on all the parameters of the neural network and find MAP estimate of parameters and plot the predicted probability surface on a dense grid along with data (see <a href="https://machinelearningmastery.com/plot-a-decision-surface-for-machine-learning/">this example</a> for code reference). You may choose the appropriate limits for the grid to cover the data with some additional margin. [0.5 mark]</li>
+<li>What is the expected size of the Hessian matrix? Compute Full Hessian and invert it to get the covariance matrix. Visualize the heatmap of this covariance matrix with seaborn or matplotlib. A valid covariance matrix is always positive semi-definite (PSD). Check if the obtained covariance matrix is PSD. [1.5 marks]</li>
+<li>As an approximation, we can ignore the off-diagonal elements of Hessian. Why such a matrix might be easier to invert? After inverting and getting the covariance matrix, visualize it with a heatmap and compare it with the Full covariance obtained in (ii). [0.5 mark]</li>
+<li>Sample parameters from the posterior distribution. Use these parameters to obtain the predictive posterior with Monte Carlo sampling on a uniform 2d grid. Plot mean and standard deviation surfaces side-by-side with something similar to <code>plt.subplots()</code>. What are your observations? [1 mark]</li>
+</ol>
+<p>Following functions from <a href="https://github.com/AdamCobb/hamiltorch"><code>hamiltorch</code></a> will become useful while working on this:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># flatten function returns a 1d tensor of parameters from the model.</span></span>
+<span id="cb4-2">flat_params <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> hamiltorch.util.flatten(model)</span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># unflatten function returns a list of parameters which has</span></span>
+<span id="cb4-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># the same structure as list(model.parameters())</span></span>
+<span id="cb4-6">params_list <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> hamiltorch.util.unflatten(model, flat_params)</span>
+<span id="cb4-7"></span>
+<span id="cb4-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Put back the weights in the model in-place</span></span>
+<span id="cb4-9">hamiltorch.util.update_model_params_in_place(model, params_list)</span></code></pre></div>
+<!-- 6. BMH data
+https://nbviewer.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb -->
+
+
+</section>
+
+ ]]></description>
+  <guid>https://github.com/nipunbatra/pml2023/assignments/3.html</guid>
+  <pubDate>Mon, 18 Sep 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Assignment 2 (released 22 Aug, due 30 Aug)</title>
   <link>https://github.com/nipunbatra/pml2023/assignments/2.html</link>
@@ -210,53 +372,6 @@ font-style: inherit;">0.8</span></span>
 
  ]]></description>
   <guid>https://github.com/nipunbatra/pml2023/assignments/2.html</guid>
-  <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Assignment 2 (released 22 Aug, due 30 Aug)</title>
-  <link>https://github.com/nipunbatra/pml2023/assignments/3.html</link>
-  <description><![CDATA[ 
-
-
-
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<ul>
-<li>Total marks: 8</li>
-<li>Use torch for the assignment</li>
-<li>For distributions use torch.distributions and do not use torch.random directly</li>
-<li>The assignment has to be done in groups of two.</li>
-<li>The assignment should be a single Jupyter notebook.</li>
-<li>The results from every question of your assignment should be in visual formats such as plots, tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
-<li>To know more about a distribution, just look at the Wikipedia page.</li>
-</ul>
-</section>
-<section id="under-construction-dont-solve-till-this-note-is-removed" class="level2">
-<h2 class="anchored" data-anchor-id="under-construction-dont-solve-till-this-note-is-removed">UNDER CONSTRUCTION (DON”T SOLVE TILL THIS NOTE IS REMOVED)</h2>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<ol type="1">
-<li><p>Approximate the normalization constant for standard normal distribution using Monte Carlo integration. We only know the numerator term: e^ and want to find <img src="https://latex.codecogs.com/png.latex?I%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20e%5E%5Cfrac%7B-x%5E2%7D%7B2%7D%20dx"></p>
-<ol type="i">
-<li>What do you choose as f(x) and p(x)? [0.5 mark]</li>
-<li>Estimate <code>I</code> using Monte Carlo integration for varying number of samples. For each number of samples, repeat the experiment 10 times and report the mean and standard deviation of the estimate. [1 mark]</li>
-<li>scipy.integrate.quad</li>
-</ol></li>
-</ol>
-<p>Use 1000 samples. [1 mark]</p>
-<ol start="2" type="1">
-<li><p>Inverse CDF</p></li>
-<li><p>Rejection sampling</p></li>
-<li><p>Laplace approximation (w/ change of variable?; BNN)</p></li>
-<li><p>BMH data https://nbviewer.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb</p></li>
-</ol>
-
-
-</section>
-
- ]]></description>
-  <guid>https://github.com/nipunbatra/pml2023/assignments/3.html</guid>
   <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
