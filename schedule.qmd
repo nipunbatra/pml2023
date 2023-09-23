@@ -20,7 +20,7 @@ The page containing the notebooks is linked [here](notebooks/index.qmd).
 |11| Sep 14| Neural Networks uncertainty [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/nn-variants-final.ipynb)], [[YouTube](https://www.youtube.com/watch?v=hKgcZuAdgnM)]|
 |12| Sep 18| Rejection and Importance Sampling [[Slides](https://github.com/nipunbatra/pml-teaching/blob/master/slides/Sampling-2.pdf)] [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/rejection-sampling-importance-sampling.ipynb)] [[YouTube](https://www.youtube.com/watch?v=_xWL9AvYNlE&feature=youtu.be)]|
 |13| Sep 21| Practical MCMC [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/mcmc-hamiltorch.ipynb)] [[Youtube](https://www.youtube.com/watch?v=GEGTRKBX-20)]|
-14| Sep 25| MCMC theory|
+14| Sep 25| MCMC theory [[Slides 1 on Markov Chain](https://github.com/nipunbatra/pml-teaching/blob/master/slides/hmm.pdf)], [[Slides on MCMC]()] [[Markov Chain notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/markov-chain.ipynb)]|
 15| Sep 28| MCMC continued, Hierarchical Models|
 16| Oct 5| Neural Processes|
 17| Oct 9| Neural Processes - II, KL divergence, Variational Inference-I|
