@@ -18,3 +18,19 @@ The page containing the notebooks is linked [here](notebooks/index.qmd).
 |9| Aug 31| Monte Carlo Sampling [[Slides](https://github.com/nipunbatra/pml-teaching/blob/master/slides/Sampling-1.pdf)], [[Notebooks]], [[Youtube](https://www.youtube.com/watch?v=eCTCFI98Fl0)]|
 |10| Sep 11| Monte Carlo Sampling and Sampling from common distributions [[Slides](https://github.com/nipunbatra/pml-teaching/blob/master/slides/Sampling-1.pdf)], [[Notebooks]], [[YouTube](https://www.youtube.com/watch?v=Bl2VP1jl3SA&list=PLftoLyLEwECBEJyfRBJoSBd0UaTjEcs3I&index=10)]|
 |11| Sep 14| Neural Networks uncertainty [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/nn-variants-final.ipynb)], [[YouTube](https://www.youtube.com/watch?v=hKgcZuAdgnM)]|
+|12| Sep 18| Rejection and Importance Sampling [[Slides](https://github.com/nipunbatra/pml-teaching/blob/master/slides/Sampling-2.pdf)] [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/rejection-sampling-importance-sampling.ipynb)] [[YouTube](https://www.youtube.com/watch?v=_xWL9AvYNlE&feature=youtu.be)]|
+|13| Sep 21| Practical MCMC [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/mcmc-hamiltorch.ipynb)] [[Youtube](https://www.youtube.com/watch?v=GEGTRKBX-20)]|
+14| Sep 25| MCMC theory|
+15| Sep 28| MCMC continued, Hierarchical Models|
+16| Oct 5| Neural Processes|
+17| Oct 9| Neural Processes - II, KL divergence, Variational Inference-I|
+18| Oct 16| Variational Inference-II|
+19| Oct 19| Quantifying Uncertainty - Reliability Diagrams, Calibration|
+20| Oct 30| Bayesian Neural Networks - MC Dropout, Deep Ensemble|
+21| Nov 2| Active Learning|
+22| Nov 6| Bayesian Optimization|
+23| Nov 9| |
+24| Nov 13| |
+25| Nov 16| |
+26| Nov 20| |
+27| Nov 23| |
