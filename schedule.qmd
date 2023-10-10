@@ -21,16 +21,15 @@ The page containing the notebooks is linked [here](notebooks/index.qmd).
 |12| Sep 18| Rejection and Importance Sampling [[Slides](https://github.com/nipunbatra/pml-teaching/blob/master/slides/Sampling-2.pdf)] [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/rejection-sampling-importance-sampling.ipynb)] [[YouTube](https://www.youtube.com/watch?v=_xWL9AvYNlE&feature=youtu.be)]|
 |13| Sep 21| Practical MCMC [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/mcmc-hamiltorch.ipynb)] [[Youtube](https://www.youtube.com/watch?v=GEGTRKBX-20)]|
 14| Sep 25| MCMC theory [[Slides 1 on Markov Chain](https://github.com/nipunbatra/pml-teaching/blob/master/slides/hmm.pdf)], [[Slides on MCMC]()] [[Markov Chain notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/markov-chain.ipynb)]|
-15| Sep 28| MCMC continued, Hierarchical Models|
-16| Oct 5| Neural Processes|
-17| Oct 9| Neural Processes - II, KL divergence, Variational Inference-I|
-18| Oct 16| Variational Inference-II|
-19| Oct 19| Quantifying Uncertainty - Reliability Diagrams, Calibration|
-20| Oct 30| Bayesian Neural Networks - MC Dropout, Deep Ensemble|
-21| Nov 2| Active Learning|
-22| Nov 6| Bayesian Optimization|
-23| Nov 9| |
-24| Nov 13| |
-25| Nov 16| |
-26| Nov 20| |
-27| Nov 23| |
+15| Oct 5| Calibration [[Youtube](https://www.youtube.com/watch?v=1YLYuRFjdqU)], [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/reliability.ipynb)], [[Tutorial on Calibration](https://classifier-calibration.github.io)]|
+16| Oct 9| MC Dropout and Deep Ensemble [[Youtube](https://www.youtube.com/watch?v=jYjLuFiTpck)], [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/monte-carlo-dropout.ipynb)]|
+17| Oct 16| Hierarchical Models|
+18| Oct 19| Neural Processes|
+19| Oct 30| KL divergence, Variational Inference-I|
+20| Nov 2| Variational Inference-II|
+21| Nov 6| Active Learning|
+22| Nov 9| Bayesian Optimization|
+23| Nov 13| |
+24| Nov 16| |
+25| Nov 20| |
+26| Nov 23| |
