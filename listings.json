@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/quizzes.html",
+    "items": []
+  },
+  {
     "listing": "/assignments.html",
     "items": [
       "/assignments/3.html",
@@ -9,10 +13,6 @@
   },
   {
     "listing": "/notebooks/index.html",
-    "items": []
-  },
-  {
-    "listing": "/quizzes.html",
     "items": []
   }
 ]
