@@ -23,13 +23,13 @@ The page containing the notebooks is linked [here](notebooks/index.qmd).
 14| Sep 25| MCMC theory [[Slides 1 on Markov Chain](https://github.com/nipunbatra/pml-teaching/blob/master/slides/hmm.pdf)], [[Slides on MCMC](https://github.com/nipunbatra/pml-teaching/blob/master/slides/MCMC.pdf)] [[Markov Chain notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/markov-chain.ipynb)]|
 15| Oct 5| Calibration [[Youtube](https://www.youtube.com/watch?v=1YLYuRFjdqU)], [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/reliability.ipynb)], [[Tutorial on Calibration](https://classifier-calibration.github.io)]|
 16| Oct 9| MC Dropout and Deep Ensemble [[Youtube](https://www.youtube.com/watch?v=jYjLuFiTpck)], [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/monte-carlo-dropout.ipynb)]|
-17| Oct 16| Hierarchical Models|
-18| Oct 19| Neural Processes|
-19| Oct 30| KL divergence, Variational Inference-I|
-20| Nov 2| Variational Inference-II|
-21| Nov 6| Active Learning|
-22| Nov 9| Bayesian Optimization|
-23| Nov 13| |
-24| Nov 16| |
-25| Nov 20| |
+17| Oct 16| Hierarchical Models, [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hierarchical_lr_numpyro.ipynb)], [[YouTube](https://www.youtube.com/watch?v=FFSk8Z1FDxw)]|
+18| Oct 19| Meta learning: Hypernets and Neural Processes, [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb)], [[YouTube](https://www.youtube.com/watch?v=V_pYGbAArMk&list=PLftoLyLEwECBEJyfRBJoSBd0UaTjEcs3I&index=18)]|
+19| Oct 30| KL divergence, Variational Inference, MC sampling, Reparameterisation|
+20| Nov 2| Variational Inference-II: ELBO, Coin Toss|
+21| Nov 6| Variational Inference-III: VI for NNs, Mean field, low rank, ADVI?|
+22| Nov 9| Active Learning: Classic Methods|
+23| Nov 13| Active Learning for Deep learning|
+24| Nov 16| Bayesian Optimization|
+25| Nov 20| Conformal Prediction|
 26| Nov 23| |
