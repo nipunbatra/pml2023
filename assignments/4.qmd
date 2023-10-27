@@ -1,0 +1,87 @@
+---
+title: Assignment 4 (released 27 Sep, due 10 October 7 PM)
+date: 2023-10-27
+---
+
+## Instructions
+
+- Total Marks: 9
+- Use torch for the assignment.
+- For sampling, use torch.distributions and do not use torch.random directly.
+- The assignment has to be done in groups of two.
+- The assignment should be a single jupyter notebook. 
+- The results from every question of your assignment should be in visual formats such as plots and tables. Don't show model's log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g. 10%).
+
+## Questions 
+
+1. [1 mark] Implement Logistic Regression using the Pyro library referring [1] for guidance. Use the below given dataset. 
+[1] [](https://docs.pyro.ai/en/stable/)
+```py
+from sklearn.datasets import make_moons
+from sklearn.model_selection import train_test_split
+
+X, y = make_moons(n_samples=100, noise=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_state=42)
+```
+2. [2 marks] For the FVC dataset example discussed in the class, taking the test set as mentioned below, deduce which model works best by keeping MAE as the metric and why? The base model is Linear Regression by Sklearn. Also plot variance plots and report the coverage for the 90% confidence interval for the posterior distribution.
+
+```py
+x_train, x_test, y_train, y_test = train_test_split(train["Weeks"], train['FVC'], train_size = 0.8, random_state = 0)
+```
+Pooled Model
+\textbf{Pooled:}
+\begin{align*}
+\alpha &\sim \mathcal{N}(0, 500) \\
+\beta &\sim \mathcal{N}(0, 500) \\
+\sigma &\sim \text{HalfNormal}(100)
+\end{align*}
+
+Partially pooled model with the same sigma
+\textbf{Partially pooled (with same sigma):}
+\begin{align*}
+\mu_\alpha &\sim \mathcal{N}(0, 500) \\
+\sigma_\alpha &\sim \text{HalfNormal}(100) \\
+\mu_\beta &\sim \mathcal{N}(0, 3) \\
+\sigma_\beta &\sim \text{HalfNormal}(3) \\
+\alpha_i &\sim \mathcal{N}(\mu_\alpha, \sigma_\alpha) \\
+\beta_i &\sim \mathcal{N}(\mu_\beta, \sigma_\beta) \\
+\sigma &\sim \text{HalfNormal}(100)
+\end{align*}
+
+Partially pooled model with Sigma Hyperpriors
+\textbf{Partially pooled with sigma hyperpriors:}
+\begin{align*}
+\mu_\alpha &\sim \mathcal{N}(0, 500) \\
+\sigma_\alpha &\sim \text{HalfNormal}(100) \\
+\mu_\beta &\sim \mathcal{N}(0, 3) \\
+\sigma_\beta &\sim \text{HalfNormal}(3) \\
+\alpha_i &\sim \mathcal{N}(\mu_\alpha, \sigma_\alpha) \\
+\beta_i &\sim \mathcal{N}(\mu_\beta, \sigma_\beta) \\
+\mu_\sigma &\sim \mathcal{N}(0, 10) \\
+\sigma_\sigma &\sim \text{HalfNormal}(30) \\
+\gamma_\sigma &\sim \text{LogNormal}(\mu_\sigma, \sigma_\sigma) \\
+\sigma_i &\sim \text{HalfNormal}(\gamma_\sigma)
+\end{align*}
+
+3. [3 marks] Use your version of following models to reproduce figure 4 and figure 5 from the paper referenced at [2] You can also refer to the notebook at [3].
+[2] [](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf)
+[3] [](https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx)
+    i. Hypernet [1.5 marks]
+    ii. Neural Processes [1.5 marks]
+
+4. [3 marks] Write the metropolis algorithms from scratch. Take the samples using below given log probs and compare with hamiltorch and emcee’s implementation. Use the log joint function given below. 
+
+```py
+def log_prior(omega):
+    # Assuming a flat prior for this example
+    return 0.0
+
+def log_likelihood(omega):
+    omega = torch.tensor(omega)
+    mean = torch.tensor([0., 0.])
+    stddev = torch.tensor([0.5, 1.])
+    return D.MultivariateNormal(mean, torch.diag(stddev**2)).log_prob(omega).sum()
+
+def log_joint(omega):
+    return log_likelihood(omega) + log_prior(omega)
+```
