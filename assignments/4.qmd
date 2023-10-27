@@ -14,7 +14,7 @@ date: 2023-10-27
 
 ## Questions 
 
-1. [1 mark] Implement Logistic Regression using the Pyro library referring [1] for guidance. Use the below given dataset. 
+1. [1 mark] Implement Logistic Regression using the Pyro library referring [1] for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use the below given dataset.
 [[1]](https://docs.pyro.ai/en/stable/)
 ```py
 from sklearn.datasets import make_moons
@@ -23,8 +23,8 @@ from sklearn.model_selection import train_test_split
 X, y = make_moons(n_samples=100, noise=0.3, random_state=42)
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_state=42)
 ```
-2. [2 marks] For the FVC dataset example discussed in the class, taking the test set as mentioned below, deduce which model works best by keeping MAE as the metric and why? The base model is Linear Regression by Sklearn. Also plot variance plots and report the coverage for the 90% confidence interval for the posterior distribution.
-
+2. [2 marks] Consider the FVC dataset example discussed in the class. Find the notebook link at [2]. We only had the train dataset. Now, we want to find out the performance of various models on the test dataset. Use the given dataset and deduce which model works best in terms of accuracy and coverage? The base model is Linear Regression by Sklearn (```from sklearn.linear_model import LinearRegression```). Plot the trace diagrams and posterior distribution. Also plot the predictive posteriror distribution with 90% confidence interval. 
+[[2]](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hierarchical_lr_numpyro.ipynb)
 ```py
 x_train, x_test, y_train, y_test = train_test_split(train["Weeks"], train['FVC'], train_size = 0.8, random_state = 0)
 ```
@@ -63,25 +63,19 @@ Partially pooled model with Sigma Hyperpriors
 \sigma_i &\sim \text{HalfNormal}(\gamma_\sigma)
 \end{align*}
 
-3. [3 marks] Use your version of following models to reproduce figure 4 and figure 5 from the paper referenced at [2] You can also refer to the notebook at [3].
+3. [3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [2] You can also refer to the notebook at [3].
 [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf)
 [[3]](https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx)
     i. Hypernet [1.5 marks]
     ii. Neural Processes [1.5 marks]
 
-4. [3 marks] Write the metropolis algorithms from scratch. Take the samples using below given log probs and compare with hamiltorch and emcee’s implementation. Use the log joint function given below. 
+4. [3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below. 
 
 ```py
-def log_prior(omega):
-    # Assuming a flat prior for this example
-    return 0.0
-
+import torch.distributions as D
 def log_likelihood(omega):
     omega = torch.tensor(omega)
     mean = torch.tensor([0., 0.])
     stddev = torch.tensor([0.5, 1.])
     return D.MultivariateNormal(mean, torch.diag(stddev**2)).log_prob(omega).sum()
-
-def log_joint(omega):
-    return log_likelihood(omega) + log_prior(omega)
 ```
