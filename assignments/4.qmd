@@ -15,7 +15,7 @@ date: 2023-10-27
 ## Questions 
 
 1. [1 mark] Implement Logistic Regression using the Pyro library referring [1] for guidance. Use the below given dataset. 
-[1] [](https://docs.pyro.ai/en/stable/)
+[[1]](https://docs.pyro.ai/en/stable/)
 ```py
 from sklearn.datasets import make_moons
 from sklearn.model_selection import train_test_split
@@ -64,8 +64,8 @@ Partially pooled model with Sigma Hyperpriors
 \end{align*}
 
 3. [3 marks] Use your version of following models to reproduce figure 4 and figure 5 from the paper referenced at [2] You can also refer to the notebook at [3].
-[2] [](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf)
-[3] [](https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx)
+[[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf)
+[[3]](https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx)
     i. Hypernet [1.5 marks]
     ii. Neural Processes [1.5 marks]
 
