@@ -220,8 +220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 \beta &amp;\sim \mathcal{N}(0, 500) \\
 \sigma &amp;\sim \text{HalfNormal}(100)
 \end{align*}\]</span> <span class="math display">\[\begin{equation*}
-FVC_i \sim \text{Normal}(\alpha + \beta \cdot Week_i, \sigma)
-\end{equation*}\]</span></p>
+FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_, \sigma)
+\end{equation*}\]</span> where <span class="math inline">\(j\)</span> is the patient index.</p>
 <p>Partially pooled model with the same sigma <span class="math display">\[\begin{align*}
 \mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
 \sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
@@ -232,8 +232,8 @@ FVC_i \sim \text{Normal}(\alpha + \beta \cdot Week_i, \sigma)
 \sigma &amp;\sim \text{HalfNormal}(100)
 \end{align*}\]</span></p>
 <p><span class="math display">\[\begin{equation*}
-FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
-\end{equation*}\]</span></p>
+FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
+\end{equation*}\]</span> where <span class="math inline">\(i\)</span> is the patient index and <span class="math inline">\(j\)</span> is the week index.</p>
 <p>Partially pooled model with sigma hyperpriors <span class="math display">\[\begin{align*}
 \mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
 \sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
@@ -245,15 +245,15 @@ FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 \sigma_i &amp;\sim \text{Exp}(\gamma_\sigma)
 \end{align*}\]</span></p>
 <p><span class="math display">\[\begin{equation*}
-FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
-\end{equation*}\]</span></p>
+FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
+\end{equation*}\]</span> where <span class="math inline">\(i\)</span> is the patient index and <span class="math inline">\(j\)</span> is the week index.</p>
 <ol start="3" type="1">
-<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the course.
+<li>[4 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the <a href="https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb">course</a>.
 <ol type="i">
-<li>Hypernet [1.5 marks]</li>
-<li>Neural Processes [1.5 marks]</li>
+<li>Hypernet [2 marks]</li>
+<li>Neural Processes [2 marks]</li>
 </ol></li>
-<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch’s standard HMC and <a href="https://emcee.readthedocs.io">emcee’s</a> Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below.</li>
+<li>[2 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch’s standard HMC and <a href="https://emcee.readthedocs.io">emcee’s</a> Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.distributions <span class="im">as</span> D</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_likelihood(omega):</span>
