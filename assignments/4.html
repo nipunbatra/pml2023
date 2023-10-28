@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-10-27">
 
-<title>ES661 PML - Assignments</title>
+<title>ES661 PML - Assignment 4 (released 27 Sep, due 10 October 7 PM)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,49 +96,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="alternate" type="application/rss+xml" title="ES661 PML" href="assignments.xml"></head>
+</head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">ES661 PML</span>
     </a>
   </div>
@@ -116,31 +120,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./grading.html" rel="" target="">
+    <a class="nav-link" href="../grading.html" rel="" target="">
  <span class="menu-text">Grading Policy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./faq.html" rel="" target="">
+    <a class="nav-link" href="../faq.html" rel="" target="">
  <span class="menu-text">FAQs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule.html" rel="" target="">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignments.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../assignments.html" rel="" target="">
  <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./quizzes.html" rel="" target="">
+    <a class="nav-link" href="../quizzes.html" rel="" target="">
  <span class="menu-text">Quizzes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notebooks/index.html" rel="" target="">
+    <a class="nav-link" href="../notebooks/index.html" rel="" target="">
  <span class="menu-text">Notebooks</span></a>
   </li>  
   <li class="nav-item">
@@ -156,18 +160,16 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignments</h1>
+<h1 class="title">Assignment 4 (released 27 Sep, due 10 October 7 PM)</h1>
 </div>
 
 
@@ -175,6 +177,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 27, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -182,78 +190,82 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total Marks: 9</li>
+<li>Use torch for the assignment.</li>
+<li>For sampling, use torch.distributions and do not use torch.random directly.</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots and tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+</ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> make_moons</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> make_moons(n_samples<span class="op">=</span><span class="dv">100</span>, noise<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y,test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>[2 marks] Consider the FVC dataset example discussed in the class. Find the notebook link at <a href="(https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hierarchical_lr_numpyro.ipynb)">[2]</a>. We had only used the train dataset. Now, we want to find out the performance of various models on the test dataset. Use the given dataset and deduce which model works best in terms of error (<code>MAE</code>) and coverage? The base model is Linear Regression by Sklearn (<code>from sklearn.linear_model import LinearRegression</code>). Plot the trace diagrams and posterior distribution. Also plot the predictive posterior distribution with 90% confidence interval.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x_train, x_test, y_train, y_test <span class="op">=</span> train_test_split(train[<span class="st">"Weeks"</span>], train[<span class="st">'FVC'</span>], train_size <span class="op">=</span> <span class="fl">0.8</span>, random_state <span class="op">=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pooled Model <span class="math display">\[\begin{align*}
+\alpha &amp;\sim \mathcal{N}(0, 500) \\
+\beta &amp;\sim \mathcal{N}(0, 500) \\
+\sigma &amp;\sim \text{HalfNormal}(100)
+\end{align*}\]</span> <span class="math display">\[\begin{equation*}
+FVC_i \sim \text{Normal}(\alpha + \beta \cdot Week_i, \sigma)
+\end{equation*}\]</span></p>
+<p>Partially pooled model with the same sigma <span class="math display">\[\begin{align*}
+\mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
+\sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
+\mu_\beta &amp;\sim \mathcal{N}(0, 3) \\
+\sigma_\beta &amp;\sim \text{HalfNormal}(3) \\
+\alpha_i &amp;\sim \mathcal{N}(\mu_\alpha, \sigma_\alpha) \\
+\beta_i &amp;\sim \mathcal{N}(\mu_\beta, \sigma_\beta) \\
+\sigma &amp;\sim \text{HalfNormal}(100)
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
+\end{equation*}\]</span></p>
+<p>Partially pooled model with sigma hyperpriors <span class="math display">\[\begin{align*}
+\mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
+\sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
+\mu_\beta &amp;\sim \mathcal{N}(0, 3) \\
+\sigma_\beta &amp;\sim \text{HalfNormal}(3) \\
+\alpha_i &amp;\sim \mathcal{N}(\mu_\alpha, \sigma_\alpha) \\
+\beta_i &amp;\sim \mathcal{N}(\mu_\beta, \sigma_\beta) \\
+\gamma_\sigma &amp;\sim \text{HalfNormal}(30) \\
+\sigma_i &amp;\sim \text{Exp}(\gamma_\sigma)
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
+\end{equation*}\]</span></p>
+<ol start="3" type="1">
+<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook at <a href="https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx">[3]</a>
+<ol type="i">
+<li>Hypernet [1.5 marks]</li>
+<li>Neural Processes [1.5 marks]</li>
+</ol></li>
+<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.distributions <span class="im">as</span> D</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_likelihood(omega):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    omega <span class="op">=</span> torch.tensor(omega)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> torch.tensor([<span class="fl">0.</span>, <span class="fl">0.</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    stddev <span class="op">=</span> torch.tensor([<span class="fl">0.5</span>, <span class="fl">1.</span>])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> D.MultivariateNormal(mean, torch.diag(stddev<span class="op">**</span><span class="dv">2</span>)).log_prob(omega).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-date-sort="1698364800000" data-listing-file-modified-sort="1698461681417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Assignment 4 (released 27 Sep, due 10 October 7 PM)" data-listing-filename-sort="4.qmd">
-<td>
-<span class="listing-date">Oct 27, 2023</span>
-</td>
-<td>
-<a href="./assignments/4.html" class="title listing-title">Assignment 4 (released 27 Sep, due 10 October 7 PM)</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-<tr data-index="1" data-listing-date-sort="1694995200000" data-listing-file-modified-sort="1698461681417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Assignment 3 (released 18 Sep, due 27 September 7 PM)" data-listing-filename-sort="3.qmd">
-<td>
-<span class="listing-date">Sep 18, 2023</span>
-</td>
-<td>
-<a href="./assignments/3.html" class="title listing-title">Assignment 3 (released 18 Sep, due 27 September 7 PM)</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-<tr data-index="2" data-listing-date-sort="1692662400000" data-listing-file-modified-sort="1698461681417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Assignment 2 (released 22 Aug, due 30 Aug)" data-listing-filename-sort="2.qmd">
-<td>
-<span class="listing-date">Aug 22, 2023</span>
-</td>
-<td>
-<a href="./assignments/2.html" class="title listing-title">Assignment 2 (released 22 Aug, due 30 Aug)</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-<tr data-index="3" data-listing-date-sort="1691625600000" data-listing-file-modified-sort="1698461681417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Assignment 1 (released 10 Aug, due 18 Aug)" data-listing-filename-sort="1.qmd">
-<td>
-<span class="listing-date">Aug 10, 2023</span>
-</td>
-<td>
-<a href="./assignments/1.html" class="title listing-title">Assignment 1 (released 10 Aug, due 18 Aug)</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/nipunbatra/pml2023/faq.html</loc>
-    <lastmod>2023-10-19T12:38:33.743Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/notebooks/biased-mle-normal.html</loc>
-    <lastmod>2023-10-19T12:38:32.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/notebooks/mle-univariate.html</loc>
-    <lastmod>2023-10-19T12:38:31.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/notebooks/distributions.html</loc>
-    <lastmod>2023-10-19T12:38:30.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/assignments/3.html</loc>
-    <lastmod>2023-10-19T12:38:28.983Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/quizzes.html</loc>
-    <lastmod>2023-10-19T12:38:27.515Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/schedule.html</loc>
-    <lastmod>2023-10-19T12:38:26.527Z</lastmod>
+    <loc>https://github.com/nipunbatra/pml2023/assignments.html</loc>
+    <lastmod>2023-10-28T02:55:14.805Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/grading.html</loc>
-    <lastmod>2023-10-19T12:38:23.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/assignments.html</loc>
-    <lastmod>2023-10-19T12:38:27.111Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/nipunbatra/pml2023/assignments/1.html</loc>
-    <lastmod>2023-10-19T12:38:28.023Z</lastmod>
+    <lastmod>2023-10-28T02:55:13.777Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/assignments/2.html</loc>
-    <lastmod>2023-10-19T12:38:29.843Z</lastmod>
+    <lastmod>2023-10-28T02:55:12.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/assignments/1.html</loc>
+    <lastmod>2023-10-28T02:55:10.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/schedule.html</loc>
+    <lastmod>2023-10-28T02:55:09.529Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/notebooks/bayes-librarian.html</loc>
-    <lastmod>2023-10-19T12:38:31.183Z</lastmod>
+    <lastmod>2023-10-28T02:55:08.189Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/notebooks/distributions.html</loc>
+    <lastmod>2023-10-28T02:55:07.129Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/faq.html</loc>
+    <lastmod>2023-10-28T02:55:03.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/notebooks/mle-univariate.html</loc>
+    <lastmod>2023-10-28T02:55:06.365Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/notebooks/index.html</loc>
-    <lastmod>2023-10-19T12:38:32.375Z</lastmod>
+    <lastmod>2023-10-28T02:55:07.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/notebooks/biased-mle-normal.html</loc>
+    <lastmod>2023-10-28T02:55:08.801Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/nipunbatra/pml2023/index.html</loc>
-    <lastmod>2023-10-19T12:38:33.351Z</lastmod>
+    <lastmod>2023-10-28T02:55:09.977Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/assignments/3.html</loc>
+    <lastmod>2023-10-28T02:55:11.513Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/assignments/4.html</loc>
+    <lastmod>2023-10-28T02:55:13.285Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/nipunbatra/pml2023/quizzes.html</loc>
+    <lastmod>2023-10-28T02:55:14.225Z</lastmod>
   </url>
 </urlset>

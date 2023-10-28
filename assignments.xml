@@ -10,7 +10,140 @@
 <atom:link href="https://github.com/nipunbatra/pml2023/assignments.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 18 Sep 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 27 Oct 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Assignment 4 (released 27 Sep, due 10 October 7 PM)</title>
+  <link>https://github.com/nipunbatra/pml2023/assignments/4.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<ul>
+<li>Total Marks: 9</li>
+<li>Use torch for the assignment.</li>
+<li>For sampling, use torch.distributions and do not use torch.random directly.</li>
+<li>The assignment has to be done in groups of two.</li>
+<li>The assignment should be a single jupyter notebook.</li>
+<li>The results from every question of your assignment should be in visual formats such as plots and tables. Don’t show model’s log directly in Viva. All plots should have labels and legends appropriately. If not done, we may cut some marks for presentation (e.g.&nbsp;10%).</li>
+</ul>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
+</ol>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sklearn.datasets <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> make_moons</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sklearn.model_selection <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> train_test_split</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">X, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> make_moons(n_samples<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, noise<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.3</span>, random_state<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42</span>)</span>
+<span id="cb1-5">X_train, X_test, y_train, y_test <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> train_test_split(X, y,test_size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span>, random_state<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42</span>)</span></code></pre></div>
+<ol start="2" type="1">
+<li>[2 marks] Consider the FVC dataset example discussed in the class. Find the notebook link at <a href="(https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hierarchical_lr_numpyro.ipynb)">[2]</a>. We had only used the train dataset. Now, we want to find out the performance of various models on the test dataset. Use the given dataset and deduce which model works best in terms of error (<code>MAE</code>) and coverage? The base model is Linear Regression by Sklearn (<code>from sklearn.linear_model import LinearRegression</code>). Plot the trace diagrams and posterior distribution. Also plot the predictive posterior distribution with 90% confidence interval.</li>
+</ol>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1">x_train, x_test, y_train, y_test <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> train_test_split(train[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Weeks"</span>], train[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'FVC'</span>], train_size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span>, random_state <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span></code></pre></div>
+<p>Pooled Model <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_i%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha%20+%20%5Cbeta%20%5Ccdot%20Week_i,%20%5Csigma)%0A%5Cend%7Bequation*%7D"></p>
+<p>Partially pooled model with the same sigma <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha_i%20+%20%5Cbeta_i%20%5Ccdot%20Week_j,%20%5Csigma)%0A%5Cend%7Bequation*%7D"></p>
+<p>Partially pooled model with sigma hyperpriors <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Cgamma_%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(30)%20%5C%5C%0A%5Csigma_i%20&amp;%5Csim%20%5Ctext%7BExp%7D(%5Cgamma_%5Csigma)%0A%5Cend%7Balign*%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha_i%20+%20%5Cbeta_i%20%5Ccdot%20Week_j,%20%5Csigma_i)%0A%5Cend%7Bequation*%7D"></p>
+<ol start="3" type="1">
+<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook at <a href="https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx">[3]</a>
+<ol type="i">
+<li>Hypernet [1.5 marks]</li>
+<li>Neural Processes [1.5 marks]</li>
+</ol></li>
+<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below.</li>
+</ol>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch.distributions <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> D</span>
+<span id="cb3-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> log_likelihood(omega):</span>
+<span id="cb3-3">    omega <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.tensor(omega)</span>
+<span id="cb3-4">    mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.tensor([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.</span>])</span>
+<span id="cb3-5">    stddev <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.tensor([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.</span>])</span>
+<span id="cb3-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> D.MultivariateNormal(mean, torch.diag(stddev<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)).log_prob(omega).<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()</span></code></pre></div>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://github.com/nipunbatra/pml2023/assignments/4.html</guid>
+  <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Assignment 3 (released 18 Sep, due 27 September 7 PM)</title>
   <link>https://github.com/nipunbatra/pml2023/assignments/3.html</link>
