@@ -34,8 +34,9 @@ Pooled Model
 \sigma &\sim \text{HalfNormal}(100)
 \end{align*}
 \begin{equation*}
-FVC_i \sim \text{Normal}(\alpha + \beta \cdot Week_i, \sigma)
+FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_, \sigma)
 \end{equation*}
+where $j$ is the patient index.
 
 Partially pooled model with the same sigma
 \textbf{Partially pooled (with same sigma):}
@@ -50,8 +51,9 @@ Partially pooled model with the same sigma
 \end{align*}
 
 \begin{equation*}
-FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
+FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 \end{equation*}
+where $i$ is the patient index and $j$ is the week index.
 
 Partially pooled model with sigma hyperpriors
 \textbf{Partially pooled with sigma hyperpriors:}
@@ -67,14 +69,15 @@ Partially pooled model with sigma hyperpriors
 \end{align*}
 
 \begin{equation*}
-FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
+FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
 \end{equation*}
+where $i$ is the patient index and $j$ is the week index.
 
-3. [3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf). You can also refer to the notebook in the course.
-    i. Hypernet [1.5 marks]
-    ii. Neural Processes [1.5 marks]
+3. [4 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf). You can also refer to the notebook in the [course](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb).
+    i. Hypernet [2 marks]
+    ii. Neural Processes [2 marks]
 
-4. [3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch's standard HMC and [emcee’s](https://emcee.readthedocs.io) Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below. 
+4. [2 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch's standard HMC and [emcee’s](https://emcee.readthedocs.io) Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below. 
 
 ```py
 import torch.distributions as D
