@@ -1,6 +1,6 @@
 ---
-title: Assignment 4 (released 27 Sep, due 10 October 7 PM)
-date: 2023-10-27
+title: Assignment 4 (released 28 Oct, due 8 Nov 7 PM)
+date: 2023-10-28
 ---
 
 ## Instructions
@@ -14,7 +14,7 @@ date: 2023-10-27
 
 ## Questions 
 
-1. [1 mark] Implement Logistic Regression using the Pyro library referring [[1]](https://docs.pyro.ai/en/stable/) for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.
+1. [1 mark] Implement Logistic Regression using the Pyro library referring [[1]](https://docs.pyro.ai/en/stable/) for guidance. Show both the mean prediction as well as standard deviation in the predictions over the 2d grid. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.
 ```py
 from sklearn.datasets import make_moons
 from sklearn.model_selection import train_test_split
@@ -70,11 +70,11 @@ Partially pooled model with sigma hyperpriors
 FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
 \end{equation*}
 
-3. [3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf). You can also refer to the notebook at [[3]](https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx)
+3. [3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf). You can also refer to the notebook in the course.
     i. Hypernet [1.5 marks]
     ii. Neural Processes [1.5 marks]
 
-4. [3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below. 
+4. [3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch's standard HMC and [emcee’s](https://emcee.readthedocs.io) Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below. 
 
 ```py
 import torch.distributions as D
