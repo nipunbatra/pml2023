@@ -10,9 +10,9 @@
 <atom:link href="https://github.com/nipunbatra/pml2023/assignments.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 27 Oct 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 28 Oct 2023 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Assignment 4 (released 27 Sep, due 10 October 7 PM)</title>
+  <title>Assignment 4 (released 28 Oct, due 8 Nov 7 PM)</title>
   <link>https://github.com/nipunbatra/pml2023/assignments/4.html</link>
   <description><![CDATA[ 
 
@@ -32,7 +32,7 @@
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <ol type="1">
-<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
+<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions over the 2d grid. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
 </ol>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
@@ -95,12 +95,12 @@ font-style: inherit;">0</span>)</span></code></pre></div>
 <p>Partially pooled model with sigma hyperpriors <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Cgamma_%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(30)%20%5C%5C%0A%5Csigma_i%20&amp;%5Csim%20%5Ctext%7BExp%7D(%5Cgamma_%5Csigma)%0A%5Cend%7Balign*%7D"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha_i%20+%20%5Cbeta_i%20%5Ccdot%20Week_j,%20%5Csigma_i)%0A%5Cend%7Bequation*%7D"></p>
 <ol start="3" type="1">
-<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook at <a href="https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx">[3]</a>
+<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the course.
 <ol type="i">
 <li>Hypernet [1.5 marks]</li>
 <li>Neural Processes [1.5 marks]</li>
 </ol></li>
-<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below.</li>
+<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch’s standard HMC and <a href="https://emcee.readthedocs.io">emcee’s</a> Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below.</li>
 </ol>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
@@ -142,7 +142,7 @@ font-style: inherit;">sum</span>()</span></code></pre></div>
 
  ]]></description>
   <guid>https://github.com/nipunbatra/pml2023/assignments/4.html</guid>
-  <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+  <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Assignment 3 (released 18 Sep, due 27 September 7 PM)</title>

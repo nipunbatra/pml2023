@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-10-27">
+<meta name="dcterms.date" content="2023-10-28">
 
-<title>ES661 PML - Assignment 4 (released 27 Sep, due 10 October 7 PM)</title>
+<title>ES661 PML - Assignment 4 (released 28 Oct, due 8 Nov 7 PM)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4 (released 27 Sep, due 10 October 7 PM)</h1>
+<h1 class="title">Assignment 4 (released 28 Oct, due 8 Nov 7 PM)</h1>
 </div>
 
 
@@ -180,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 27, 2023</p>
+      <p class="date">October 28, 2023</p>
     </div>
   </div>
   
@@ -204,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <ol type="1">
-<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
+<li>[1 mark] Implement Logistic Regression using the Pyro library referring <a href="https://docs.pyro.ai/en/stable/">[1]</a> for guidance. Show both the mean prediction as well as standard deviation in the predictions over the 2d grid. Use NUTS MCMC sampling to sample the posterior. Take 1000 samples for posterior distribution and use 500 samples as burn/warm up. Use the below given dataset.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> make_moons</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
@@ -248,12 +248,12 @@ FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 FVC_j \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
 \end{equation*}\]</span></p>
 <ol start="3" type="1">
-<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook at <a href="https://colab.research.google.com/drive/1i8gMWybkVhF66hqbjrSkbkMo54dIOJsx">[3]</a>
+<li>[3 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the course.
 <ol type="i">
 <li>Hypernet [1.5 marks]</li>
 <li>Neural Processes [1.5 marks]</li>
 </ol></li>
-<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch and emcee’s implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the proposed sigma. Use the log likelihood function given below.</li>
+<li>[3 marks] Write the Random walk Metropolis Hastings algorithms from scratch. Take 1000 samples using below given log probs and compare the mean and covariance matrix with hamiltorch’s standard HMC and <a href="https://emcee.readthedocs.io">emcee’s</a> Metropolis Hastings implementation. Use 500 samples as the burn/warm up samples. Also check the relation between acceptance ratio and the sigma of the proposal distribution in your from scratch implementation. Use the log likelihood function given below.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.distributions <span class="im">as</span> D</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> log_likelihood(omega):</span>
