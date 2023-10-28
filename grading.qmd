@@ -19,12 +19,12 @@ TO BE FINALISED
         - Assignment 1: 10 August (due 18 August)
         - Assignment 2: 21 August (due 28 August)
         - Assignment 3: 14 September (due 21 September)
-        - Assignment 4: 30 October (due 6 November)
+        - ~~Assignment 4: 30 October (due 6 November)~~ Assignment 4: 28 October (due 8 November)
 
 - Project (27%): The number of project groups would be <=10. Depending on the class size, the groups would be of 3-5 students. 
     - Tentative schedule:
         - Presentation I: 6 October (10%)
-        - Final Project presentation: 22 November (12%)
-        - Final report: 24 November (5%)
+        - Final Project presentation: ~~22 November~~ 17 Nov (12%)
+        - Final report: ~~24 November~~ 20 Nov (5%)
 
 - Interactive article (5%): Create a Streamlit or similar interactive article for concept explanation (due 15 November)
