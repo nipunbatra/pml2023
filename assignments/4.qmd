@@ -26,7 +26,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_s
 ```py
 x_train, x_test, y_train, y_test = train_test_split(train["Weeks"], train['FVC'], train_size = 0.8, random_state = 0)
 ```
-Pooled Model
+
+::: {.callout-important title="Pooled Model Older (wrong) version"}
 \textbf{Pooled:}
 \begin{align*}
 \alpha &\sim \mathcal{N}(0, 500) \\
@@ -37,9 +38,23 @@ Pooled Model
 FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_, \sigma)
 \end{equation*}
 where $j$ is the patient index.
+:::
 
-Partially pooled model with the same sigma
-\textbf{Partially pooled (with same sigma):}
+::: {.callout-tip title="Pooled Model Newer (corrected) version"}
+\textbf{Pooled:}
+\begin{align*}
+\alpha &\sim \mathcal{N}(0, 500) \\
+\beta &\sim \mathcal{N}(0, 500) \\
+\sigma &\sim \text{HalfNormal}(100)
+\end{align*}
+\begin{equation*}
+FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_j, \sigma)
+\end{equation*}
+where $j$ is the week index.
+:::
+
+--- 
+::: {.callout-tip title="Partially pooled model with the same sigma"}
 \begin{align*}
 \mu_\alpha &\sim \mathcal{N}(0, 500) \\
 \sigma_\alpha &\sim \text{HalfNormal}(100) \\
@@ -54,8 +69,10 @@ Partially pooled model with the same sigma
 FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 \end{equation*}
 where $i$ is the patient index and $j$ is the week index.
+:::
 
-Partially pooled model with sigma hyperpriors
+
+::: {.callout-tip title="Partially pooled model with the sigma hyperpriors"}
 \textbf{Partially pooled with sigma hyperpriors:}
 \begin{align*}
 \mu_\alpha &\sim \mathcal{N}(0, 500) \\
@@ -72,6 +89,7 @@ Partially pooled model with sigma hyperpriors
 FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
 \end{equation*}
 where $i$ is the patient index and $j$ is the week index.
+:::
 
 3. [4 marks] Use your version of following models to reproduce figure 4 from the paper referenced at [[2]](http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf). You can also refer to the notebook in the [course](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb).
     i. Hypernet [2 marks]
