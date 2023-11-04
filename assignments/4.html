@@ -215,14 +215,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>[2 marks] Consider the FVC dataset example discussed in the class. Find the notebook link at <a href="(https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hierarchical_lr_numpyro.ipynb)">[2]</a>. We had only used the train dataset. Now, we want to find out the performance of various models on the test dataset. Use the given dataset and deduce which model works best in terms of error (<code>MAE</code>) and coverage? The base model is Linear Regression by Sklearn (<code>from sklearn.linear_model import LinearRegression</code>). Plot the trace diagrams and posterior distribution. Also plot the predictive posterior distribution with 90% confidence interval.</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x_train, x_test, y_train, y_test <span class="op">=</span> train_test_split(train[<span class="st">"Weeks"</span>], train[<span class="st">'FVC'</span>], train_size <span class="op">=</span> <span class="fl">0.8</span>, random_state <span class="op">=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Pooled Model <span class="math display">\[\begin{align*}
+<div class="callout callout-style-default callout-important callout-titled" title="Pooled Model Older (wrong) version">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pooled Model Older (wrong) version
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <span class="math display">\[\begin{align*}
 \alpha &amp;\sim \mathcal{N}(0, 500) \\
 \beta &amp;\sim \mathcal{N}(0, 500) \\
 \sigma &amp;\sim \text{HalfNormal}(100)
 \end{align*}\]</span> <span class="math display">\[\begin{equation*}
 FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_, \sigma)
 \end{equation*}\]</span> where <span class="math inline">\(j\)</span> is the patient index.</p>
-<p>Partially pooled model with the same sigma <span class="math display">\[\begin{align*}
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pooled Model Newer (corrected) version">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pooled Model Newer (corrected) version
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <span class="math display">\[\begin{align*}
+\alpha &amp;\sim \mathcal{N}(0, 500) \\
+\beta &amp;\sim \mathcal{N}(0, 500) \\
+\sigma &amp;\sim \text{HalfNormal}(100)
+\end{align*}\]</span> <span class="math display">\[\begin{equation*}
+FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_j, \sigma)
+\end{equation*}\]</span> where <span class="math inline">\(j\)</span> is the week index.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="Partially pooled model with the same sigma">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Partially pooled model with the same sigma
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align*}
 \mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
 \sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
 \mu_\beta &amp;\sim \mathcal{N}(0, 3) \\
@@ -234,7 +276,19 @@ FVC_j \sim \text{Normal}(\alpha + \beta \cdot Week_, \sigma)
 <p><span class="math display">\[\begin{equation*}
 FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 \end{equation*}\]</span> where <span class="math inline">\(i\)</span> is the patient index and <span class="math inline">\(j\)</span> is the week index.</p>
-<p>Partially pooled model with sigma hyperpriors <span class="math display">\[\begin{align*}
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Partially pooled model with the sigma hyperpriors">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Partially pooled model with the sigma hyperpriors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <span class="math display">\[\begin{align*}
 \mu_\alpha &amp;\sim \mathcal{N}(0, 500) \\
 \sigma_\alpha &amp;\sim \text{HalfNormal}(100) \\
 \mu_\beta &amp;\sim \mathcal{N}(0, 3) \\
@@ -247,6 +301,8 @@ FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma)
 <p><span class="math display">\[\begin{equation*}
 FVC_{ij} \sim \text{Normal}(\alpha_i + \beta_i \cdot Week_j, \sigma_i)
 \end{equation*}\]</span> where <span class="math inline">\(i\)</span> is the patient index and <span class="math inline">\(j\)</span> is the week index.</p>
+</div>
+</div>
 <ol start="3" type="1">
 <li>[4 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the <a href="https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb">course</a>.
 <ol type="i">

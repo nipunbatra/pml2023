@@ -89,11 +89,61 @@ background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>)</span></code></pre></div>
-<p>Pooled Model <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha%20+%20%5Cbeta%20%5Ccdot%20Week_,%20%5Csigma)%0A%5Cend%7Bequation*%7D"> where <img src="https://latex.codecogs.com/png.latex?j"> is the patient index.</p>
-<p>Partially pooled model with the same sigma <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Pooled Model Older (wrong) version">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pooled Model Older (wrong) version
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha%20+%20%5Cbeta%20%5Ccdot%20Week_,%20%5Csigma)%0A%5Cend%7Bequation*%7D"> where <img src="https://latex.codecogs.com/png.latex?j"> is the patient index.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pooled Model Newer (corrected) version">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pooled Model Newer (corrected) version
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_j%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha%20+%20%5Cbeta%20%5Ccdot%20Week_j,%20%5Csigma)%0A%5Cend%7Bequation*%7D"> where <img src="https://latex.codecogs.com/png.latex?j"> is the week index.</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="Partially pooled model with the same sigma">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Partially pooled model with the same sigma
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%0A%5Cend%7Balign*%7D"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_%7Bij%7D%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha_i%20+%20%5Cbeta_i%20%5Ccdot%20Week_j,%20%5Csigma)%0A%5Cend%7Bequation*%7D"> where <img src="https://latex.codecogs.com/png.latex?i"> is the patient index and <img src="https://latex.codecogs.com/png.latex?j"> is the week index.</p>
-<p>Partially pooled model with sigma hyperpriors <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Cgamma_%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(30)%20%5C%5C%0A%5Csigma_i%20&amp;%5Csim%20%5Ctext%7BExp%7D(%5Cgamma_%5Csigma)%0A%5Cend%7Balign*%7D"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Partially pooled model with the sigma hyperpriors">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Partially pooled model with the sigma hyperpriors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cmu_%5Calpha%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%20500)%20%5C%5C%0A%5Csigma_%5Calpha%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(100)%20%5C%5C%0A%5Cmu_%5Cbeta%20&amp;%5Csim%20%5Cmathcal%7BN%7D(0,%203)%20%5C%5C%0A%5Csigma_%5Cbeta%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(3)%20%5C%5C%0A%5Calpha_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Calpha,%20%5Csigma_%5Calpha)%20%5C%5C%0A%5Cbeta_i%20&amp;%5Csim%20%5Cmathcal%7BN%7D(%5Cmu_%5Cbeta,%20%5Csigma_%5Cbeta)%20%5C%5C%0A%5Cgamma_%5Csigma%20&amp;%5Csim%20%5Ctext%7BHalfNormal%7D(30)%20%5C%5C%0A%5Csigma_i%20&amp;%5Csim%20%5Ctext%7BExp%7D(%5Cgamma_%5Csigma)%0A%5Cend%7Balign*%7D"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation*%7D%0AFVC_%7Bij%7D%20%5Csim%20%5Ctext%7BNormal%7D(%5Calpha_i%20+%20%5Cbeta_i%20%5Ccdot%20Week_j,%20%5Csigma_i)%0A%5Cend%7Bequation*%7D"> where <img src="https://latex.codecogs.com/png.latex?i"> is the patient index and <img src="https://latex.codecogs.com/png.latex?j"> is the week index.</p>
+</div>
+</div>
 <ol start="3" type="1">
 <li>[4 marks] Use your version of following models to reproduce figure 4 from the paper referenced at <a href="http://proceedings.mlr.press/v80/garnelo18a/garnelo18a.pdf">[2]</a>. You can also refer to the notebook in the <a href="https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/hypernet-np.ipynb">course</a>.
 <ol type="i">
