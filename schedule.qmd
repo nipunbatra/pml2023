@@ -32,4 +32,4 @@ The page containing the notebooks is linked [here](notebooks/index.qmd).
 23| Nov 13| KL divergence, Variational Inference, MC sampling, Reparameterisation [[Notebook](https://github.com/nipunbatra/pml-teaching/blob/master/notebooks/variational-inference.ipynb)]|
 24| Nov 16| Variational Inference-II: ELBO, Coin Toss|
 25| Nov 20| Variational Inference-III: VI for NNs, Mean field, low rank, Variational Autoencoders|
-26| Nov 20| Conformal Prediction?/Neural Processes?/Gaussian Processes?|
+26| Nov 23| Conformal Prediction?/Neural Processes?/Gaussian Processes?|
