@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/quizzes.html",
-    "items": []
-  },
-  {
-    "listing": "/notebooks/index.html",
-    "items": []
-  },
-  {
     "listing": "/assignments.html",
     "items": [
       "/assignments/4.html",
@@ -15,5 +7,13 @@
       "/assignments/2.html",
       "/assignments/1.html"
     ]
+  },
+  {
+    "listing": "/notebooks/index.html",
+    "items": []
+  },
+  {
+    "listing": "/quizzes.html",
+    "items": []
   }
 ]
