@@ -1,0 +1,21 @@
+---
+title: "Interactive apps"
+---
+
+- https://bayesian-classification-benchmark-bnn-gp-blr-gpv8ayxbmhhheiqbt.streamlit.app/
+- https://pmldemo-b8jqky8zv4zrwkwpffdhn4.streamlit.app/
+- https://es661interactivedemo-tz8spi4e2manafv2mrtjdd.streamlit.app
+- https://active-learning-regression.streamlit.app/
+- https://uncertain-regression.streamlit.app/
+- https://mapie-noisy-regresor.streamlit.app/
+- https://huggingface.co/spaces/meetv25/PML
+- https://appdemopml-dxzfnqowilhxh4bq68kcpk.streamlit.app/
+- https://vae-app-ljhgo4hxshjushcnruc5gq.streamlit.app/
+- https://sampling-methods.streamlit.app
+- https://bayesianlinearregression-zcbbu8ax3x8enkrvdavxia.streamlit.app/
+- https://huggingface.co/spaces/Ayushs799/Conformal_Predictions
+- https://posterior.streamlit.app
+- https://pml-app-demo.streamlit.app/
+- https://huggingface.co/spaces/bhardwajsatyam/blr-demo
+- https://bayesian-unlearning-app-5s28vwlgzcut9gew8rjs4i.streamlit.app/
+- https://pml-app-demo-l3bknz3o6zoytxmxqqb89w.streamlit.app/

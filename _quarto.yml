@@ -18,8 +18,8 @@ website:
         text: "Assignments"
       - href: quizzes.qmd
         text: Quizzes
-      - text: "Notebooks"
-        href: notebooks/index.qmd
+      - text: "Interactive apps"
+        href: interactive-apps.qmd
       - href: https://nipunbatra.github.io
         text: Instructor Homepage
 
