@@ -1,8 +1,5 @@
 ---
 title: "Quizzes"
-listing:
-  contents: exams
-  type: table
-  sort: "date"  
 ---
 
+No quiz papers are posted on this site yet. Quiz weights are on the [grading](grading.qmd) page.
