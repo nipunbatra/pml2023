@@ -1,13 +1,15 @@
 ---
-title: Notebook
-subtitle: Notebooks
-listing:
-  sort: "date desc"
-  contents: "posts"
-  sort-ui: false
-  filter-ui: false
-  categories: true
-  feed: true
-  type: table
-page-layout: full
+title: "Notebooks"
+subtitle: "Rendered notebooks from the first weeks of the course"
 ---
+
+These notebooks are rendered on this site. The notebooks for every lecture, including these, are in
+[pml-teaching](https://github.com/nipunbatra/pml-teaching/tree/master/notebooks) and are linked from each row of
+the [lecture library](../schedule.qmd).
+
+| Notebook | Lectures |
+|:--|:--|
+| [Bayes' rule: librarian or farmer](bayes-librarian.ipynb) | 2, 3, 4 |
+| [Distributions](distributions.ipynb) | 3 |
+| [Maximum likelihood for the univariate normal](mle-univariate.ipynb) | 3, 4 |
+| [Biased and unbiased estimators](biased-mle-normal.ipynb) | 4 |

@@ -1,20 +1,30 @@
 ---
-title: "ES 661 Probabilistic Machine Learning"
+title: "ES 661: Probabilistic machine learning"
+subtitle: "August 2023 · IIT Gandhinagar"
 ---
 
-### Summary
+::: {.lead}
+Machine learning with uncertainty. The course starts from Bayes' rule for the parameters of a model, moves from
+maximum likelihood and MAP estimates to full posteriors, and then approximates the posteriors that have no closed
+form with the Laplace approximation, sampling, MCMC and variational inference. It ends with uses of uncertainty in
+neural networks, meta-learning, active learning and Bayesian optimisation. Every lecture's slides, notebooks, cheat
+sheet and recording are in the [lecture library](schedule.qmd), where three-minute summary videos are being added.
+:::
+
+::: {.callout-note}
+## Summary
 
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
 * Teaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor
 * Course Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST
 * [Slack Invite corrected!](https://join.slack.com/t/pml23/shared_invite/zt-20o47q69t-SRBCc6sbNybppafChg8rPA)
+:::
 
+## Main topics
 
-
-### Main topics
-1. Bayesian Inference
-2. Estimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian
-3. Sampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)
-4. Approximate Inference: Variational Inference,  Markov Chain Monte Carlo, Laplace Approximation
-5. Models: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA
-6. Applications: Bayesian Optimization, Active learning
+1. Bayesian inference
+2. Estimation: maximum likelihood, maximum a posteriori, full Bayesian
+3. Sampling: rejection sampling, Monte Carlo, specific sampling techniques (like Box-Muller)
+4. Approximate inference: variational inference, Markov chain Monte Carlo, Laplace approximation
+5. Models: Bayesian linear and logistic regression; Bayesian neural networks; Gaussian processes; probabilistic PCA
+6. Applications: Bayesian optimisation, active learning

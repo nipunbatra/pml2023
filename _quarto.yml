@@ -3,38 +3,48 @@ project:
   output-dir: docs
 
 website:
-  title: "ES661 PML"
+  title: "ES 661 · Probabilistic machine learning"
+  description: "Probabilistic machine learning at IIT Gandhinagar, August 2023"
+  site-url: https://nipunbatra.github.io/pml2023/
+  favicon: images/logo.png
   navbar:
+    title: "ES 661 · Probabilistic ML"
     right:
       - href: index.qmd
         text: Home
-      - href: grading.qmd
-        text: Grading Policy
-      - href: faq.qmd
-        text: FAQs
       - href: schedule.qmd
-        text: Schedule
+        text: Lectures
+      - href: grading.qmd
+        text: Grading
+      - href: faq.qmd
+        text: FAQ
       - href: assignments.qmd
-        text: "Assignments"
+        text: Assignments
       - href: quizzes.qmd
         text: Quizzes
-      - text: "Interactive apps"
-        href: interactive-apps.qmd
+      - href: interactive-apps.qmd
+        text: Apps
       - href: https://nipunbatra.github.io
-        text: Instructor Homepage
-
+        text: Instructor
+  page-footer:
+    left: "ES 661 Probabilistic machine learning · IIT Gandhinagar · August 2023"
+    right: "© 2023 [Nipun Batra](https://nipunbatra.github.io) · Made with [Quarto](https://quarto.org)"
 
 format:
   html:
+    from: markdown-smart
     theme:
-      light: [litera, styles.scss]
-      dark: [darkly, styles-dark.scss]
-    highlight-style: a11y-dark
-    mainfont: "Roboto"
+      light: [cosmo, nb-course.scss]
+      dark: [darkly, nb-course.scss]
+    toc: false
+    page-layout: full
+    smooth-scroll: false
+    highlight-style: github
     code-copy: true
     code-overflow: wrap
-
+    link-external-newwindow: true
+    anchor-sections: true
+    fig-responsive: true
 
 execute:
   freeze: auto
-
