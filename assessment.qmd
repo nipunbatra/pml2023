@@ -1,0 +1,73 @@
+---
+title: "Assessment"
+body-classes: dl wide
+---
+
+```{=html}
+<p class="lede">Grading and every dated event of the 2023 offering in one place. All times are IST. Quizzes are held in the exam slots; each assignment is followed by a viva.</p>
+```
+
+::: {.two .rule-top}
+
+## Dates {#deadlines}
+
+{{< include _dates.qmd >}}
+
+Assignment dates are those given on each assignment. The three quizzes were held in the exam 1, 2 and 3 slots.
+
+## Grading {#grading}
+
+Everything is out of **100 marks**. The scheme below was published at the start of the course as provisional.
+
+```{=html}
+<table class="t" data-quarto-disable-processing="true">
+<thead><tr><th>Component</th><th>Marks</th><th>How</th></tr></thead>
+<tbody>
+<tr><th>Quizzes</th><td class="big">36</td><td>Three quizzes of 12 marks each, held in the exam 1, 2 and 3 slots.</td></tr>
+<tr><th>Assignments</th><td class="big">32</td><td>Four group assignments of about 8 marks each, each followed by a viva. You get one week for each.</td></tr>
+<tr><th>Project</th><td class="big">27</td><td>A group project: a first presentation (10), a final presentation (12) and a final report (5).</td></tr>
+<tr><th>Interactive article</th><td class="big">5</td><td>A Streamlit app or similar interactive article that explains a concept.</td></tr>
+<tr><th>Total</th><td class="big">100</td><td></td></tr>
+</tbody></table>
+```
+
+### Assignment marks {#assignment-marks}
+
+```{=html}
+<table class="t att" style="max-width:340px" data-quarto-disable-processing="true">
+<thead><tr><th>Part</th><th>Share</th></tr></thead>
+<tbody><tr><td>Correctness of the code</td><td>50%</td></tr><tr><td>Code quality</td><td>25%</td></tr><tr><td>Presentation and conceptual understanding</td><td>25%</td></tr></tbody></table>
+```
+
+There are at most 20 assignment groups in the course, of two or three students depending on class size.
+
+### Project {#project}
+
+There are at most 10 project groups, of three to five students depending on class size.
+
+```{=html}
+<table class="t att" style="max-width:340px" data-quarto-disable-processing="true">
+<thead><tr><th>Part</th><th>Date</th><th>Marks</th></tr></thead>
+<tbody><tr><td>Presentation I</td><td>06 Oct</td><td>10</td></tr><tr><td>Final presentation</td><td>17 Nov</td><td>12</td></tr><tr><td>Final report</td><td>20 Nov</td><td>5</td></tr></tbody></table>
+```
+
+:::
+
+::: {.rule-top}
+
+## Assignments {#assignments}
+
+```{=html}
+<table class="t" data-quarto-disable-processing="true">
+<thead><tr><th>Assignment</th><th>Marks</th><th>Released</th><th>Due</th></tr></thead>
+<tbody>
+<tr><td><a href="assignments/1.html">Assignment 1</a></td><td>6</td><td>10 Aug</td><td>18 Aug</td></tr>
+<tr><td><a href="assignments/2.html">Assignment 2</a></td><td>8</td><td>22 Aug</td><td>30 Aug</td></tr>
+<tr><td><a href="assignments/3.html">Assignment 3</a></td><td>9</td><td>18 Sep</td><td>27 Sep, 7:00 pm</td></tr>
+<tr><td><a href="assignments/4.html">Assignment 4</a></td><td>9</td><td>28 Oct</td><td>08 Nov, 7:00 pm</td></tr>
+</tbody></table>
+```
+
+Each assignment is a single Jupyter notebook, done in groups of two, using PyTorch and `torch.distributions`. Show results as labelled plots and tables, not raw training logs; poor presentation may cost marks (for example, 10%).
+
+:::

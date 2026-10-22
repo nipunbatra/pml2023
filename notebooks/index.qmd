@@ -1,13 +1,10 @@
 ---
-title: Notebook
-subtitle: Notebooks
-listing:
-  sort: "date desc"
-  contents: "posts"
-  sort-ui: false
-  filter-ui: false
-  categories: true
-  feed: true
-  type: table
-page-layout: full
+title: "Notebooks"
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=../schedule.html">
+    <link rel="canonical" href="https://nipunbatra.github.io/pml2023/schedule.html">
+    <meta name="robots" content="noindex">
 ---
+
+This page has moved: [go to Lectures](/schedule.html).

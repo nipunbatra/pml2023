@@ -1,7 +1,10 @@
 ---
-title: "FAQ"
+title: "Questions"
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=index.html#faq">
+    <link rel="canonical" href="https://nipunbatra.github.io/pml2023/index.html#faq">
+    <meta name="robots" content="noindex">
 ---
 
-
-#### Prerequisites
-
+This page has moved: [go to Questions](/index.html#faq).

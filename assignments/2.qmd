@@ -1,5 +1,6 @@
 ---
-title: Assignment 2 (released 22 Aug, due 30 Aug)
+title: "Assignment 2"
+subtitle: "Released 22 Aug, due 30 Aug"
 date: 2023-08-22
 ---
 

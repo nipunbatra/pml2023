@@ -1,40 +1,32 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "assignments/*.qmd"
+    - "notebooks/index.qmd"
+    - "notebooks/*.ipynb"
+  resources:
+    - "lectures/**"
 
 website:
-  title: "ES661 PML"
-  navbar:
-    right:
-      - href: index.qmd
-        text: Home
-      - href: grading.qmd
-        text: Grading Policy
-      - href: faq.qmd
-        text: FAQs
-      - href: schedule.qmd
-        text: Schedule
-      - href: assignments.qmd
-        text: "Assignments"
-      - href: quizzes.qmd
-        text: Quizzes
-      - text: "Interactive apps"
-        href: interactive-apps.qmd
-      - href: https://nipunbatra.github.io
-        text: Instructor Homepage
-
+  title: "ES 661 · Probabilistic Machine Learning"
+  favicon: favicon.svg
+  description: "Probabilistic Machine Learning at IIT Gandhinagar, Semester I 2023–24"
+  site-url: https://nipunbatra.github.io/pml2023/
+  search: false
 
 format:
   html:
-    theme:
-      light: [litera, styles.scss]
-      dark: [darkly, styles-dark.scss]
-    highlight-style: a11y-dark
-    mainfont: "Roboto"
-    code-copy: true
-    code-overflow: wrap
-
+    theme: [cosmo, styles.scss, course.scss]
+    toc: false
+    page-layout: article
+    anchor-sections: false
+    body-classes: dl
+    link-external-newwindow: true
+    include-in-header: course-theme.html
+    include-before-body: rail.html
+    include-after-body: course-tools.html
 
 execute:
   freeze: auto
-

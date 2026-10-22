@@ -1,8 +1,10 @@
 ---
 title: "Quizzes"
-listing:
-  contents: exams
-  type: table
-  sort: "date"  
+include-in-header:
+  text: |
+    <meta http-equiv="refresh" content="0; url=assessment.html#grading">
+    <link rel="canonical" href="https://nipunbatra.github.io/pml2023/assessment.html#grading">
+    <meta name="robots" content="noindex">
 ---
 
+This page has moved: [go to Grading](/assessment.html#grading).

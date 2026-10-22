@@ -10,3 +10,5 @@ ds_store/
 .DS_Store
 runs/
 mnist-cnn/
+
+**/*.quarto_ipynb

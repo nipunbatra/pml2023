@@ -1,0 +1,22 @@
+<!-- Course dates, shared by Assessment. Write dates as "08 Oct 23" or "08 Oct 23, 6:30 pm" (IST);
+     the page greys out past rows and draws the Today line from the date in the browser. -->
+
+::: {.dates}
+
+| Date | Event |
+|---|---|
+| 03 Aug 23 | First lecture |
+| 10 Aug 23 | [Assignment 1](assignments/1.qmd) released |
+| 18 Aug 23 | [Assignment 1](assignments/1.qmd) due |
+| 22 Aug 23 | [Assignment 2](assignments/2.qmd) released |
+| 30 Aug 23 | [Assignment 2](assignments/2.qmd) due |
+| 18 Sep 23 | [Assignment 3](assignments/3.qmd) released |
+| 27 Sep 23, 7:00 pm | [Assignment 3](assignments/3.qmd) due |
+| 06 Oct 23 | **Project presentation I** |
+| 28 Oct 23 | [Assignment 4](assignments/4.qmd) released |
+| 08 Nov 23, 7:00 pm | [Assignment 4](assignments/4.qmd) due |
+| 15 Nov 23 | Interactive article due |
+| 17 Nov 23 | **Final project presentation** |
+| 20 Nov 23 | Final project report due |
+
+:::

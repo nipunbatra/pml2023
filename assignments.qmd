@@ -1,12 +1,16 @@
 ---
-title: Assignments
+title: "Assignments"
 listing:
-  sort: "date desc"
+  sort: "date"
   contents: "assignments"
   sort-ui: false
   filter-ui: false
-  categories: true
+  categories: false
   feed: true
   type: table
-page-layout: full
+  fields: [title, subtitle]
+  field-display-names:
+    subtitle: "Dates"
 ---
+
+Four group assignments, each a single Jupyter notebook followed by a viva. Marks and dates are under [Assessment](assessment.qmd#assignments).

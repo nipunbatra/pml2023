@@ -1,20 +1,88 @@
 ---
-title: "ES 661 Probabilistic Machine Learning"
+pagetitle: "ES 661 · Probabilistic Machine Learning"
+description: "Probabilistic Machine Learning at IIT Gandhinagar, Semester I 2023–24"
+body-classes: dl wide
 ---
 
-### Summary
+::: {.top}
 
-* Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
-* Teaching Assistants: Zeel B Patel, Sarth Dubey, Madhav Kanda, Haikoo Khandor
-* Course Timings: Monday 330-450 PM IST and Thursday 2-3:20 PM IST
-* [Slack Invite corrected!](https://join.slack.com/t/pml23/shared_invite/zt-20o47q69t-SRBCc6sbNybppafChg8rPA)
+::: {.top-main}
+```{=html}
+<span hidden></span><!-- keeps Quarto from moving the h1 into its own title block -->
+<h1 class="h1">Probabilistic Machine Learning</h1>
+<p class="role">ES 661 · IIT Gandhinagar · Semester I, 2023–24</p>
+<p class="lede" style="margin-top:18px">ES 661 is a course on probabilistic machine learning: Bayesian inference, estimation, sampling, approximate inference, probabilistic models, and their use in Bayesian optimisation and active learning. Lectures link their recordings, slides, cheat sheets and notebooks.</p>
+<dl class="facts">
+  <dt>Instructor</dt><dd><a href="https://nipunbatra.github.io">Prof. Nipun Batra</a></dd>
+  <dt>Email</dt><dd><a href="mailto:nipun.batra@iitgn.ac.in">nipun.batra@iitgn.ac.in</a></dd>
+  <dt>Lectures</dt><dd>Monday 3:30–4:50 pm and Thursday 2:00–3:20 pm IST</dd>
+  <dt>Teaching assistants</dt><dd><a href="#people">4 TAs</a></dd>
+  <dt>Discussion</dt><dd><a href="https://join.slack.com/t/pml23/shared_invite/zt-20o47q69t-SRBCc6sbNybppafChg8rPA">Course Slack</a></dd>
+</dl>
+```
+:::
 
+::: {.next aria-labelledby="record-h"}
+```{=html}
+<span class="label" id="record-h">Course record</span>
+<p class="small" style="margin:0 0 12px">This offering ran from August to November 2023. Its lectures, recordings, notebooks and assignments remain available.</p>
+<dl>
+  <dt>Lectures</dt><dd><span class="stat">25</span></dd>
+  <dt>Recordings</dt><dd><span class="stat">23</span></dd>
+  <dt>Cheat sheets</dt><dd><span class="stat">15</span></dd>
+  <dt>Assignments</dt><dd><a href="assignments.html">4</a></dd>
+  <dt>Interactive apps</dt><dd><a href="interactive-apps.html">17</a></dd>
+</dl>
+<p class="all"><a href="assessment.html#deadlines">All dates</a></p>
+```
+:::
 
+:::
 
-### Main topics
-1. Bayesian Inference
-2. Estimation: Maximum Likelihood, Maximum a Posteriori, Full Bayesian
-3. Sampling: Rejection Sampling, Monte Carlo, Specific Sampling Techniques (like Box Muller)
-4. Approximate Inference: Variational Inference,  Markov Chain Monte Carlo, Laplace Approximation
-5. Models: Bayesian Linear, Logistic regression; Bayesian Neural Networks; Gaussian Processes; Probabilistic PCA
-6. Applications: Bayesian Optimization, Active learning
+```{=html}
+<section class="rule-top" id="lectures"><h2>Lectures</h2>
+<ul class="modules c4">
+  <li><span class="r">1–4</span><a href="schedule.html#probability-and-likelihood">Probability and likelihood</a><span class="c">4 lectures</span></li>
+  <li><span class="r">5–8</span><a href="schedule.html#estimation-and-bayesian-regression">Estimation and Bayesian regression</a><span class="c">4 lectures</span></li>
+  <li><span class="r">9–14</span><a href="schedule.html#sampling-and-mcmc">Sampling and MCMC</a><span class="c">6 lectures</span></li>
+  <li><span class="r">15–16</span><a href="schedule.html#uncertainty-in-deep-learning">Uncertainty in deep learning</a><span class="c">2 lectures</span></li>
+  <li><span class="r">17–20</span><a href="schedule.html#hierarchical-models-and-meta-learning">Hierarchical models, meta-learning and self-supervision</a><span class="c">4 lectures</span></li>
+  <li><span class="r">21–22</span><a href="schedule.html#active-learning-and-bayesian-optimisation">Active learning and Bayesian optimisation</a><span class="c">2 lectures</span></li>
+  <li><span class="r">23–25</span><a href="schedule.html#variational-inference">Variational inference</a><span class="c">3 lectures</span></li>
+</ul>
+<div class="playlists">
+  <a class="btn ib" href="https://www.youtube.com/watch?v=UCYaVS9_jGU&amp;list=PLftoLyLEwECBEJyfRBJoSBd0UaTjEcs3I" target="_blank" rel="noopener noreferrer"><svg class="ic ic-recording" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Lecture playlist</a>
+  <a class="btn solid" href="schedule.html">All 25 lectures</a>
+</div>
+</section>
+
+<div class="two rule-top">
+<section id="faq"><h2>Questions</h2>
+<details class="q" id="grading"><summary>How is the course graded?</summary><p>Three quizzes (36%), four assignments (32%), a group project (27%) and an interactive article (5%). See <a href="assessment.html#grading">Grading</a>.</p></details>
+<details class="q" id="quizzes"><summary>When are the quizzes?</summary><p>There are three quizzes of 12% each, held in the exam 1, 2 and 3 slots.</p></details>
+<details class="q" id="assignments"><summary>How do the assignments work?</summary><p>Each assignment is a single Jupyter notebook done in a group, using PyTorch and <code>torch.distributions</code>, with about a week to complete it. Each is followed by a viva and graded on correctness of the code (50%), code quality (25%) and presentation and conceptual understanding (25%).</p></details>
+<details class="q" id="project"><summary>Is there a project?</summary><p>Yes, in groups of three to five students. It has a first presentation, a final presentation and a final report. See <a href="assessment.html#project">Project</a>.</p></details>
+<details class="q" id="interactive-article"><summary>What is the interactive article?</summary><p>A Streamlit app or similar interactive article that explains a concept from the course. See the course's <a href="interactive-apps.html">interactive apps</a>.</p></details>
+<p class="small muted" style="margin-top:12px">Ask anything else on <a href="https://join.slack.com/t/pml23/shared_invite/zt-20o47q69t-SRBCc6sbNybppafChg8rPA">the course Slack</a>.</p>
+</section>
+<section id="topics"><h2>Main topics</h2>
+<ol class="refs">
+  <li>Bayesian inference</li>
+  <li>Estimation: maximum likelihood, maximum a posteriori, full Bayesian</li>
+  <li>Sampling: rejection sampling, Monte Carlo, specific sampling techniques such as Box–Muller</li>
+  <li>Approximate inference: variational inference, Markov chain Monte Carlo, Laplace approximation</li>
+  <li>Models: Bayesian linear and logistic regression, Bayesian neural networks, Gaussian processes, probabilistic PCA</li>
+  <li>Applications: Bayesian optimisation, active learning</li>
+</ol>
+</section>
+</div>
+
+<section class="rule-top" id="people"><h2>Teaching assistants</h2>
+<ul class="people">
+  <li>Zeel B Patel</li>
+  <li>Sarth Dubey</li>
+  <li>Madhav Kanda</li>
+  <li>Haikoo Khandor</li>
+</ul>
+</section>
+```
