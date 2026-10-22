@@ -1,1 +1,1 @@
-Sitemap: https://github.com/nipunbatra/pml2023/sitemap.xml
+Sitemap: https://nipunbatra.github.io/pml2023/sitemap.xml
